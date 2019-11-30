@@ -1,2 +1,2 @@
-# HackQROO_2019
-Hackathon de Chetumal, Quintana roo. Team: StackOverDevs
+# HackQROO 2019
+HackQROO 2019 youth statistics and indicators, StackOverDevs team
