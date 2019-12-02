@@ -48,7 +48,7 @@
 - [x]  La aplicación no debe haber sido premiada en ningún concurso de carácter nacional o internacional. 
 - [x]  No haber sido comercializada ni estar en proceso de comercialización con anterioridad a la celebración de este concurso.
 
-**Relaciones detectadas:**
+**Datos publicos utilizados:**
 
 
 * EDUCACION - ECONOMIA - ARTE Y CULTURA: 
