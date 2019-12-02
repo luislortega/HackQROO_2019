@@ -49,7 +49,9 @@
 - [x]  No haber sido comercializada ni estar en proceso de comercialización con anterioridad a la celebración de este concurso.
 
 **Relaciones detectadas:**
-EDUCACION - ECONOMIA - ARTE Y CULTURA: 
+
+
+* EDUCACION - ECONOMIA - ARTE Y CULTURA: 
 
 
 https://www.caixabankresearch.com/educacion-y-crecimiento-economico
@@ -64,7 +66,7 @@ estadisticas de bachilleres (TODO EL ESTADO): http://datos.qroo.gob.mx/dataset/7
 cantidad de estudiantes (POR MUNICIPIO): http://www.cobaqroo.edu.mx/ListaAspirantes/nuevoingreso.php
 
 
-VIVIENDA - ESPARCIMIENTO - AMBIENTE:
+* VIVIENDA - ESPARCIMIENTO - AMBIENTE:
 
 
 https://es.wikipedia.org/wiki/Impacto_ambiental_del_crecimiento_urbano
