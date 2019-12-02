@@ -20,17 +20,17 @@
 - [x] Economía 
 - [x]  Seguridad 
 - [ ]  Identidad 
-- [ ]  Familia  
+- [x]  Familia  
 - [x]  Vivienda 
 - [ ]  Derechos
 - [x]  Esparcimiento 
 - [x]  Arte y Cultura 
 - [ ]  Religión
 - [ ]  Deporte
-- [ ]  Política 
+- [x]  Política 
 - [ ]  Civismo 
 - [ ]  Etnicidad 
-- [ ]  Asociación
+- [x]  Asociación
 - [ ]  Migración
 - [x]  Medio Ambiente.
 
@@ -66,6 +66,9 @@ estadisticas de bachilleres (TODO EL ESTADO): http://datos.qroo.gob.mx/dataset/7
 cantidad de estudiantes (POR MUNICIPIO): http://www.cobaqroo.edu.mx/ListaAspirantes/nuevoingreso.php
 
 
+becas otorgadas (POR MUNICIPIO): https://datos.gob.mx/busca/dataset/listado-de-beneficiarios-por-el-programa-nacional-de-becas-para-el-bienestar-benito-juarez/resource/3e161a89-be49-4417-aee5-3f4c4e7d3198
+
+
 * VIVIENDA - ESPARCIMIENTO - AMBIENTE:
 
 
@@ -81,7 +84,22 @@ Consumo electrico (POR MUNICIPIO): https://datos.gob.mx/busca/dataset/usuarios-y
 Embarazos en jovenes menores de 20 años (POR MUNICIPIO): https://www.inegi.org.mx/sistemas/olap/Proyectos/bd/continuas/natalidad/nacimientos.asp#
 
 
+Apoyo a adolescentes en drogas y alcohol (POR ESTADOS)	: https://datos.gob.mx/busca/dataset/adolescentes-de-12-a-17-anos-en-actividades-de-prevencion-en-los-centros-de-atencion-primaria-e
+
+
 * SEGURIDAD:
 
 
 asaltos ocurridos (POR MUNICIPIO)https://news.google.com/rss/search?q=playa%del%carmen%asalto&hl=es-419&gl=MX&ceid=MX:es-419
+
+* ASOCIACION:
+
+API DENUE: https://www.inegi.org.mx/servicios/api_denue.html
+
+
+* DATOS DE CONFIANZA DE INSTITUCIONES (POR ESTADO):
+
+
+https://www.inegi.org.mx/programas/encig/2017/default.html#Tabulados
+
+
