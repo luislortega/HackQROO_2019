@@ -15,16 +15,16 @@
 **Variables a evaluar en el proyecto:**
 
 
-- [ ] Educación 
+- [x] Educación 
 - [ ] Salud  
-- [ ] Economía 
-- [ ] Seguridad 
+- [x] Economía 
+- [ ]  Seguridad 
 - [ ]  Identidad 
 - [ ]  Familia  
-- [ ] Vivienda 
+- [x]  Vivienda 
 - [ ]  Derechos
-- [ ]  Esparcimiento 
-- [ ]  Arte y Cultura 
+- [x]  Esparcimiento 
+- [x]  Arte y Cultura 
 - [ ]  Religión
 - [ ]  Deporte
 - [ ]  Política 
@@ -32,7 +32,7 @@
 - [ ]  Etnicidad 
 - [ ]  Asociación
 - [ ]  Migración
-- [ ]  Medio Ambiente.
+- [x]  Medio Ambiente.
 
 **Evaluación:** 
 
@@ -47,3 +47,27 @@
 - [x]  No vulnerar, en ningún caso, los derechos de propiedad intelectual e industrial de terceros. 
 - [x]  La aplicación no debe haber sido premiada en ningún concurso de carácter nacional o internacional. 
 - [x]  No haber sido comercializada ni estar en proceso de comercialización con anterioridad a la celebración de este concurso.
+
+**Relaciones detectadas:**
+EDUCACION - ECONOMIA - ARTE Y CULTURA: 
+
+
+https://www.caixabankresearch.com/educacion-y-crecimiento-economico
+
+
+Apoyo trabajo - escuela (POR MUNICIPIO): http://datos.qroo.gob.mx/dataset/beneficiarios-del-programa-vinculacion-escuela-trabajo-segunda-etapa-2018
+
+
+estadisticas de bachilleres (TODO EL ESTADO): http://datos.qroo.gob.mx/dataset/74c9abe8-31fc-4c74-a70c-ab294d3e02f3/resource/df06a75f-4fda-4d5b-a1e1-4404f04a4cd7/download/indicadores.txt
+
+
+cantidad de estudiantes (POR MUNICIPIO): http://www.cobaqroo.edu.mx/ListaAspirantes/nuevoingreso.php
+
+
+VIVIENDA - ESPARCIMIENTO - AMBIENTE:
+
+
+https://es.wikipedia.org/wiki/Impacto_ambiental_del_crecimiento_urbano
+
+
+Consumo electrico (POR MUNICIPIO): https://datos.gob.mx/busca/dataset/usuarios-y-consumo-de-electricidad-por-municipio-a-partir-de-2018/resource/38b7a514-78c2-4355-9ed0-d6ac72722952
