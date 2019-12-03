@@ -51,7 +51,7 @@
 **Datos publicos utilizados:**
 
 
-* EDUCACION - ECONOMIA - ARTE Y CULTURA: 
+* EDUCACION - ECONOMIA: 
 
 
 https://www.caixabankresearch.com/educacion-y-crecimiento-economico
@@ -67,6 +67,12 @@ cantidad de estudiantes (POR MUNICIPIO): http://www.cobaqroo.edu.mx/ListaAspiran
 
 
 becas otorgadas (POR MUNICIPIO): https://datos.gob.mx/busca/dataset/listado-de-beneficiarios-por-el-programa-nacional-de-becas-para-el-bienestar-benito-juarez/resource/3e161a89-be49-4417-aee5-3f4c4e7d3198
+
+* ARTE Y CULTURA:
+
+
+API CALENDAR GOOGLE: https://stackoverflow.com/questions/46703466/google-calendar-api-search-event-by-name/46713338#46713338
+
 
 
 * VIVIENDA - ESPARCIMIENTO - AMBIENTE:
