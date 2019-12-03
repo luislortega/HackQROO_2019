@@ -37,12 +37,12 @@
 **Evaluación:** 
 
 
-- [ ] Originalidad / Innovación de la propuesta. -
+- [x]  Originalidad / Innovación de la propuesta. -
 - [ ]  Calidad en la conceptualización y definición. 
-- [ ] Avance de las funcionalidades de la aplicación.
+- [ ]  Avance de las funcionalidades de la aplicación.
 - [ ]  Viabilidad de implementación del proyecto. 
 - [ ]  Utilidad de la propuesta. 
-- [ ]  Experiencia de usuario. 
+- [x]  Experiencia de usuario. 
 - [x]  Ser propiedad exclusiva de los participantes. 
 - [x]  No vulnerar, en ningún caso, los derechos de propiedad intelectual e industrial de terceros. 
 - [x]  La aplicación no debe haber sido premiada en ningún concurso de carácter nacional o internacional. 
