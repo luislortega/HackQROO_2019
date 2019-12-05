@@ -81,8 +81,7 @@ API CALENDAR GOOGLE: https://stackoverflow.com/questions/46703466/google-calenda
 https://es.wikipedia.org/wiki/Impacto_ambiental_del_crecimiento_urbano
 
 
-Consumo electrico (POR MUNICIPIO): https://datos.gob.mx/busca/dataset/usuarios-y-consumo-de-electricidad-por-municipio-a-partir-de-2018/resource/38b7a514-78c2-4355-9ed0-d6ac72722952
-
+Consumo electrico (POR MUNICIPIO): https://datos.gob.mx/busca/dataset/usuarios-y-consumo-de-electricidad-por-municipio-a-partir-de-2018
 
 * SALUD:
 
