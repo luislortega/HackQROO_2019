@@ -108,3 +108,81 @@ API DENUE: https://www.inegi.org.mx/servicios/api_denue.html
 https://www.inegi.org.mx/programas/encig/2017/default.html#Tabulados
 
 
+## NOTAS DE LUIS
+
+
+EDUCACION: 
+municipio:
+x) Apoyo economico trabajo - escuela 
+x) Cantidad de estudiantes 
+estatal:
+x) Porcentaje de aprobacion escolar
+x) Porcentaje de estudiantes que acaban la preparatoria
+
+
+SALUD:
+municipio:
+1) Seguridad en los seguros publicos
+2) Embarazos en menor de 20 años.
+estatal:
+1)  Apoyo a adolecentes en drogas y alcohol
+
+
+ECONOMIA: 
+municipio:
+1) numero de estudiantes
+estatal: 
+1) datos inegi
+
+
+
+SEGURIDAD:
+municipio:
+porcentaje de confianza en la policia
+estatal:
+promedio porcentaje de confianza en la policia
+
+
+
+FAMILIA:
+municipio:
+porcentaje de confianza en la familia
+estatal:
+promedio porcentaje de confianza en la familia
+
+
+
+VIVIENDA:
+Consumo electrico por municipio 
+
+
+
+ESPARCIMIENTO:
+Consumo electrico por municipio
+
+
+
+ARTE Y CULTURA
+municipio:
+1) Cantidad de eventos culturales disponibles
+2) Numero de bibliotecas y museos
+estatal:
+1) comparacion de todos.
+
+
+
+POLITICA:
+municipal:
+1) porcentaje de confianza en los politicos
+estatal: 
+2) promedio del porcentaje de confianza en los politicos
+
+
+
+ASOCIACION:
+1) numero de negocios con mas de 3 socios
+
+
+
+MEDIO AMBIENTE: 
+Consumo electrico por municipio 
