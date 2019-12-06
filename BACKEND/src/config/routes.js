@@ -3,9 +3,9 @@ const UserController = require('../controllers/userController');
 const PinController = require('../controllers/pinController');
 
 module.exports = app => {
-  app.get('/', (req, res)=>{
-    res.send("hi bitch");
-  })
+  app.get('/', (req, res) => {
+    res.send('hi bitch');
+  });
   /**
    * login
    *
