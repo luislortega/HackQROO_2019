@@ -5,7 +5,7 @@ const { sequelize, municipio } = require('../src/models');
 const Promise = require('bluebird');
 //Default JSON
 const municipios = require('./municipios.json');
-
+const datosBachilleres = require('../src/DATA/educacion/datosbachillerestrimestral.json')
 /* CONTROLADOR */
 const MunicipioController = require('../src/controllers/municipioController');
 
@@ -64,5 +64,10 @@ sequelize.sync({ force: true }).then(async function() {
     fs.createReadStream(cantidadestudiantes).pipe(
       scanner_cantidadesestudiantes,
     );
+    /* LECTURA JSON */
+    console.log(datosBachilleres['primer trimestre'][0])
+    console.log(datosBachilleres['primer trimestre'][1])
+    console.log(datosBachilleres['primer trimestre'][8])
+    console.log(datosBachilleres['primer trimestre'][9])
   });
 });
