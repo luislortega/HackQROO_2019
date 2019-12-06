@@ -7,7 +7,7 @@ module.exports = {
     database: process.env.DB_NAME || 'qdata',
     user: process.env.DB_USER || 'postgres',
     password: process.env.DB_PASS || '1298Luis',
-    options: {  
+    options: {
       dialect: process.env.DIALECT || 'postgres',
       /*ssl: true,
       dialectOptions: {
