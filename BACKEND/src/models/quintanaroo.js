@@ -9,6 +9,10 @@ module.exports = (sequelize, DataTypes) => {
     porcentaje_absorcion: DataTypes.STRING,
     porcentaje_aprobacion: DataTypes.STRING,
     posicion_actividad_economica_terciaria: DataTypes.INTEGER,
+    embarazos_menores_15: DataTypes.STRING,
+    embarazos_15a19: DataTypes.STRING,
+    embarazos_20a24: DataTypes.STRING,
+    embarazos_25a29: DataTypes.STRING
   });
   return quintanaroo;
 };

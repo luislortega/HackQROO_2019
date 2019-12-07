@@ -7,4 +7,13 @@ module.exports = {
       posicion_actividad_economica_terciaria: 17,
     });
   },
+  insertarEmbarazosMenores15(datos){
+      quintanaroo.update({
+        embarazos_menores_15: datos
+      },{
+          where: {
+              id: 1
+          }
+      })
+  }
 };
