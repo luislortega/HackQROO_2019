@@ -21,10 +21,12 @@ sequelize.sync({ force: true }).then(async function() {
     let array_apoyo_trabajo_escuela = new Array();
     let array_cantidad_estudiantes = new Array();
     let array_cantidadEmbarazosMenores15 = new Array();
+    let array_cantidadEmbarazos15a19 = new Array();
     //Contadores
     let contador_apoyo_trabajo_escuela = 0;
     let contador_cantidad_estudiantes = 0;
     let contador_cantidadEmbarazosMenores15 = 0;
+    let contador_cantidadEmbarazos15a19 = 0;
 
     let fs = require('fs');
     let parse = require('csv-parse');
@@ -34,6 +36,7 @@ sequelize.sync({ force: true }).then(async function() {
     let trabajoestudio = 'src/DATA/educacion/apoyotrabajoestudio.csv';
     let cantidadestudiantes = 'src/DATA/educacion/cantidadestudiantescs.csv';
     let cantidadEmbarazosMenores15 = 'src/DATA/salud/embarazoMenor15.csv';
+    let cantidadEmbarazos15a19 = 'src/DATA/salud/embarazo15a19.csv';
 
     let scanner_trabajoestudio = parse({ delimiter: ',' }, function(err, data) {
       async.eachSeries(data, function(line, callback) {
@@ -90,12 +93,40 @@ sequelize.sync({ force: true }).then(async function() {
         });
       });
 
+    let scanner_embarazos_15a19 =  parse({ delimiter: ',' }, function(
+        err,
+        data,
+      ) {
+        async.eachSeries(data, function(line, callback) {
+          //console.log(line, contador_apoyo_trabajo_escuela);
+          array_cantidadEmbarazos15a19.push(line);
+          contador_cantidadEmbarazos15a19 = contador_cantidadEmbarazos15a19 + 1;
+          
+          //Insercion en el estado
+          if(contador_cantidadEmbarazos15a19 === 1){
+            let dataOrdenada = array_cantidadEmbarazos15a19[0][2]+","+array_cantidadEmbarazos15a19[0][3]+
+                                ","+array_cantidadEmbarazos15a19[0][4]+","+array_cantidadEmbarazos15a19[0][5]+","+array_cantidadEmbarazos15a19[0][6]+
+                                ","+array_cantidadEmbarazos15a19[0][7]+","+array_cantidadEmbarazos15a19[0][8]
+
+            QuintanaRooController.insertarEmbarazos15a19(dataOrdenada)
+        
+          }
+          if(contador_cantidadEmbarazosMenores15 === 12){
+            MunicipioController.insertarEmbarazos15a19(array_cantidadEmbarazos15a19);
+          }
+       
+
+          //console.log(line, contador_cantidadEmbarazosMenores15);
+          callback();
+        });
+      });
+
     fs.createReadStream(trabajoestudio).pipe(scanner_trabajoestudio);
     fs.createReadStream(cantidadestudiantes).pipe(
       scanner_cantidadesestudiantes,
     );
     fs.createReadStream(cantidadEmbarazosMenores15).pipe(scanner_embarazos_menores15)
-
+    fs.createReadStream(cantidadEmbarazos15a19).pipe(scanner_embarazos_15a19)
     /* LECTURA JSON */
     let tasaAbsorcion =
       datosBachilleres['primer trimestre'][0]['Línea base'] +

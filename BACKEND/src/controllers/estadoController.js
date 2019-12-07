@@ -15,5 +15,13 @@ module.exports = {
               id: 1
           }
       })
+  },insertarEmbarazos15a19(datos){
+    quintanaroo.update({
+        embarazos_15a19: datos
+      },{
+          where: {
+              id: 1
+          }
+      })
   }
 };
