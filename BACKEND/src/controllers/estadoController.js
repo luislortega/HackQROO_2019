@@ -33,7 +33,8 @@ module.exports = {
       })
   },insertarEmbarazos25a29(datos){
     quintanaroo.update({
-        embarazos_25a29: datos
+        embarazos_25a29: datos,
+        anexados_menores20: '10959,11800,22759'
       },{
           where: {
               id: 1

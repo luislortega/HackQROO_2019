@@ -151,7 +151,6 @@ estatal:
 1) promedio porcentaje de confianza en la familia
 
 
-
 VIVIENDA:
 1) Consumo electrico por municipio 
 

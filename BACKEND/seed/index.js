@@ -24,6 +24,7 @@ sequelize.sync({ force: true }).then(async function() {
     let array_cantidadEmbarazos15a19 = new Array();
     let array_cantidadEmbarazos20a24 = new Array();
     let array_cantidadEmbarazos25a29 = new Array();
+
     //Contadores
     let contador_apoyo_trabajo_escuela = 0;
     let contador_cantidad_estudiantes = 0;
@@ -185,7 +186,9 @@ sequelize.sync({ force: true }).then(async function() {
           callback();
         });
       });
-    
+
+
+
     fs.createReadStream(trabajoestudio).pipe(scanner_trabajoestudio);
     fs.createReadStream(cantidadestudiantes).pipe(
       scanner_cantidadesestudiantes,
