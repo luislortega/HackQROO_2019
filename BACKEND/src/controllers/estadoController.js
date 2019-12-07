@@ -40,5 +40,39 @@ module.exports = {
               id: 1
           }
       })
+  }, actualizarConfianzaFamilia(dato){
+      quintanaroo.update({
+        confianzaFamilia: dato
+      },{
+          where:{
+              id: 1
+          }
+      })
+  },actualizarConfianzaHospitales(dato){
+      quintanaroo.update({
+        confianzaSegurosPublicos: dato
+      },{
+          where:{
+              id: 1
+          }
+      })
+
+  }, actualizarConfianzaGobiernoMunicipal(dato){
+    quintanaroo.update({
+        confianzaPoliticos: dato
+      },{
+          where:{
+              id: 1
+          }
+      })
+
+  }, actualizarConfianzaPolicia(dato){
+    quintanaroo.update({
+        confianzaPolicia: dato
+      },{
+          where:{
+              id: 1
+          }
+      })
   }
 };

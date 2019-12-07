@@ -10,6 +10,8 @@ const datosBachilleres = require('../src/DATA/educacion/datosbachillerestrimestr
 const MunicipioController = require('../src/controllers/municipioController');
 const QuintanaRooController = require('../src/controllers/estadoController');
 
+
+
 //Init the seed with command node seed
 sequelize.sync({ force: true }).then(async function() {
   await Promise.all(
@@ -17,7 +19,7 @@ sequelize.sync({ force: true }).then(async function() {
       municipio.create(muni);
     }),
   ).then(function(one) {
-    /* LIMPIEZA DE DATOS */
+    /* Array de datos  */
     let array_apoyo_trabajo_escuela = new Array();
     let array_cantidad_estudiantes = new Array();
     let array_cantidadEmbarazosMenores15 = new Array();
@@ -34,6 +36,7 @@ sequelize.sync({ force: true }).then(async function() {
     let contador_cantidadEmbarazos20a24 = 0;
     let contador_cantidadEmbarazos25a29 = 0;
     let contador_consumoElectrico = 0;
+    let contador_confianza = 0;
 
     let fs = require('fs');
     let parse = require('csv-parse');
@@ -46,8 +49,8 @@ sequelize.sync({ force: true }).then(async function() {
     let cantidadEmbarazos15a19 = 'src/DATA/salud/embarazo15a19.csv';
     let cantidadEmbarazos20a24 = 'src/DATA/salud/embarazo20a24.csv';
     let cantidadEmbarazos25a29 = 'src/DATA/salud/embarazo25a29.csv';
-
     let consumoElectrico = 'src/DATA/electricidad/consumoelectrico.csv';
+    let confianza = 'src/DATA/confianzaquintanaroo.csv';
 
     let scanner_trabajoestudio = parse({ delimiter: ',' }, function(err, data) {
       async.eachSeries(data, function(line, callback) {
@@ -209,6 +212,34 @@ sequelize.sync({ force: true }).then(async function() {
         });
       });
 
+    let scanner_confianza = parse({ delimiter: ',' }, function(
+        err,
+        data,
+      ) {
+        async.eachSeries(data, function(line, callback) {
+          contador_confianza += 1;
+          switch (contador_confianza) {
+            case 2:
+                //familia
+                QuintanaRooController.actualizarConfianzaFamilia(line[1]+","+line[2])
+                break;
+            case 9:
+                //hospitales
+                QuintanaRooController.actualizarConfianzaHospitales(line[1]+","+line[2])
+                break;
+            case 19:
+                //gobierno municipa
+                QuintanaRooController.actualizarConfianzaGobiernoMunicipal(line[1]+","+line[2])
+                break;
+            case 20:
+                //policias
+                QuintanaRooController.actualizarConfianzaPolicia(line[1]+","+line[2])
+                break;
+          }
+          callback();
+        });
+      });
+
 
     fs.createReadStream(trabajoestudio).pipe(scanner_trabajoestudio);
     fs.createReadStream(cantidadestudiantes).pipe(
@@ -219,6 +250,7 @@ sequelize.sync({ force: true }).then(async function() {
     fs.createReadStream(cantidadEmbarazos20a24).pipe(scanner_embarazos_20a24)
     fs.createReadStream(cantidadEmbarazos25a29).pipe(scanner_embarazos_25a29)
     fs.createReadStream(consumoElectrico).pipe(scanner_consumo_electrico);
+    fs.createReadStream(confianza).pipe(scanner_confianza)
 
     /* LECTURA JSON */
     let tasaAbsorcion =

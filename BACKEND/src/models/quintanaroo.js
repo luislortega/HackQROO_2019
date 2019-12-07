@@ -13,7 +13,11 @@ module.exports = (sequelize, DataTypes) => {
     embarazos_15a19: DataTypes.STRING,
     embarazos_20a24: DataTypes.STRING,
     embarazos_25a29: DataTypes.STRING,
-    anexados_menores20: DataTypes.STRING
+    anexados_menores20: DataTypes.STRING,
+    confianzaPolicia: DataTypes.STRING,
+    confianzaFamilia: DataTypes.STRING,
+    confianzaPoliticos: DataTypes.STRING,
+    confianzaSegurosPublicos: DataTypes.STRING
   });
   return quintanaroo;
 };

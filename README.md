@@ -122,7 +122,7 @@ estatal:
 
 SALUD:
 municipio:
-1) Seguridad en los seguros publicos
+1) Seguridad en los seguros publicos [X]
 2) Embarazos en menor de 20 años. [X]
 estatal:
 1)  Apoyo a adolecentes en drogas y alcohol [X]
@@ -138,43 +138,37 @@ estatal:
 
 SEGURIDAD:
 municipio:
-1) porcentaje de confianza en la policia
+1) Asaltos ocurridos en municipios
 estatal:
-1) promedio porcentaje de confianza en la policia
+1) promedio porcentaje de confianza en la policia [X]
 
 
 
 FAMILIA:
-municipio:
-1) porcentaje de confianza en la familia
 estatal:
-1) promedio porcentaje de confianza en la familia
+1) promedio porcentaje de confianza en la familia [X]
 
 
 VIVIENDA:
-1) Consumo electrico por municipio 
+1) Consumo electrico por municipio [X]
 
 
 
 ESPARCIMIENTO:
-1) Consumo electrico por municipio
-
+1) Consumo electrico por municipio [X]
 
 
 ARTE Y CULTURA
 municipio:
-1) Cantidad de eventos culturales disponibles
-2) Numero de bibliotecas y museos
+1) Numero de bibliotecas y museos
 estatal:
 1) comparacion de todos.
 
 
 
 POLITICA:
-municipal:
-1) porcentaje de confianza en los politicos
 estatal: 
-2) promedio del porcentaje de confianza en los politicos
+1) promedio del porcentaje de confianza en los politicos [X]
 
 
 
@@ -184,4 +178,7 @@ ASOCIACION:
 
 
 MEDIO AMBIENTE: 
-1) Consumo electrico por municipio 
+1) Consumo electrico por municipio [X]
+
+
+**API KEY:** e6d570c40e5842299c77d9c3db48087f
