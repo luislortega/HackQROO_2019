@@ -6,8 +6,9 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       unique: true,
     },
-    porcentaje_aprobacion_esolar: DataTypes.STRING,
-    porcentaje_acaban_prepa: DataTypes.STRING,
+    porcentaje_absorcion: DataTypes.STRING,
+    porcentaje_aprobacion: DataTypes.STRING,
+    posicion_actividad_economica_terciaria: DataTypes.INTEGER,
   });
   return quintanaroo;
 };

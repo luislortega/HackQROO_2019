@@ -5,9 +5,10 @@ const { sequelize, municipio } = require('../src/models');
 const Promise = require('bluebird');
 //Default JSON
 const municipios = require('./municipios.json');
-const datosBachilleres = require('../src/DATA/educacion/datosbachillerestrimestral.json')
+const datosBachilleres = require('../src/DATA/educacion/datosbachillerestrimestral.json');
 /* CONTROLADOR */
 const MunicipioController = require('../src/controllers/municipioController');
+const QuintanaRooController = require('../src/controllers/estadoController');
 
 //Init the seed with command node seed
 sequelize.sync({ force: true }).then(async function() {
@@ -54,7 +55,7 @@ sequelize.sync({ force: true }).then(async function() {
         array_cantidad_estudiantes.push(line);
         contador_cantidad_estudiantes = contador_cantidad_estudiantes + 1;
         if (contador_cantidad_estudiantes === 24) {
-            MunicipioController.aumentarAlumnos(array_cantidad_estudiantes)
+          MunicipioController.aumentarAlumnos(array_cantidad_estudiantes);
         }
         callback();
       });
@@ -65,9 +66,21 @@ sequelize.sync({ force: true }).then(async function() {
       scanner_cantidadesestudiantes,
     );
     /* LECTURA JSON */
-    console.log(datosBachilleres['primer trimestre'][0])
-    console.log(datosBachilleres['primer trimestre'][1])
-    console.log(datosBachilleres['primer trimestre'][8])
-    console.log(datosBachilleres['primer trimestre'][9])
+    let tasaAbsorcion =
+      datosBachilleres['primer trimestre'][0]['Línea base'] +
+      ',' +
+      datosBachilleres['primer trimestre'][0][
+        'Sentido del indicador (catálogo)'
+      ];
+    let porcentajeAprobacion =
+      datosBachilleres['primer trimestre'][1]['Línea base'] +
+      ',' +
+      datosBachilleres['primer trimestre'][1][
+        'Sentido del indicador (catálogo)'
+      ];
+    QuintanaRooController.insertarPorcentajeAbsorcionAprobacion(
+      tasaAbsorcion,
+      porcentajeAprobacion,
+    );
   });
 });
