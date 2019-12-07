@@ -113,52 +113,51 @@ https://www.inegi.org.mx/programas/encig/2017/default.html#Tabulados
 
 EDUCACION: 
 municipio:
-x) Apoyo economico trabajo - escuela 
-x) Cantidad de estudiantes 
+1) Apoyo economico trabajo - escuela [X]
+2) Cantidad de estudiantes [X]
 estatal:
-x) Porcentaje de aprobacion escolar
-x) Porcentaje de estudiantes que acaban la preparatoria
+1) Porcentaje de aprobacion escolar [X]
+2) Porcentaje de secundaria entran a la prepa (absorcion) [X]
 
 
 SALUD:
 municipio:
 1) Seguridad en los seguros publicos
-2) Embarazos en menor de 20 años.
+2) Embarazos en menor de 20 años. [X]
 estatal:
-1)  Apoyo a adolecentes en drogas y alcohol
+1)  Apoyo a adolecentes en drogas y alcohol [X]
 
 
 ECONOMIA: 
 municipio:
-1) numero de estudiantes
+1) numero de estudiantes [X] CASO ESPECIAL: TULUM POR LA FALTA DE INFORMACION DE ESTUDIANTES.
 estatal: 
-1) datos inegi
+1) datos inegi  (POSICION EN ECONOMIA POR ACTIVIDADES ECONOMICAS TERCIARIAS) [X]
 
 
 
 SEGURIDAD:
 municipio:
-porcentaje de confianza en la policia
+1) porcentaje de confianza en la policia
 estatal:
-promedio porcentaje de confianza en la policia
+1) promedio porcentaje de confianza en la policia
 
 
 
 FAMILIA:
 municipio:
-porcentaje de confianza en la familia
+1) porcentaje de confianza en la familia
 estatal:
-promedio porcentaje de confianza en la familia
-
+1) promedio porcentaje de confianza en la familia
 
 
 VIVIENDA:
-Consumo electrico por municipio 
+1) Consumo electrico por municipio 
 
 
 
 ESPARCIMIENTO:
-Consumo electrico por municipio
+1) Consumo electrico por municipio
 
 
 
@@ -185,4 +184,4 @@ ASOCIACION:
 
 
 MEDIO AMBIENTE: 
-Consumo electrico por municipio 
+1) Consumo electrico por municipio 
