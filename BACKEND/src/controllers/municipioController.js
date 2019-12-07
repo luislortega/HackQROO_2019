@@ -644,5 +644,93 @@ module.exports = {
         }
       })
     })
-  },
+  },insertarConsumoElectricoTotal(datos){
+    municipio.update({
+      consumo_electrico_total: datos[0]
+    }, {
+      where:{
+        nombre: 'Benito Juarez'
+      }
+    })
+
+    municipio.update({
+      consumo_electrico_total: datos[1]
+    }, {
+      where:{
+        nombre: 'Bacalar'
+      }
+    })
+
+    municipio.update({
+      consumo_electrico_total: datos[2]
+    }, {
+      where:{
+        nombre: 'Solidaridad'
+      }
+    })
+
+    municipio.update({
+      consumo_electrico_total: datos[3]
+    }, {
+      where:{
+        nombre: 'Puerto Morelos'
+      }
+    })
+
+    municipio.update({
+      consumo_electrico_total: datos[4]
+    }, {
+      where:{
+        nombre: 'Othon P. Blanco'
+      }
+    })
+
+    municipio.update({
+      consumo_electrico_total: datos[5]
+    }, {
+      where:{
+        nombre: 'Lazaro Cardenas'
+      }
+    })
+
+    municipio.update({
+      consumo_electrico_total: datos[6]
+    }, {
+      where:{
+        nombre: 'Cozumel'
+      }
+    })
+
+    municipio.update({
+      consumo_electrico_total: datos[7]
+    }, {
+      where:{
+        nombre: 'Felipe Carrillo Puerto'
+      }
+    })
+
+    municipio.update({
+      consumo_electrico_total: datos[8]
+    }, {
+      where:{
+        nombre: 'Isla Mujeres'
+      }
+    })
+
+    municipio.update({
+      consumo_electrico_total: datos[9]
+    }, {
+      where:{
+        nombre: 'Tulum'
+      }
+    })
+
+    municipio.update({
+      consumo_electrico_total: datos[10]
+    }, {
+      where:{
+        nombre: 'Jose Maria Morelos'
+      }
+    })
+  }
 };

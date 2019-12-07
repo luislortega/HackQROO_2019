@@ -14,7 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     embarazos_menores_15: DataTypes.STRING,
     embarazos_15a19: DataTypes.STRING,
     embarazos_20a24: DataTypes.STRING,
-    embarazos_25a29: DataTypes.STRING
+    embarazos_25a29: DataTypes.STRING,
+    consumo_electrico_total: DataTypes.BIGINT
   });
   return municipio;
 };

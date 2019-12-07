@@ -24,6 +24,7 @@ sequelize.sync({ force: true }).then(async function() {
     let array_cantidadEmbarazos15a19 = new Array();
     let array_cantidadEmbarazos20a24 = new Array();
     let array_cantidadEmbarazos25a29 = new Array();
+    let array_cantidadConsumoElectrico = new Array();
 
     //Contadores
     let contador_apoyo_trabajo_escuela = 0;
@@ -32,6 +33,7 @@ sequelize.sync({ force: true }).then(async function() {
     let contador_cantidadEmbarazos15a19 = 0;
     let contador_cantidadEmbarazos20a24 = 0;
     let contador_cantidadEmbarazos25a29 = 0;
+    let contador_consumoElectrico = 0;
 
     let fs = require('fs');
     let parse = require('csv-parse');
@@ -44,6 +46,8 @@ sequelize.sync({ force: true }).then(async function() {
     let cantidadEmbarazos15a19 = 'src/DATA/salud/embarazo15a19.csv';
     let cantidadEmbarazos20a24 = 'src/DATA/salud/embarazo20a24.csv';
     let cantidadEmbarazos25a29 = 'src/DATA/salud/embarazo25a29.csv';
+
+    let consumoElectrico = 'src/DATA/electricidad/consumoelectrico.csv';
 
     let scanner_trabajoestudio = parse({ delimiter: ',' }, function(err, data) {
       async.eachSeries(data, function(line, callback) {
@@ -187,6 +191,23 @@ sequelize.sync({ force: true }).then(async function() {
         });
       });
 
+    let scanner_consumo_electrico = parse({ delimiter: ',' }, function(
+        err,
+        data,
+      ) {
+        async.eachSeries(data, function(line, callback) {
+          if(line[0] === 'Totales =>'){
+            let consumo_total = parseInt(line[6].replace(',', '').replace(',', '').replace(',', '')) + parseInt(line[7].replace(',', '').replace(',', '').replace(',', ''))+ parseInt(line[8].replace(',', '').replace(',', '').replace(',', ''))+parseInt(line[9].replace(',', '').replace(',', '').replace(',', ''))+parseInt(line[10].replace(',', '').replace(',', '').replace(',', ''))+
+                                parseInt(line[11].replace(',', '').replace(',', '').replace(',', '')) + parseInt(line[12].replace(',', '').replace(',', '').replace(',', ''))+ parseInt(line[13].replace(',', '').replace(',', '').replace(',', ''))+parseInt(line[14].replace(',', '').replace(',', '').replace(',', ''))+parseInt(line[15].replace(',', '').replace(',', '').replace(',', ''))+parseInt(line[16].replace(',', '').replace(',', '').replace(',', ''))
+            array_cantidadConsumoElectrico.push(consumo_total)
+            }
+            contador_consumoElectrico += 1;
+            if(contador_consumoElectrico === 253){
+                MunicipioController.insertarConsumoElectricoTotal(array_cantidadConsumoElectrico)
+            }
+          callback();
+        });
+      });
 
 
     fs.createReadStream(trabajoestudio).pipe(scanner_trabajoestudio);
@@ -197,6 +218,8 @@ sequelize.sync({ force: true }).then(async function() {
     fs.createReadStream(cantidadEmbarazos15a19).pipe(scanner_embarazos_15a19)
     fs.createReadStream(cantidadEmbarazos20a24).pipe(scanner_embarazos_20a24)
     fs.createReadStream(cantidadEmbarazos25a29).pipe(scanner_embarazos_25a29)
+    fs.createReadStream(consumoElectrico).pipe(scanner_consumo_electrico);
+
     /* LECTURA JSON */
     let tasaAbsorcion =
       datosBachilleres['primer trimestre'][0]['Línea base'] +
