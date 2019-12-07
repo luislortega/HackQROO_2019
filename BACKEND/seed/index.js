@@ -22,11 +22,13 @@ sequelize.sync({ force: true }).then(async function() {
     let array_cantidad_estudiantes = new Array();
     let array_cantidadEmbarazosMenores15 = new Array();
     let array_cantidadEmbarazos15a19 = new Array();
+    let array_cantidadEmbarazos20a24 = new Array();
     //Contadores
     let contador_apoyo_trabajo_escuela = 0;
     let contador_cantidad_estudiantes = 0;
     let contador_cantidadEmbarazosMenores15 = 0;
     let contador_cantidadEmbarazos15a19 = 0;
+    let contador_cantidadEmbarazos20a24 = 0;
 
     let fs = require('fs');
     let parse = require('csv-parse');
@@ -37,6 +39,7 @@ sequelize.sync({ force: true }).then(async function() {
     let cantidadestudiantes = 'src/DATA/educacion/cantidadestudiantescs.csv';
     let cantidadEmbarazosMenores15 = 'src/DATA/salud/embarazoMenor15.csv';
     let cantidadEmbarazos15a19 = 'src/DATA/salud/embarazo15a19.csv';
+    let cantidadEmbarazos20a24 = 'src/DATA/salud/embarazo20a24.csv';
 
     let scanner_trabajoestudio = parse({ delimiter: ',' }, function(err, data) {
       async.eachSeries(data, function(line, callback) {
@@ -121,12 +124,42 @@ sequelize.sync({ force: true }).then(async function() {
         });
       });
 
+    let scanner_embarazos_20a24 =  parse({ delimiter: ',' }, function(
+        err,
+        data,
+      ) {
+        async.eachSeries(data, function(line, callback) {
+          //console.log(line, contador_apoyo_trabajo_escuela);
+          array_cantidadEmbarazos20a24.push(line);
+          contador_cantidadEmbarazos20a24 = contador_cantidadEmbarazos20a24 + 1;
+          
+          //Insercion en el estado
+          if(contador_cantidadEmbarazos20a24 === 1){
+            let dataOrdenada = array_cantidadEmbarazos20a24[0][2]+","+array_cantidadEmbarazos20a24[0][3]+
+                                ","+array_cantidadEmbarazos20a24[0][4]+","+array_cantidadEmbarazos20a24[0][5]+","+array_cantidadEmbarazos20a24[0][6]+
+                                ","+array_cantidadEmbarazos20a24[0][7]+","+array_cantidadEmbarazos20a24[0][8]
+
+            QuintanaRooController.insertarEmbarazos20a24(dataOrdenada)
+        
+          }
+          
+          if(contador_cantidadEmbarazos20a24 === 12){
+            MunicipioController.insertarEmbarazos20a24(array_cantidadEmbarazos20a24);
+          }
+       
+
+          //console.log(line, contador_cantidadEmbarazosMenores15);
+          callback();
+        });
+      });
+
     fs.createReadStream(trabajoestudio).pipe(scanner_trabajoestudio);
     fs.createReadStream(cantidadestudiantes).pipe(
       scanner_cantidadesestudiantes,
     );
     fs.createReadStream(cantidadEmbarazosMenores15).pipe(scanner_embarazos_menores15)
     fs.createReadStream(cantidadEmbarazos15a19).pipe(scanner_embarazos_15a19)
+    fs.createReadStream(cantidadEmbarazos20a24).pipe(scanner_embarazos_20a24)
     /* LECTURA JSON */
     let tasaAbsorcion =
       datosBachilleres['primer trimestre'][0]['Línea base'] +

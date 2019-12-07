@@ -3,6 +3,7 @@ let array_informacion = [0, 0, 0, 0];
 let array_informacion_alumnos = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 let array_informacion_embarazos_menores15 = new Array();
 let array_informacion_embarazos_15a19 = new Array();
+let array_informacion_embarazos_20a24 = new Array(); 
 
 function asyncFunction(item, cb) {
   setTimeout(() => {
@@ -78,6 +79,16 @@ function asyncFunction4(item, cb) {
     let data_limpia = item[2] + "," + item[3]+ "," + item[4]+ "," + item[5]+ "," + item[6]+ "," + item[7]+ "," + item[8];
     if(item[1] !== 'Quintana Roo'){
       array_informacion_embarazos_15a19.push(data_limpia);
+    }
+    cb();
+  }, 100);
+}
+
+function asyncFunction5(item, cb) {
+  setTimeout(() => {
+    let data_limpia = item[2] + "," + item[3]+ "," + item[4]+ "," + item[5]+ "," + item[6]+ "," + item[7]+ "," + item[8];
+    if(item[1] !== 'Quintana Roo'){
+      array_informacion_embarazos_20a24.push(data_limpia);
     }
     cb();
   }, 100);
@@ -425,6 +436,101 @@ module.exports = {
   
       municipio.update({
         embarazos_15a19: array_informacion_embarazos_15a19[10]
+      },{
+        where:{
+          nombre: 'Puerto Morelos'
+        }
+      })
+    })
+  },insertarEmbarazos20a24(arrayDatos){
+    let requests = arrayDatos.map(item => {
+      return new Promise(resolve => {
+        asyncFunction5(item, resolve);
+      });
+    });
+    Promise.all(requests).then(() => {
+      municipio.update({
+        embarazos_20a24: array_informacion_embarazos_20a24[0]
+      },{
+        where:{
+          nombre: 'Cozumel'
+        }
+      })
+
+      municipio.update({
+        embarazos_20a24: array_informacion_embarazos_20a24[1]
+      },{
+        where:{
+          nombre: 'Felipe Carrillo Puerto'
+        }
+      })
+
+      municipio.update({
+        embarazos_20a24: array_informacion_embarazos_20a24[2]
+      },{
+        where:{
+          nombre: 'Isla Mujeres'
+        }
+      })
+
+      municipio.update({
+        embarazos_20a24: array_informacion_embarazos_20a24[3]
+      },{
+        where:{
+          nombre: 'Othon P. Blanco'
+        }
+      })
+  
+      municipio.update({
+        embarazos_20a24: array_informacion_embarazos_20a24[4]
+      },{
+        where:{
+          nombre: 'Benito Juarez'
+        }
+      })
+  
+      municipio.update({
+        embarazos_20a24: array_informacion_embarazos_20a24[5]
+      },{
+        where:{
+          nombre: 'Jose Maria Morelos'
+        }
+      })
+  
+      municipio.update({
+        embarazos_20a24: array_informacion_embarazos_20a24[6]
+      },{
+        where:{
+          nombre: 'Lazaro Cardenas'
+        }
+      })
+  
+      municipio.update({
+        embarazos_20a24: array_informacion_embarazos_20a24[7]
+      },{
+        where:{
+          nombre: 'Solidaridad'
+        }
+      })
+  
+      municipio.update({
+        embarazos_20a24: array_informacion_embarazos_20a24[8]
+      },{
+        where:{
+          nombre: 'Tulum'
+        }
+      })
+  
+      municipio.update({
+        embarazos_20a24: array_informacion_embarazos_20a24[9]
+      },{
+        where:{
+          nombre: 'Bacalar'
+        }
+      })
+  
+      municipio.update({
+        embarazos_20a24: array_informacion_embarazos_20a24[10]
       },{
         where:{
           nombre: 'Puerto Morelos'
