@@ -1,20 +1,3 @@
-<!--
-=========================================================
- Paper Dashboard 2 - v2.0.0
-=========================================================
-
- Product Page: https://www.creative-tim.com/product/paper-dashboard-2
- Copyright 2019 Creative Tim (https://www.creative-tim.com)
- Licensed under MIT (https://github.com/creativetimofficial/paper-dashboard/blob/master/LICENSE)
-
- Coded by Creative Tim
-
-=========================================================
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,6 +18,9 @@ The above copyright notice and this permission notice shall be included in all c
   <link href="panel/css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="panel/demo/demo.css" rel="stylesheet" />
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body class="">
@@ -132,139 +118,153 @@ The above copyright notice and this permission notice shall be included in all c
 
 
 </div> -->
-      <div class="content">
+     <div class="content">
+        <div class="row">
+          <div class="col-sm-6">
+            <a href="#addProductModal" class="btn btn-success" data-toggle="modal"><i class="nc-icon nc-simple-add"></i> <span>Agregar Nuevo Programa</span></a>
+          </div>
+          <div class="col-md-6">
+            <div id="custom-search-input">
+                            <div class="input-group col-md-12">
+                                <input type="text" class="form-control" placeholder="Buscar"  id="q" onkeyup="load(1);" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-info" type="button" onclick="load(1);">
+                                        <span class="fa fa-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+                </div>
+          </div>
+        </div>
         <div class="row">
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title"> Simple Table</h4>
+                <h4 class="card-title"> Programas</h4>
               </div>
               <div class="card-body">
-                <div class="table-responsive">
-                  <table class="table">
-                    <thead class=" text-primary">
-                      <th>
-                        Name
-                      </th>
-                      <th>
-                        Country
-                      </th>
-                      <th>
-                        City
-                      </th>
-                      <th class="text-right">
-                        Salary
-                      </th>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          Dakota Rice
-                        </td>
-                        <td>
-                          Niger
-                        </td>
-                        <td>
-                          Oud-Turnhout
-                        </td>
-                        <td class="text-right">
-                          $36,738
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Minerva Hooper
-                        </td>
-                        <td>
-                          Curaçao
-                        </td>
-                        <td>
-                          Sinaai-Waas
-                        </td>
-                        <td class="text-right">
-                          $23,789
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Sage Rodriguez
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          Baileux
-                        </td>
-                        <td class="text-right">
-                          $56,142
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Philip Chaney
-                        </td>
-                        <td>
-                          Korea, South
-                        </td>
-                        <td>
-                          Overland Park
-                        </td>
-                        <td class="text-right">
-                          $38,735
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Doris Greene
-                        </td>
-                        <td>
-                          Malawi
-                        </td>
-                        <td>
-                          Feldkirchen in Kärnten
-                        </td>
-                        <td class="text-right">
-                          $63,542
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Mason Porter
-                        </td>
-                        <td>
-                          Chile
-                        </td>
-                        <td>
-                          Gloucester
-                        </td>
-                        <td class="text-right">
-                          $78,615
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Jon Porter
-                        </td>
-                        <td>
-                          Portugal
-                        </td>
-                        <td>
-                          Gloucester
-                        </td>
-                        <td class="text-right">
-                          $98,615
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+
+               <!-- asdasdaskdanskasndkasndkjas-->
+               <div class='clearfix'></div>
+                <hr>
+                <div id="loader"></div><!-- Carga de datos ajax aqui -->
+                <div id="resultados"></div><!-- Carga de datos ajax aqui -->
+                <div class='outer_div'></div><!-- Carga de datos ajax aqui -->
+
               </div>
             </div>
           </div>
+        </div>
 
-         
+
+      </div>
+
+       <div id="addProductModal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form name="add_product" id="add_product">
+              <div class="modal-header">            
+                <h4 class="modal-title">Agregar Instituto</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+              <div class="modal-body">          
+               
+                <div class="form-group">
+                  <label>Nombre</label>
+                  <input type="text" name="name" id="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label>Descripcion</label>
+                  <input type="text" name="description" id="description" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label>Imagen</label>
+                  <input type="text" name="imagen" id="imagen" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label>Usuario</label>
+                  <input type="text" name="user" id="user" class="form-control" required>
+                </div> 
+
+                 <div class="form-group">
+                  <label>Contraseña</label>
+                  <input type="password" name="password" id="password" class="form-control" required>
+                </div>          
+              </div>
+              <div class="modal-footer">
+                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                <input type="submit" class="btn btn-success" value="Guardar">
+              </div>
+            </form>
+          </div>
         </div>
       </div>
+
+      <div id="deleteProductModal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form name="delete_product" id="delete_product">
+              <div class="modal-header">            
+                <h4 class="modal-title">Eliminar Instituto</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+              <div class="modal-body">          
+                <p>¿Seguro que quieres eliminar este registro?</p>
+                <p class="text-warning"><small>Esta acción no se puede deshacer y los datos almacenados con ellos seran eliminados.</small></p>
+                <input type="hidden" name="delete_id" id="delete_id">
+              </div>
+              <div class="modal-footer">
+                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                <input type="submit" class="btn btn-danger" value="Eliminar">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="editProductModal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form name="edit_product" id="edit_product">
+              <input type="hidden" name="edit_id" id="edit_id" >
+              <div class="modal-header">            
+                <h4 class="modal-title">Editar Instituto</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+              <div class="modal-body">          
+               
+                <div class="form-group">
+                  <label>Nombre</label>
+                  <input type="text" name="edit_name" id="edit_name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label>Descripcion</label>
+                  <input type="text" name="edit_description" id="edit_description" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label>Imagen</label>
+                  <input type="text" name="edit_imagen" id="edit_imagen" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label>Usuario</label>
+                  <input type="text" name="edit_user" id="edit_user" class="form-control" required>
+                </div> 
+
+                 <div class="form-group">
+                  <label>Contraseña</label>
+                  <input type="password" name="edit_password" id="edit_password" class="form-control" required>
+                </div>          
+              </div>
+              <div class="modal-footer">
+                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                <input type="submit" class="btn btn-success" value="Guardar">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
 
 
         <footer class="footer footer-black  footer-white ">
@@ -306,6 +306,7 @@ The above copyright notice and this permission notice shall be included in all c
       demo.initChartsPages();
     });
   </script>
+   <script src="panel/js/script_programas.js"></script>
 </body>
 
 </html>
