@@ -235,26 +235,31 @@
               <div class="modal-body">          
                
                 <div class="form-group">
-                  <label>Nombre</label>
-                  <input type="text" name="edit_name" id="edit_name" class="form-control" required>
+                  <label>Nombre del Programa</label>
+                  <input type="text" name="edit_nombre" id="edit_nombre" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label>Descripcion</label>
+                  <label>Descripción del Programa</label>
                   <input type="text" name="edit_description" id="edit_description" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label>Imagen</label>
-                  <input type="text" name="edit_imagen" id="edit_imagen" class="form-control" required>
+                  <label>Carpeta de Datos</label>
+                  <input type="text" name="edit_carpeta" id="edit_carpeta" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label>Usuario</label>
-                  <input type="text" name="edit_user" id="edit_user" class="form-control" required>
+                  <label>Json de Datos</label>
+                  <input type="text" name="edit_json" id="edit_json" class="form-control" required>
                 </div> 
 
                  <div class="form-group">
-                  <label>Contraseña</label>
-                  <input type="password" name="edit_password" id="edit_password" class="form-control" required>
-                </div>          
+                  <label>TAG Archivo Programa</label>
+                  <input type="text" name="edit_tag" id="edit_tag" class="form-control" required>
+                </div> 
+
+                <div id="cargar_datos_box"></div> 
+                <div id="cargar_datos_box2"></div> 
+
+
               </div>
               <div class="modal-footer">
                 <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">

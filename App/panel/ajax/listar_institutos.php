@@ -84,7 +84,7 @@ if($action == 'ajax'){
 							$price=$row['password_institucion'];						
 							$finales++;
 						?>	
-						<tr class="<?php echo $text_class;?>">
+						<tr class="">
 							<td class='text-center'><?php echo $prod_code;?></td>
 							<td ><?php echo $prod_name;?></td>
 							<td >
