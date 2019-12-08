@@ -148,6 +148,9 @@ transform:scale(1.45);
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#convocatorias">Convocatorias</a>
         </li>
+         <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#institutos">Institutos</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#indicadores">Indicadores</a>
         </li>
@@ -543,11 +546,46 @@ transform:scale(1.45);
 
     </section>
 
-    <hr class="m-0">
+
 
     <hr class="m-0">
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="convocatorias">
+      <div class="w-20">
+        <h2 class="mb-5">Convocatorias</h2>
+
+        <div class="card-group">
+  <div class="card">
+    <img class="card-img-top" src="https://pbs.twimg.com/profile_images/3549029586/3607341f60496b2a274b91dcc3934963_400x400.jpeg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="http://pm1.narvii.com/6661/59f36d6f2efec887568611a888d8b857ee988029_00.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://k06.kn3.net/6F5BBB1C5.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+      </div>
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="institutos">
       <div class="w-20">
         <h2 class="mb-5">Convocatorias</h2>
 
