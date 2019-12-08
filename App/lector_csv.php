@@ -224,8 +224,6 @@ if (isset($_POST["submit"])) {
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
 
@@ -322,6 +320,7 @@ if (isset($_POST["submit"])) {
 
                         let json_data = JSON.stringify(test)
                         console.log(json_data)
+                        //Enviar al servidor 
                     }
                 </script>
             </div>

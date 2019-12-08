@@ -1,8 +1,8 @@
-﻿nombre_de_variables,embarazadas totales,menores de 15,entre 16 y 20,entre 40 y 25,colonia buganbilias,colonia centro,elementoN,elementoN2
-Cozumel,!n,12,2,!n,3,32,!n,1
-Othon P. Blanco,120,21,2,3,!n,2,!n,1
-Benito Juarez,321,3,3,1,1,!n,!n,2
-Tulum,312,2,!n,1,1,!n,!n,3
-Jose Maria Morelos,3,1,2,1,!n,!n,3,5
-variableN,2,2,1,1,1,!n,2,5
-variableN2,3,4,1,1,1,!n,!n,11
+﻿nombre_de_variables,embarazadas totales,menores de 15,entre 16 y 20
+Cozumel,!n,12,2
+Othon P. Blanco,120,21,2
+Benito Juarez,321,3,3
+Tulum,312,2,!n
+Jose Maria Morelos,3,1,2
+variableN,2,2,1
+variableN2,3,4,1
