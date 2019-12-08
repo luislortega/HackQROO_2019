@@ -6,5 +6,5 @@ $sql_password = 'root';
 //$sql_password = 'practicas';
 $sql_database = 'seijuve';
 
-$db = mysqli_connect($sql_server, $sql_user, $sql_password, $sql_database);
+$db = mysqli_connect($sql_server, $sql_user, $sql_password, $sql_database,8889);
 ?>

@@ -30,15 +30,14 @@ if (isset($_POST["submit"])) {
             /*
             echo "Upload: " . $_FILES["file"]["name"] . "<br />";
             echo "Type: " . $_FILES["file"]["type"] . "<br />";
-            echo "Size: " . ($_FILES["file"]["size"] / 1024) . " Kb<br />";*/
-            echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br />";
+            echo "Size: " . ($_FILES["file"]["size"] / 1024) . " Kb<br />";
+            echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br />"; */
 
             if (file_exists("upload/" . $_FILES["file"]["name"])) {
 
-                $contador = rand(0,100000);
+                $contador = rand(0, 100000);
                 $nombre_sin_extencion = explode(".", $_FILES["file"]["name"]);
                 move_uploaded_file($_FILES["file"]["tmp_name"], "upload/" . $nombre_sin_extencion[0] . "-" . $contador . "." . $nombre_sin_extencion[1]);
-
             } else {
                 move_uploaded_file($_FILES["file"]["tmp_name"], "upload/" . $_FILES["file"]["name"]);
             }
@@ -68,8 +67,8 @@ if (isset($_POST["submit"])) {
         }
         /* 
         To Do:
-        - obtener el nombre del programa 
-        - ingresar el valor del ultimo archivo 
+        - obtener el nombre del programa y almacenarlo en una carpeta personalizada
+        - ingresar el valor del ultimo archivo subido a servidor
         */
     } else {
         echo "No file selected <br />";
@@ -262,21 +261,76 @@ if (isset($_POST["submit"])) {
             <div class="anyClass">
 
                 <?php
+                $maxVar = 0;
+                $maxElemen = 0;
+
                 if (isset($_GET["q"])) {
                     foreach ($array_variables as $key => $value) {
                         echo '<br>';
-                        echo '<p style="font-size:20px !important; margin: 0 !important;"> <input type="checkbox" name="vehicle" value="Bike">', $array_variables[$key], ' </p>';
-                        //echo "variable: ", j
+                        echo $key;
+                        if ($key > $maxVar) {
+                            $maxVar = $key;
+                        }
+                        echo '<p style="font-size:20px !important; margin: 0 !important;"> <input type="checkbox" name="' . $array_variables[$key] . '" id="variables" ">', $array_variables[$key], ' </p>';
                         foreach ($array_elementos as $key2 => $value) {
                             if ($array_data[$key + 1][$key2 + 1] !== '!n') {
-                                echo '<input type="checkbox" name="vehicle" value="Bike" style="margin-left: 1em;"> ', $array_elementos[$key2], ' <br>';
+                                if ($key2 > $maxElemen) {
+                                    $maxElemen = $key2;
+                                }
+                                echo '<input type="checkbox" name="' . $array_variables[$key] . '/' . $array_elementos[$key2] . '" id="elementos" style="margin-left: 1em;"> ', $array_elementos[$key2], ' <br>';
                             }
                         }
                     }
                 }
-
+                echo '<p id="maximos">' . ($maxVar + 1) . "-" . ($maxElemen + 1) . '</p>';
                 ?>
+                <button type="button" class="btn btn-primary" onclick="clickSubir()">Subir</button>
+
+                <script>
+                    var variables = document.querySelectorAll("[id='variables']");
+                    var elementos = document.querySelectorAll("[id='elementos']");
+
+                    function clickSubir() {
+                        let test = new Array(new Array(), new Array());
+
+                        variables.forEach(
+                            function(currentValue, currentIndex, listObj) {
+                                if (currentValue.checked === true) {
+                                    test[0].push(currentValue.name)
+
+                                    let array_elementos = new Array();
+
+                                    //buscar elementos
+                                    elementos.forEach(
+                                        function(currentValue2, currentIndex2, listObj2) {
+                                            let nombre_separado = currentValue2.name.split("/")
+                                            if (nombre_separado[0] === currentValue.name) {
+                                                array_elementos.push(nombre_separado[1])
+                                            }
+                                        },
+                                        'miEsteArg'
+                                    );
+
+
+                                    if (array_elementos.length) {
+                                        test[1].push(array_elementos);
+                                    }
+                                }
+                            },
+                            'miEsteArg'
+                        );
+
+                        let json_data = JSON.stringify(test)
+                        console.log(json_data)
+                    }
+                </script>
             </div>
+        </div>
+    </div>
+    <div id="popup2" class="overlay">
+        <div class="popup">
+            <h5>Archivo subido correctamente</h5>
+            <img src="https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/512/Tick_Mark-512.png" alt="" srcset="">
         </div>
     </div>
 

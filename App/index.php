@@ -35,6 +35,7 @@ if (isset($_POST['usuario'])) {
         header("Location: index.php");
         exit();
     }
+
   } else {
     $mensaje_error = "El usuario o contraseña son incorrectos.";
   }
