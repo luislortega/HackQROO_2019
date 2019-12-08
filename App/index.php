@@ -25,9 +25,9 @@ if (isset($_POST['usuario'])) {
           header("Location: admin.php");
           exit();
           break;
-        case 'institucion':
+        case 'instituto':
           mysqli_close($db);
-          header("Location: institucion.php");
+          header("Location: instituto.php");
           exit();
           break;
         default:

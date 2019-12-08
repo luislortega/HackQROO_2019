@@ -41,7 +41,6 @@ if($action == 'ajax'){
 	//loop through fetched data
 	
 
-
 		
 	
 	if ($numrows>0){
@@ -86,10 +85,14 @@ if($action == 'ajax'){
 							$prod_name=$row['descripcion_programa'];
 							$prod_ctry=$row['carpeta_datos_programa'];
 							$prod_qty=$row['json_datos_programa'];
-							$price=$row['id_institucion'];						
+							$tag = $row['tag_archivo_programa'];
+							$price=$row['id_institucion'];	
+
+							$query222 = mysqli_query($con,"SELECT nombre_institucion FROM  instituciones WHERE id_instituciones = ".$price);
+					
 							$finales++;
 						?>	
-						<tr class="<?php echo $text_class;?>">
+						<tr class="">
 							<td class='text-center'><?php echo $prod_code;?></td>
 							<td ><?php echo $prod_name;?></td>
 							<td >
@@ -104,7 +107,13 @@ if($action == 'ajax'){
 
 							</td>
 							<td class='text-center' >
-								<?php echo $price;?>
+								<?php 
+
+									while($row2 = mysqli_fetch_array($query222)){	
+									  echo $row2['nombre_institucion'];
+									}
+
+								 ?>
 								
 							</td>
 							
@@ -113,11 +122,12 @@ if($action == 'ajax'){
 								data-target="#editProductModal" 
 								class="btn btn-primary btn-sm"
 								data-toggle="modal" 
-								data-code='<?php echo $prod_code;?>' 
-								data-name="<?php echo $prod_name?>" 
-								data-category="<?php echo $prod_ctry?>" 
-								data-stock="<?php echo $prod_qty?>" 
-								data-price="<?php echo $price;?>" 
+								data-nombrep='<?php echo $prod_code;?>' 
+								data-descripcionp="<?php echo $prod_name?>" 
+								data-carpetadatosp="<?php echo $prod_ctry?>" 
+								data-datosprogramap="<?php echo $prod_qty?>" 
+								data-idinstitucionp="<?php echo $price;?>" 
+								data-tagp="<?php echo $tag;?>" 
 								data-id="<?php echo $product_id; ?>"
 							    title="Editar"
 							    role="button"
@@ -129,12 +139,13 @@ if($action == 'ajax'){
 							<a href="#deleteProductModal" 
 								class="btn btn-primary btn-sm"
 								data-toggle="modal" 
-								data-code='<?php echo $prod_code;?>' 
-								data-name="<?php echo $prod_name?>" 
-								data-category="<?php echo $prod_ctry?>" 
-								data-stock="<?php echo $prod_qty?>" 
-								data-price="<?php echo $price;?>" 
+								data-nombrep='<?php echo $prod_code;?>' 
+								data-descripcionp="<?php echo $prod_name?>" 
+								data-carpetadatosp="<?php echo $prod_ctry?>" 
+								data-datosprogramap="<?php echo $prod_qty?>" 
+								data-idinstitucionp="<?php echo $price;?>" 
 								data-id="<?php echo $product_id; ?>"
+								data-tagp="<?php echo $tag;?>" 
 							    title="Editar"
 							    role="button"
 							    aria-disabled="true">

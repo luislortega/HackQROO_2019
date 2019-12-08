@@ -1,3 +1,17 @@
+<?php
+session_start();
+if (isset( $_SESSION['id_usuario'] )) {
+    if($_SESSION['rango_usuario'] != "admin"){
+       header("Location: instituto.php");
+    }
+
+  
+} else {
+  header("Location: index.php");
+  exit();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -99,6 +113,7 @@
               <li class="nav-item btn-rotate dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="nc-icon nc-single-02"></i>
+                   <?php echo  $_SESSION['user_usuario']; ?>
                   <p>
                     <span class="d-lg-none d-md-block ">Opciones</span>
                   </p>
@@ -120,10 +135,16 @@
 </div> -->
      <div class="content">
         <div class="row">
+          <?php if($_SESSION['rango_usuario'] == "instituto"){ ?>
           <div class="col-sm-6">
             <a href="#addProductModal" class="btn btn-success" data-toggle="modal"><i class="nc-icon nc-simple-add"></i> <span>Agregar Nuevo Programa</span></a>
           </div>
-          <div class="col-md-6">
+          <?php }else{ ?>
+             <div class="col-sm-6 disabled" >
+            <a href="#addProductModal" class="btn btn-success disabled" data-toggle="modal"><i class="nc-icon nc-simple-add"></i> <span>Agregar Nuevo Programa</span></a>
+          </div>
+             <?php }?>
+          <div class="col-md-6 align-right">
             <div id="custom-search-input">
                             <div class="input-group col-md-12">
                                 <input type="text" class="form-control" placeholder="Buscar"  id="q" onkeyup="load(1);" />
@@ -170,26 +191,31 @@
               <div class="modal-body">          
                
                 <div class="form-group">
-                  <label>Nombre</label>
-                  <input type="text" name="name" id="name" class="form-control" required>
+                  <label>Nombre del Programa</label>
+                  <input type="text" name="nombre" id="nombre" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label>Descripcion</label>
+                  <label>Descripción del Programa</label>
                   <input type="text" name="description" id="description" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label>Imagen</label>
-                  <input type="text" name="imagen" id="imagen" class="form-control" required>
+                  <label>Carpeta de Datos</label>
+                  <input type="text" name="carpeta" id="carpeta" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label>Usuario</label>
-                  <input type="text" name="user" id="user" class="form-control" required>
+                  <label>Json de Datos</label>
+                  <input type="text" name="json" id="json" class="form-control" required>
                 </div> 
 
                  <div class="form-group">
-                  <label>Contraseña</label>
-                  <input type="password" name="password" id="password" class="form-control" required>
-                </div>          
+                  <label>TAG Archivo Programa</label>
+                  <input type="text" name="tag" id="tag" class="form-control" required>
+                </div> 
+
+                <div id="cargar_datos_box"></div> 
+                <div id="cargar_datos_box2"></div> 
+
+
               </div>
               <div class="modal-footer">
                 <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
@@ -235,26 +261,31 @@
               <div class="modal-body">          
                
                 <div class="form-group">
-                  <label>Nombre</label>
-                  <input type="text" name="edit_name" id="edit_name" class="form-control" required>
+                  <label>Nombre del Programa</label>
+                  <input type="text" name="edit_nombre" id="edit_nombre" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label>Descripcion</label>
+                  <label>Descripción del Programa</label>
                   <input type="text" name="edit_description" id="edit_description" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label>Imagen</label>
-                  <input type="text" name="edit_imagen" id="edit_imagen" class="form-control" required>
+                  <label>Carpeta de Datos</label>
+                  <input type="text" name="edit_carpeta" id="edit_carpeta" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label>Usuario</label>
-                  <input type="text" name="edit_user" id="edit_user" class="form-control" required>
+                  <label>Json de Datos</label>
+                  <input type="text" name="edit_json" id="edit_json" class="form-control" required>
                 </div> 
 
                  <div class="form-group">
-                  <label>Contraseña</label>
-                  <input type="password" name="edit_password" id="edit_password" class="form-control" required>
-                </div>          
+                  <label>TAG Archivo Programa</label>
+                  <input type="text" name="edit_tag" id="edit_tag" class="form-control" required>
+                </div> 
+
+                <div id="cargar_datos_boxx"></div> 
+                <div id="cargar_datos_box22"></div> 
+
+
               </div>
               <div class="modal-footer">
                 <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
