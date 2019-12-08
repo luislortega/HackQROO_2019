@@ -1,7 +1,8 @@
 <?php
-	if (empty($_POST['name'])){
+session_start();
+	if (empty($_POST['nombre'])){
 		$errors[] = "Ingresa el nombre del producto.";
-	} elseif (!empty($_POST['name'])){
+	} elseif (!empty($_POST['nombre'])){
 	define('DB_HOST','localhost');
 	define('DB_USER','root');
 	define('DB_PASS','');
@@ -15,18 +16,17 @@
         die("Conexión falló: ".mysqli_connect_errno()." : ". mysqli_connect_error());
     }
 	// escaping, additionally removing everything that could be (html/javascript-) code
-    $prod_code = mysqli_real_escape_string($con,(strip_tags($_POST["name"],ENT_QUOTES))); //name
-	$prod_name = mysqli_real_escape_string($con,(strip_tags($_POST["description"],ENT_QUOTES))); //desciption
-	$prod_ctry = mysqli_real_escape_string($con,(strip_tags($_POST["imagen"],ENT_QUOTES))); //imagen
-	$stock = mysqli_real_escape_string($con,(strip_tags($_POST["user"],ENT_QUOTES))); //user
-	$price = mysqli_real_escape_string($con,(strip_tags($_POST["password"],ENT_QUOTES))); //password
-	
+    $nombre = mysqli_real_escape_string($con,(strip_tags($_POST["nombre"],ENT_QUOTES))); //name
+	$description = mysqli_real_escape_string($con,(strip_tags($_POST["description"],ENT_QUOTES))); //desciption
+	$carpeta = mysqli_real_escape_string($con,(strip_tags($_POST["carpeta"],ENT_QUOTES))); //imagen
+	$json = mysqli_real_escape_string($con,(strip_tags($_POST["json"],ENT_QUOTES))); //user
+	$tag = mysqli_real_escape_string($con,(strip_tags($_POST["tag"],ENT_QUOTES))); //password 
+	$selectboxx = mysqli_real_escape_string($con,(strip_tags($_POST["selectboxx"],ENT_QUOTES)));
 
 	// REGISTER data into database
-    $sql = "INSERT INTO `instituciones`(`id_instituciones`, `nombre_institucion`, `descripcion_institucion`, `imagen_institucion`, `usuario_institucion`, `password_institucion`) VALUES (NULL,'$prod_code','$prod_name','$prod_ctry','$stock','$price')";
-    $query = mysqli_query($con,$sql);
 
-     $id_institucion = mysqli_insert_id($con);
+    $sql = "INSERT INTO `programas`(`id_programa`, `nombre_programa`, `descripcion_programa`, `carpeta_datos_programa`, `json_datos_programa`, `id_institucion`, `tag_archivo_programa`) VALUES (null,'$nombre','$description','$carpeta','$json',$selectboxx,'$tag')";
+    $query = mysqli_query($con,$sql);
     // if product has been added successfully
     if ($query) {
         $messages[] = "El producto ha sido guardado con éxito.";
@@ -38,17 +38,6 @@
 	{
 		$errors[] = "desconocido.";
 	}
-
-	$sql2 = "INSERT INTO `usuarios` (`id_usuario`, `user_usuario`, `password_usuario`, `rango_usuario`) VALUES ($id_institucion, '$stock', '$price', 'instituto');";
-    $query2 = mysqli_query($con,$sql2);
-    // if product has been added successfully
-    if ($query2) {
-        $messages[] = "El producto ha sido guardado con éxito.";
-    } else {
-        $errors[] = "Lo sentimos, el registro falló. Por favor, regrese y vuelva a intentarlo.";
-    }
-
-
 if (isset($errors)){
 			
 			?>

@@ -1,11 +1,7 @@
 <?php
 session_start();
 if (isset( $_SESSION['id_usuario'] )) {
-    if($_SESSION['rango_usuario'] != "admin"){
-       header("Location: instituto.php");
-    }
 
-  
 } else {
   header("Location: index.php");
   exit();
@@ -32,9 +28,9 @@ if (isset( $_SESSION['id_usuario'] )) {
   <link href="panel/css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="panel/demo/demo.css" rel="stylesheet" />
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 </head>
 
 <body class="">
@@ -45,12 +41,12 @@ if (isset( $_SESSION['id_usuario'] )) {
     -->
 
       <div class="logo">
-        <a href="admin.php" class="simple-text logo-mini">
+        <a href="instituto.php" class="simple-text logo-mini">
           <div class="logo-image-small">
             <img src="http://pprioritariosqroo.com/assets/img/logo.png">
           </div>
         </a>
-        <a href="admin.php" class="simple-text logo-normal">
+        <a href="instituto.php" class="simple-text logo-normal">
           SEIJUVE QROO
           <!-- <div class="logo-image-big">
             <img src="../assets/img/logo-big.png">
@@ -58,23 +54,17 @@ if (isset( $_SESSION['id_usuario'] )) {
         </a>
       </div>
 
-     <div class="sidebar-wrapper">
+      <div class="sidebar-wrapper">
         <ul class="nav">
           <li >
-            <a href="admin.php">
+            <a href="instituto.php">
                <i class="nc-icon nc-diamond"></i>
               <p>Panel de Control</p>
             </a>
           </li>
+          
           <li class="active ">
-            <a href="instituciones.php">
-             
-              <i class="nc-icon nc-bank"></i>
-              <p>Instituciones</p>
-            </a>
-          </li>
-          <li >
-            <a href="programas.php">
+            <a href="programasins.php">
               
               <i class="nc-icon nc-tile-56"></i>
               <p>Programas</p>
@@ -133,12 +123,18 @@ if (isset( $_SESSION['id_usuario'] )) {
 
 
 </div> -->
-      <div class="content">
+     <div class="content">
         <div class="row">
+          <?php if($_SESSION['rango_usuario'] == "instituto"){ ?>
           <div class="col-sm-6">
-            <a href="#addProductModal" class="btn btn-success" data-toggle="modal"><i class="nc-icon nc-simple-add"></i> <span>Agregar Nueva Institución</span></a>
+            <a href="#addProductModal" class="btn btn-success" data-toggle="modal"><i class="nc-icon nc-simple-add"></i> <span>Agregar Nuevo Programa</span></a>
           </div>
-          <div class="col-md-6">
+          <?php }else{ ?>
+             <div class="col-sm-6 disabled" >
+            <a href="#addProductModal" class="btn btn-success disabled" data-toggle="modal"><i class="nc-icon nc-simple-add"></i> <span>Agregar Nuevo Programa</span></a>
+          </div>
+             <?php }?>
+          <div class="col-md-6 align-right">
             <div id="custom-search-input">
                             <div class="input-group col-md-12">
                                 <input type="text" class="form-control" placeholder="Buscar"  id="q" onkeyup="load(1);" />
@@ -155,7 +151,7 @@ if (isset( $_SESSION['id_usuario'] )) {
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title"> Institutos</h4>
+                <h4 class="card-title"> Programas</h4>
               </div>
               <div class="card-body">
 
@@ -174,37 +170,40 @@ if (isset( $_SESSION['id_usuario'] )) {
 
       </div>
 
-      <div id="addProductModal" class="modal fade">
+       <div id="addProductModal" class="modal fade">
         <div class="modal-dialog">
           <div class="modal-content">
-            <form name="add_product" id="add_product">
+            <form name="add_product2" id="add_product2">
               <div class="modal-header">            
                 <h4 class="modal-title">Agregar Instituto</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
               <div class="modal-body">          
-               
+               <input type="hidden" name="selectboxx" id="selectboxx" value="<?php echo $_SESSION['id_usuario'] ?>">
                 <div class="form-group">
-                  <label>Nombre</label>
-                  <input type="text" name="name" id="name" class="form-control" required>
+                  <label>Nombre del Programa</label>
+                  <input type="text" name="nombre" id="nombre" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label>Descripcion</label>
+                  <label>Descripción del Programa</label>
                   <input type="text" name="description" id="description" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label>Imagen</label>
-                  <input type="text" name="imagen" id="imagen" class="form-control" required>
+                  <label>Carpeta de Datos</label>
+                  <input type="text" name="carpeta" id="carpeta" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label>Usuario</label>
-                  <input type="text" name="user" id="user" class="form-control" required>
+                  <label>Json de Datos</label>
+                  <input type="text" name="json" id="json" class="form-control" required>
                 </div> 
 
                  <div class="form-group">
-                  <label>Contraseña</label>
-                  <input type="password" name="password" id="password" class="form-control" required>
-                </div>          
+                  <label>TAG Archivo Programa</label>
+                  <input type="text" name="tag" id="tag" class="form-control" required>
+                </div> 
+
+              
+
               </div>
               <div class="modal-footer">
                 <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
@@ -250,26 +249,31 @@ if (isset( $_SESSION['id_usuario'] )) {
               <div class="modal-body">          
                
                 <div class="form-group">
-                  <label>Nombre</label>
-                  <input type="text" name="edit_name" id="edit_name" class="form-control" required>
+                  <label>Nombre del Programa</label>
+                  <input type="text" name="edit_nombre" id="edit_nombre" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label>Descripcion</label>
+                  <label>Descripción del Programa</label>
                   <input type="text" name="edit_description" id="edit_description" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label>Imagen</label>
-                  <input type="text" name="edit_imagen" id="edit_imagen" class="form-control" required>
+                  <label>Carpeta de Datos</label>
+                  <input type="text" name="edit_carpeta" id="edit_carpeta" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label>Usuario</label>
-                  <input type="text" name="edit_user" id="edit_user" class="form-control" required>
+                  <label>Json de Datos</label>
+                  <input type="text" name="edit_json" id="edit_json" class="form-control" required>
                 </div> 
 
                  <div class="form-group">
-                  <label>Contraseña</label>
-                  <input type="password" name="edit_password" id="edit_password" class="form-control" required>
-                </div>          
+                  <label>TAG Archivo Programa</label>
+                  <input type="text" name="edit_tag" id="edit_tag" class="form-control" required>
+                </div> 
+
+                <div id="cargar_datos_boxx"></div> 
+                <div id="cargar_datos_box22"></div> 
+
+
               </div>
               <div class="modal-footer">
                 <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
@@ -279,6 +283,8 @@ if (isset( $_SESSION['id_usuario'] )) {
           </div>
         </div>
       </div>
+
+
 
         <footer class="footer footer-black  footer-white ">
         <div class="container-fluid">
@@ -319,8 +325,7 @@ if (isset( $_SESSION['id_usuario'] )) {
       demo.initChartsPages();
     });
   </script>
-
-  <script src="panel/js/script_institutos.js"></script>
+   <script src="panel/js/script_programasin.js"></script>
 </body>
 
 </html>

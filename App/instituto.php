@@ -1,11 +1,11 @@
 <?php
 session_start();
 if (isset( $_SESSION['id_usuario'] )) {
-    if($_SESSION['rango_usuario'] != "admin"){
-       header("Location: instituto.php");
-    }
+	  if($_SESSION['rango_usuario'] != "instituto"){
+	  	 header("Location: admin.php");
+	  }
 
-  
+	
 } else {
   header("Location: index.php");
   exit();
@@ -40,13 +40,13 @@ if (isset( $_SESSION['id_usuario'] )) {
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
-      <div class="logo">
-        <a href="admin.php" class="simple-text logo-mini">
+     <div class="logo">
+        <a href="instituto.php" class="simple-text logo-mini">
           <div class="logo-image-small">
             <img src="http://pprioritariosqroo.com/assets/img/logo.png">
           </div>
         </a>
-        <a href="admin.php" class="simple-text logo-normal">
+        <a href="instituto.php" class="simple-text logo-normal">
           SEIJUVE QROO
           <!-- <div class="logo-image-big">
             <img src="../assets/img/logo-big.png">
@@ -56,21 +56,15 @@ if (isset( $_SESSION['id_usuario'] )) {
 
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="active " >
-            <a href="admin.php">
+          <li class="active ">
+            <a href="instituto.php">
                <i class="nc-icon nc-diamond"></i>
               <p>Panel de Control</p>
             </a>
           </li>
-          <li>
-            <a href="instituciones.php">
-             
-              <i class="nc-icon nc-bank"></i>
-              <p>Instituciones</p>
-            </a>
-          </li>
-          <li>
-            <a href="programas.php">
+          
+          <li >
+            <a href="programasins.php">
               
               <i class="nc-icon nc-tile-56"></i>
               <p>Programas</p>
@@ -108,6 +102,7 @@ if (isset( $_SESSION['id_usuario'] )) {
              
               <li class="nav-item btn-rotate dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
                   <i class="nc-icon nc-single-02"></i>
                    <?php echo  $_SESSION['user_usuario']; ?>
                   <p>
