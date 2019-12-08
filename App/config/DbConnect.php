@@ -1,7 +1,7 @@
 <?php
 $sql_server   = 'localhost';
 $sql_user     = 'root';
-$sql_password = '';
+$sql_password = 'root';
 //$sql_user     = 'practicas';
 //$sql_password = 'practicas';
 $sql_database = 'seijuve';

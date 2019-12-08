@@ -63,6 +63,13 @@
               <p>Programas</p>
             </a>
           </li>
+          <li>
+            <a href="lector_csv.php">
+              
+              <i class="nc-icon nc-tile-56"></i>
+              <p>Lector</p>
+            </a>
+          </li>
             
          
          
