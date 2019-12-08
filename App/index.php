@@ -1,3 +1,47 @@
+<?php
+if (isset($_POST['usuario'])) {
+  session_start();
+  require_once('config/DbConnect.php');
+
+  extract($_POST);
+
+
+  $registro_query = "SELECT * FROM `usuarios` WHERE `user_usuario`='{$usuario}' AND `password_usuario` = '{$password}'";
+
+  $result = mysqli_query($db, $registro_query);
+
+  if ($result) {
+    $row = mysqli_fetch_assoc($result);
+
+   
+      $_SESSION['id_usuario'] = $row['id_usuario'];
+      $_SESSION['user_usuario'] = $row['user_usuario'];
+      $_SESSION['password_usuario'] = $row['password_usuario'];
+      $_SESSION['rango_usuario'] = $row['rango_usuario'];
+
+      switch ($row['rango_usuario'] ) {
+        case 'admin':
+          mysqli_close($db);
+          header("Location: admin.php");
+          exit();
+          break;
+        case 'institucion':
+          mysqli_close($db);
+          header("Location: institucion.php");
+          exit();
+          break;
+        default:
+          mysqli_close($db);
+          header("Location: index.php");
+          exit();
+      }
+  } else {
+    $mensaje_error = "El usuario o contraseña son incorrectos.";
+  }
+
+  mysqli_close($db);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +64,8 @@
 
   <!-- Custom styles for this template -->
   <link href="css/resume.min.css" rel="stylesheet">
-
+  <link rel="apple-touch-icon" sizes="76x76" href="http://pprioritariosqroo.com/assets/img/logo.png">
+  <link rel="icon" type="image/png" href="http://pprioritariosqroo.com/assets/img/logo.png">
 <style rel="stylesheet" type="text/css">
 
 #cosito a {
@@ -48,6 +93,30 @@
   stroke-miterlimit:4;
   stroke-dasharray:none;
   stroke-opacity:1;
+}
+
+.contenedor_iconos {
+  -webkit-transition:all .9s ease; /* Safari y Chrome */
+-moz-transition:all .9s ease; /* Firefox */
+-o-transition:all .9s ease; /* IE 9 */
+-ms-transition:all .9s ease; /* Opera */
+width:100%;
+}
+.contenedor_iconos img.topes:hover {
+  -webkit-transform:scale(1.25);
+-moz-transform:scale(1.25);
+-ms-transform:scale(1.25);
+-o-transform:scale(1.25);
+transform:scale(1.25);
+cursor: pointer;
+}
+
+.contenedor_iconos img.topes:active {
+  -webkit-transform:scale(1.45);
+-moz-transform:scale(1.45);
+-ms-transform:scale(1.45);
+-o-transform:scale(1.45);
+transform:scale(1.45);
 }
 
 </style>
@@ -528,15 +597,15 @@
         <h2 class="mb-5">Login de Servidores Publicos</h2>
        
          
-         <form>
+         <form method="post" action="index.php">
           <div class="form-group">
             <label for="exampleInputEmail1">Usuario</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ej. Noobmaster69">
+            <input name="usuario" type="text" class="form-control" id="exampleInputEmail1" placeholder="Ej. Noobmaster69">
            
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ej. La Lonja de Manu">
+            <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Ej. La Lonja de Manu">
           </div>
         
           <button type="submit" href="#estado" class="btn btn-outline-primary js-scroll-trigger" role="button" aria-disabled="true">Comenzar</button>
@@ -548,7 +617,187 @@
   </div>    
 
 
-   <div class="portfolio-modal modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+   <div class="portfolio-modal modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Estadisticas e indicadores de Bacalar</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 text-center">
+               
+
+                <div class="contenedor_iconos" >
+                
+                  <img id="ieconomia" class="topes" src="../RECURSOS/icono1.png" />
+
+
+                </div>
+
+                 <h6>Economía</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+              <div class="contenedor_iconos" id="ieducacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono2.png" />
+
+
+                </div>
+
+                <h6>Educación</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="igobierno">
+                
+                  <img  class="topes" src="../RECURSOS/icono3.png" />
+
+
+                </div>
+
+                <h6>Gobierno</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="ipoblacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono4.png" />
+
+
+                </div>
+
+                <h6>Población</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="isalud">
+                
+                  <img  class="topes" src="../RECURSOS/icono5.png" />
+
+
+                </div>
+
+                <h6>Salud</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iseguridad">
+                
+                  <img  class="topes" src="../RECURSOS/icono6.png" />
+
+
+                </div>
+
+                <h6>Seguridad</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="itrabajo">
+                
+                  <img  class="topes" src="../RECURSOS/icono7.png" />
+
+
+                </div>
+
+                <h6>Trabajo</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="ivivienda">
+                
+                  <img  class="topes" src="../RECURSOS/icono8.png" />
+
+
+                </div>
+
+                <h6>Vivienda</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icalidad">
+                
+                  <img  class="topes" src="../RECURSOS/icono9.png" />
+
+
+                </div>
+
+                <h6>Calidad de Vida</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iecologia">
+                
+                  <img  class="topes" src="../RECURSOS/icono10.png" />
+
+
+                </div>
+
+                <h6>Ecología</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icultura">
+                
+                  <img  class="topes" src="../RECURSOS/icono11.png" />
+
+
+                </div>
+
+                <h6>Cultura</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iesparcimiento">
+                
+                  <img  class="topes" src="../RECURSOS/icono12.png" />
+
+
+                </div>
+
+                <h6>Esparcimiento</h6>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+    </div>
+  </div>   
+
+  <div class="portfolio-modal modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -576,86 +825,148 @@
             </div>
             <div class="row">
               <div class="col-md-2 text-center">
-                <img src="../RECURSOS/icono1.png"/>
+               
 
-                <h6>Economía</h6>
+                <div class="contenedor_iconos" id="ieconomia">
+                
+                  <img  class="topes" src="../RECURSOS/icono1.png" />
 
-              </div>
 
-              <div class="col-md-2 text-center">
-                <img src="../RECURSOS/icono2.png"/>
+                </div>
 
-                <h6>Economía</h6>
-
-              </div>
-
-              <div class="col-md-2 text-center">
-                <img src="../RECURSOS/icono3.png"/>
-
-                <h6>Economía</h6>
+                 <h6>Economía</h6>
 
               </div>
 
               <div class="col-md-2 text-center">
-                <img src="../RECURSOS/icono4.png"/>
+              <div class="contenedor_iconos" id="ieducacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono2.png" />
 
-                <h6>Economía</h6>
 
-              </div>
+                </div>
 
-              <div class="col-md-2 text-center">
-                <img src="../RECURSOS/icono5.png"/>
-
-                <h6>Economía</h6>
+                <h6>Educación</h6>
 
               </div>
 
               <div class="col-md-2 text-center">
-                <img src="../RECURSOS/icono6.png"/>
+                <div class="contenedor_iconos" id="igobierno">
+                
+                  <img  class="topes" src="../RECURSOS/icono3.png" />
 
-                <h6>Economía</h6>
 
-              </div>
+                </div>
 
-              <div class="col-md-2 text-center">
-                <img src="../RECURSOS/icono7.png"/>
-
-                <h6>Economía</h6>
+                <h6>Gobierno</h6>
 
               </div>
 
               <div class="col-md-2 text-center">
-                <img src="../RECURSOS/icono8.png"/>
+                <div class="contenedor_iconos" id="ipoblacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono4.png" />
 
-                <h6>Economía</h6>
 
-              </div>
+                </div>
 
-              <div class="col-md-2 text-center">
-                <img src="../RECURSOS/icono9.png"/>
-
-                <h6>Economía</h6>
+                <h6>Población</h6>
 
               </div>
 
               <div class="col-md-2 text-center">
-                <img src="../RECURSOS/icono10.png"/>
+                  <div class="contenedor_iconos" id="isalud">
+                
+                  <img  class="topes" src="../RECURSOS/icono5.png" />
 
-                <h6>Economía</h6>
 
-              </div>
+                </div>
 
-              <div class="col-md-2 text-center">
-                <img src="../RECURSOS/icono11.png"/>
-
-                <h6>Economía</h6>
+                <h6>Salud</h6>
 
               </div>
 
               <div class="col-md-2 text-center">
-                <img src="../RECURSOS/icono12.png"/>
+                  <div class="contenedor_iconos" id="iseguridad">
+                
+                  <img  class="topes" src="../RECURSOS/icono6.png" />
 
-                <h6>Economía</h6>
+
+                </div>
+
+                <h6>Seguridad</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="itrabajo">
+                
+                  <img  class="topes" src="../RECURSOS/icono7.png" />
+
+
+                </div>
+
+                <h6>Trabajo</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="ivivienda">
+                
+                  <img  class="topes" src="../RECURSOS/icono8.png" />
+
+
+                </div>
+
+                <h6>Vivienda</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icalidad">
+                
+                  <img  class="topes" src="../RECURSOS/icono9.png" />
+
+
+                </div>
+
+                <h6>Calidad de Vida</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iecologia">
+                
+                  <img  class="topes" src="../RECURSOS/icono10.png" />
+
+
+                </div>
+
+                <h6>Ecología</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icultura">
+                
+                  <img  class="topes" src="../RECURSOS/icono11.png" />
+
+
+                </div>
+
+                <h6>Cultura</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iesparcimiento">
+                
+                  <img  class="topes" src="../RECURSOS/icono12.png" />
+
+
+                </div>
+
+                <h6>Esparcimiento</h6>
 
               </div>
             </div>
@@ -663,7 +974,9 @@
         </div>
       </div>
     </div>
-  </div>      
+  </div>   
+
+
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -729,6 +1042,7 @@
     if(!seleccionado){
       $('#bacalar').removeClass('municipio');
      $(this).addClass('onion');
+     $("#modal2").modal("show");
      seleccionado = true;
     }else{
      $('#bacalar').removeClass('onion');
@@ -739,10 +1053,18 @@
     //alert('evento');
     });
 
-    $('#carrillo').on("click", function(e){
-    
-    $('#carrillo').removeClass('municipio');
-    $(this).addClass('onion');
+     $('#carrillo').on("click", function(e){
+    if(!seleccionado){
+      $('#carrillo').removeClass('municipio');
+     $(this).addClass('onion');
+     $("#modal3 ").modal("show");
+     seleccionado = true;
+    }else{
+     $('#carrillo').removeClass('onion');
+     $(this).addClass('municipio');
+     seleccionado = false;
+    }
+   
     //alert('evento');
     });
 
@@ -845,6 +1167,12 @@
     $('#bjuarez').removeClass('municipio');
     $('#bjuarez').addClass('onion');
     //alert('evento');
+    });
+
+
+    var ieconomia = document.getElementById("ieconomia");
+        $('#ieconomia').click(function(e) {
+         location.href ="estaindi.html";
     });
   </script>
 
