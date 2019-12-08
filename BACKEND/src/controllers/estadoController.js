@@ -34,7 +34,7 @@ module.exports = {
   },insertarEmbarazos25a29(datos){
     quintanaroo.update({
         embarazos_25a29: datos,
-        anexados_menores20: '10959,11800,22759'
+        anexados_menores20: '10959,11800,22759',
       },{
           where: {
               id: 1
@@ -74,5 +74,14 @@ module.exports = {
               id: 1
           }
       })
-  }
+  },async obtenerDatos(req, res){
+    //obtener datos
+    try{
+      let array_estado = null;
+      array_estado = await quintanaroo.findAll();
+      res.send(array_estado);
+    }catch(err){
+        res.send("Error");
+    }
+}
 };

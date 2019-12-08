@@ -732,5 +732,14 @@ module.exports = {
         nombre: 'Jose Maria Morelos'
       }
     })
-  }
+  },async obtenerDatos(req, res){
+    //obtener datos
+    try{
+      let municipios_array = null;
+      municipios_array = await municipio.findAll();
+      res.send(municipios_array);
+    }catch(err){
+        res.send("Error");
+    }
+}
 };

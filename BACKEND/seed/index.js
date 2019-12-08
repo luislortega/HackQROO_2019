@@ -13,12 +13,6 @@ const fs = require('fs');
 const parse = require('csv-parse');
 const async = require('async');
 
-var eyes = require('eyes');
-var https = require('https');
-var xml2js = require('xml2js');
-var parser = new xml2js.Parser();
-
-
 //Init the seed with command node seed
 sequelize.sync({ force: true }).then(async function() {
   await Promise.all(
@@ -275,44 +269,6 @@ sequelize.sync({ force: true }).then(async function() {
       porcentajeAprobacion,
     );
 
-    parser.on('error', function(err) { console.log('Parser error', err); });
-
-    var data = '';
-
-    /* 
-
-        Intruccion de mineria con XML:
-
-        CADA ITEM REPRESENTA UNA NOTA.
-
-        dentro del item tenemos la variable pubDate.
-
-        Si la variable pub date es mayor a x fecha asignada no se contara como un sucedo reciente
-
-        Fri, 16 Aug 2019 21:00:36 GMT
-
-        es el formato para las fechas.
-
-        regex para obtener el dia.
-
-        substring para obtener el mes de la cadena de texto.
-        
-    */
- https.get('https://news.google.com/rss/search?q=asalto%merida&hl=es-419&gl=MX&ceid=MX:es-419', function(res) {
-     if (res.statusCode >= 200 && res.statusCode < 400) {
-       res.on('data', function(data_) { data += data_.toString(); });
-       res.on('end', function() {
-           //data extraida.
-           data_limpiada = data.split("<item>") // Separacion por items
-
-           //Extracion de la variable pubDate
-           pubDate_proceso1 = data_limpiada[0].split(""); //Remueve la posicion de la derecha de data basura
-           pubDate_proceso2 = pubDate_proceso1[1].split(""); //Remueve la posicion de la izquierda de data basura 
-           //console.log(data_limpiada)
-           console.log(pubDate_proceso2) //Impresion de la data de publicaciones
-       });
-     }
-   });
 
   });
 });
