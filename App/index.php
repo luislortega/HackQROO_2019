@@ -61,6 +61,7 @@ if (isset($_POST['usuario'])) {
   <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
   <!-- Custom styles for this template -->
   <link href="css/resume.min.css" rel="stylesheet">
@@ -171,29 +172,7 @@ transform:scale(1.45);
 
         <p class="lead mb-5">SEIJUVE es un sistema que coordina e integra eficientemente la estructura de los procesos y recursos de la funcion estadistica, cuya creacion persigue el objetivo de fortalecer la produccion de informacion.</p>
         <a  href="#estado" class="btn btn-outline-primary js-scroll-trigger" role="button" aria-disabled="true">Comenzar</a>
-        <!--
-        <div class="subheading mb-5">3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·
-          <a href="mailto:name@email.com">name@email.com</a>
-        </div>
-        
 
-        <p class="lead mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
-      
-        <div class="social-icons">
-          <a href="#">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </div>
-        -->
       </div>
     </section>
 
@@ -533,12 +512,76 @@ transform:scale(1.45);
     <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="infoestatal">
       <div class="w-100">
         <h2 class="mb-5">Información Estatal</h2>
-
-        <div class="row">
-          <div class="col-md-4">
-            <div id="my-chart"></div>
+        <div class="container">
+          <h3>La información pública del estado al alcance de un click</h3>
+          <br><br>
+          <p style="font-size:150%;">Selecciona una de las variables para conocer información importante sobre nuestro estado.</p>
+        </div>
+        <div style="justify-content: space-around; justify-content: center; align-content: center;" >
+          <div class="row">
+          <div class="col-md-16">
+            <div class="row">
+              <div class="col-md-3 text-center">
+                <div class="contenedor_iconos" >    
+                <img id="ieconomiaEstatal" class="topes" src="../RECURSOS/icono1.png" />
+                  </div>
+                    <h6>Economía</h6>
+                  </div>
+              <div class="col-md-3 text-center">
+              <div class="contenedor_iconos" id="ieducacion">
+                <img  id="ieducacionEstatal" class="topes" src="../RECURSOS/icono2.png" />
+              </div>
+                <h6>Educación</h6>
+              </div>
+              <div class="col-md-3 text-center">
+                <div class="contenedor_iconos" id="igobierno">
+                  <img id="igobiernoEstatal" class="topes" src="../RECURSOS/icono3.png" />
+                </div>
+                   <h6>Gobierno</h6>
+              </div>
+              <div class="col-md-3 text-center">
+                  <div class="contenedor_iconos" id="isalud">
+                  <img  id="isaludEstatal"class="topes" src="../RECURSOS/icono5.png" />
+                  </div>
+                  <h6>Salud</h6>
+              </div>
+              <div class="col-md-3 text-center">
+                  <div class="contenedor_iconos" id="iseguridad">
+                    <br><br>
+                  <img id="iseguridadEstatal" class="topes" src="../RECURSOS/icono6.png" />
+                  </div>
+                  <h6>Seguridad</h6>
+              </div>
+              <div class="col-md-3 text-center">
+                <div class="contenedor_iconos" id="ivivienda">
+                  <br><br>
+                  <img id="iviviendaEstatal" class="topes" src="../RECURSOS/icono8.png" />
+                </div>
+                <h6>Vivienda</h6>
+              </div>
+              <div class="col-md-3 text-center">
+                <div class="contenedor_iconos" id="icalidad">
+                  <br><br>
+                  <img id="icalidadEstatal" class="topes" src="../RECURSOS/icono9.png" />
+                </div>
+                  <h6>Calidad de Vida</h6>
+              </div>
+              <div class="col-md-3 text-center">
+                <div class="contenedor_iconos" id="iesparcimiento">
+                  <br><br>
+                  <img id="iesparcimientoEstatal" class="topes" src="../RECURSOS/icono12.png" />
+                </div>
+                  <h6>Esparcimiento</h6>
+              </div>
+            </div>
           </div>
+        </div> 
 
+        </div>
+      </div>
+    </div>
+  </div>   
+          </div>
         </div>
       
 
@@ -653,6 +696,363 @@ transform:scale(1.45);
     </section>
 
   </div>    
+
+  <div class="portfolio-modal modal fade" id="economiaEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Economía estatal</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="container">
+              <div class="col-md-2 text-center">
+
+                 <h6>Economía</h6>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   
+
+  <div class="portfolio-modal modal fade" id="educacionEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Educación estatal</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="container">
+              <div class="col-md-2 text-center">
+
+                 <h6>Educación</h6>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   
+
+  <div class="portfolio-modal modal fade" id="gobiernoEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Gobierno estatal</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="container">
+              <div class="col-md-2 text-center">
+
+                 <h6>Gobierno</h6>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   
+
+  <div class="portfolio-modal modal fade" id="saludEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Salud estatal</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm">
+                  <p style="font-size:100%;">En el estado de Quintana Roo, se cuenta aproximádamente con una cantidad total de 22,759
+                  jóvenes menores a 20 años de edad con problemas de  consumo alcoholico o de drogas, dentro de los cuales 
+                  aproximádamente 10,959 son hombres y 11,800 son mujeres.</p>
+                </div>
+                <div class="col-sm">
+                  <div class="card">
+                    <canvas id="myChart" height="100" width="100" ></canvas>
+                    <script>
+                        const getHttp = new XMLHttpRequest();
+                            getHttp.open('GET', 'https://hackathon-juventud.herokuapp.com/obtenerDatosQuintanaRoo', true);
+                            getHttp.send();
+                            getHttp.onreadystatechange = function () {
+                                if (this.readyState == 4 && this.status == 200) {
+                                    //console.log(this.responseText);
+                                    let datos = JSON.parse(this.responseText);
+                                    console.log(datos);
+                                    var results = datos[0].anexados_menores20.split(",");
+                                    var ctx = document.getElementById('myChart').getContext('2d');
+                                    var myChart = new Chart(ctx, {
+                                        type: 'doughnut',
+                                        data: {
+                                            labels: ['Hombres', 'Mujeres'],
+                                            datasets: [{
+                                                label: 'Estudiantes',
+                                                data: [results[0], results[1]
+                                                ],
+                                                backgroundColor: [
+                                                    'rgba(54, 162, 235, 50)',
+                                                    'rgba(255, 99, 132, 50)'
+
+                                                ],
+                                            }]
+                                        },
+                                        options: {
+
+                                        }
+                                    });
+                                }
+                            }
+                    </script>
+                  </div>
+                </div>
+                <div class="col-sm">col-sm
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   
+
+  <div class="portfolio-modal modal fade" id="seguridadEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Seguridad estatal</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="container">
+              <div class="col-md-2 text-center">
+
+                 <h6>Seguridad</h6>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   
+
+  <div class="portfolio-modal modal fade" id="viviendaEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Vivienda estatal</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="container">
+              <div class="col-md-2 text-center">
+
+                 <h6>Vivienda</h6>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   
+
+  <div class="portfolio-modal modal fade" id="calidadEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Calidad de vida estatal</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="container">
+              <div class="col-md-2 text-center">
+
+                 <h6>Calidad de vida</h6>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   
+
+  <div class="portfolio-modal modal fade" id="esparcimientoEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Esparcimiento estatal</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="container">
+              <div class="col-md-2 text-center">
+
+                 <h6>Esparcimiento</h6>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   
+
+
 
 
    <div class="portfolio-modal modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
@@ -863,19 +1263,11 @@ transform:scale(1.45);
             </div>
             <div class="row">
               <div class="col-md-2 text-center">
-               
-
                 <div class="contenedor_iconos" id="ieconomia">
-                
                   <img  class="topes" src="../RECURSOS/icono1.png" />
-
-
                 </div>
-
                  <h6>Economía</h6>
-
               </div>
-
               <div class="col-md-2 text-center">
               <div class="contenedor_iconos" id="ieducacion">
                 
@@ -890,16 +1282,10 @@ transform:scale(1.45);
 
               <div class="col-md-2 text-center">
                 <div class="contenedor_iconos" id="igobierno">
-                
                   <img  class="topes" src="../RECURSOS/icono3.png" />
-
-
                 </div>
-
                 <h6>Gobierno</h6>
-
               </div>
-
               <div class="col-md-2 text-center">
                 <div class="contenedor_iconos" id="ipoblacion">
                 
@@ -1073,6 +1459,31 @@ transform:scale(1.45);
     }
    
     //alert('evento');
+    });
+
+    $('#ieconomiaEstatal').on("click", function(e) {
+      $("#economiaEstatal").modal("show");
+    });
+    $('#ieducacionEstatal').on("click", function(e) {
+      $("#educacionEstatal").modal("show");
+    });
+    $('#igobiernoEstatal').on("click", function(e) {
+      $("#gobiernoEstatal").modal("show");
+    });
+    $('#isaludEstatal').on("click", function(e) {
+      $("#saludEstatal").modal("show");
+    });
+    $('#iseguridadEstatal').on("click", function(e) {
+      $("#seguridadEstatal").modal("show");
+    });
+    $('#iviviendaEstatal').on("click", function(e) {
+      $("#viviendaEstatal").modal("show");
+    });
+    $('#icalidadEstatal').on("click", function(e) {
+      $("#calidadEstatal").modal("show");
+    });
+    $('#iesparcimientoEstatal').on("click", function(e) {
+      $("#esparcimientoEstatal").modal("show");
     });
 
 
