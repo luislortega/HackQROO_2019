@@ -1,0 +1,41 @@
+ALGORITMO DE LECTURA CSV DINAMICO.
+
+
+tabla de ejemplo:
+
+
+nombre_variable, elemento1, elemento2, elementoN
+variable1,  		x, 			x, 		x
+variable2, 			x, 			x, 		x
+variableN, 		x, 			x, 		x
+
+
+algoritmo:
+
+ - Leer toda la primera columna.
+
+ - Mostrarles las variables
+	opciones:
+		- escoger cuales quiere mostrar en la UI
+
+- hacer un recorrido por todas las columnas  y las variables que quiere importar convertirlas en un JSON
+	ejemplo:	
+	
+	[
+		variable1: {
+			elemento1: x,
+			elemento2: x,
+			elementoN: x
+		},
+		variable2: {
+			elemento1: x,
+			elemento2: x,
+			elementoN: x
+		},
+		variable3: {
+			elemento1: x,
+			elemento2: x,
+			elementoN: x
+		},
+
+	]
