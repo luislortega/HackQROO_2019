@@ -597,32 +597,89 @@ transform:scale(1.45);
       <div class="w-20">
         <h2 class="mb-5">Convocatorias</h2>
 
-        <div class="card-group">
-  <div class="card">
-    <img class="card-img-top" src="https://pbs.twimg.com/profile_images/3549029586/3607341f60496b2a274b91dcc3934963_400x400.jpeg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+       <!-- Card deck -->
+<div class="card-deck">
+
+  <!-- Card -->
+  <div class="card mb-4">
+
+    <!--Card image-->
+    <div class="view overlay">
+      <img class="card-img-top" src="https://quintanaroo.gob.mx/sites/default/files/unisitio2018/10/Estrado_20181002_Convocatoria-al-Tercer-Congreso-Juvenil-del-Estado-de-Quintana-Roo.png" alt="Card image cap">
+      <a href="#!">
+        <div class="mask rgba-white-slight"></div>
+      </a>
     </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="http://pm1.narvii.com/6661/59f36d6f2efec887568611a888d8b857ee988029_00.jpg" alt="Card image cap">
+
+    <!--Card content-->
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+      <!--Title-->
+      <h4 class="card-title">Card title</h4>
+      <!--Text-->
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+      <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+
     </div>
+
   </div>
-  <div class="card">
-    <img class="card-img-top" src="https://k06.kn3.net/6F5BBB1C5.jpg" alt="Card image cap">
+  <!-- Card -->
+
+  <!-- Card -->
+  <div class="card mb-4">
+
+    <!--Card image-->
+    <div class="view overlay">
+      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg" alt="Card image cap">
+      <a href="#!">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+
+    <!--Card content-->
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+      <!--Title-->
+      <h4 class="card-title">Card title</h4>
+      <!--Text-->
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+      <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+
     </div>
+
   </div>
-      </div>
+  <!-- Card -->
+
+  <!-- Card -->
+  <div class="card mb-4">
+
+    <!--Card image-->
+    <div class="view overlay">
+      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg" alt="Card image cap">
+      <a href="#!">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+
+    <!--Card content-->
+    <div class="card-body">
+
+      <!--Title-->
+      <h4 class="card-title">Card title</h4>
+      <!--Text-->
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+      <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+
+    </div>
+
+  </div>
+  <!-- Card -->
+
+</div>
+<!-- Card deck -->
       </div>
     </section>
 
@@ -1054,6 +1111,173 @@ transform:scale(1.45);
 
 
 
+ 
+
+  <div class="portfolio-modal modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Estadisticas e indicadores de Othón P. Blanco</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="ieconomia">
+                  <img  class="topes" src="../RECURSOS/icono1.png" />
+                </div>
+                 <h6>Economía</h6>
+              </div>
+              <div class="col-md-2 text-center">
+              <div class="contenedor_iconos" id="ieducacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono2.png" />
+
+
+                </div>
+
+                <h6>Educación</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="igobierno">
+                  <img  class="topes" src="../RECURSOS/icono3.png" />
+                </div>
+                <h6>Gobierno</h6>
+              </div>
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="ipoblacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono4.png" />
+
+
+                </div>
+
+                <h6>Población</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="isalud">
+                
+                  <img  class="topes" src="../RECURSOS/icono5.png" />
+
+
+                </div>
+
+                <h6>Salud</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iseguridad">
+                
+                  <img  class="topes" src="../RECURSOS/icono6.png" />
+
+
+                </div>
+
+                <h6>Seguridad</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="itrabajo">
+                
+                  <img  class="topes" src="../RECURSOS/icono7.png" />
+
+
+                </div>
+
+                <h6>Trabajo</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="ivivienda">
+                
+                  <img  class="topes" src="../RECURSOS/icono8.png" />
+
+
+                </div>
+
+                <h6>Vivienda</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icalidad">
+                
+                  <img  class="topes" src="../RECURSOS/icono9.png" />
+
+
+                </div>
+
+                <h6>Calidad de Vida</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iecologia">
+                
+                  <img  class="topes" src="../RECURSOS/icono10.png" />
+
+
+                </div>
+
+                <h6>Ecología</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icultura">
+                
+                  <img  class="topes" src="../RECURSOS/icono11.png" />
+
+
+                </div>
+
+                <h6>Cultura</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iesparcimiento">
+                
+                  <img  class="topes" src="../RECURSOS/icono12.png" />
+
+
+                </div>
+
+                <h6>Esparcimiento</h6>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+
 
    <div class="portfolio-modal modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
@@ -1233,9 +1457,11 @@ transform:scale(1.45);
       </div>
    
     </div>
-  </div>   
+  </div>  
 
-  <div class="portfolio-modal modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+
+
+   <div class="portfolio-modal modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -1248,7 +1474,7 @@ transform:scale(1.45);
             <div class="row justify-content-center">
               <div class="col-lg-12">
                 <!-- Portfolio Modal - Title -->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Estadisticas e indicadores de Chetumal</h2>
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Estadisticas e indicadores de Felipe Carrillo Puerto</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
@@ -1263,11 +1489,19 @@ transform:scale(1.45);
             </div>
             <div class="row">
               <div class="col-md-2 text-center">
-                <div class="contenedor_iconos" id="ieconomia">
-                  <img  class="topes" src="../RECURSOS/icono1.png" />
+               
+
+                <div class="contenedor_iconos" >
+                
+                  <img id="ieconomia" class="topes" src="../RECURSOS/icono1.png" />
+
+
                 </div>
+
                  <h6>Economía</h6>
+
               </div>
+
               <div class="col-md-2 text-center">
               <div class="contenedor_iconos" id="ieducacion">
                 
@@ -1282,10 +1516,16 @@ transform:scale(1.45);
 
               <div class="col-md-2 text-center">
                 <div class="contenedor_iconos" id="igobierno">
+                
                   <img  class="topes" src="../RECURSOS/icono3.png" />
+
+
                 </div>
+
                 <h6>Gobierno</h6>
+
               </div>
+
               <div class="col-md-2 text-center">
                 <div class="contenedor_iconos" id="ipoblacion">
                 
@@ -1397,8 +1637,1456 @@ transform:scale(1.45);
           </div>
         </div>
       </div>
+   
     </div>
-  </div>   
+  </div>  
+
+  <div class="portfolio-modal modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Estadisticas e indicadores de José María Morelos</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 text-center">
+               
+
+                <div class="contenedor_iconos" >
+                
+                  <img id="ieconomia" class="topes" src="../RECURSOS/icono1.png" />
+
+
+                </div>
+
+                 <h6>Economía</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+              <div class="contenedor_iconos" id="ieducacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono2.png" />
+
+
+                </div>
+
+                <h6>Educación</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="igobierno">
+                
+                  <img  class="topes" src="../RECURSOS/icono3.png" />
+
+
+                </div>
+
+                <h6>Gobierno</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="ipoblacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono4.png" />
+
+
+                </div>
+
+                <h6>Población</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="isalud">
+                
+                  <img  class="topes" src="../RECURSOS/icono5.png" />
+
+
+                </div>
+
+                <h6>Salud</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iseguridad">
+                
+                  <img  class="topes" src="../RECURSOS/icono6.png" />
+
+
+                </div>
+
+                <h6>Seguridad</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="itrabajo">
+                
+                  <img  class="topes" src="../RECURSOS/icono7.png" />
+
+
+                </div>
+
+                <h6>Trabajo</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="ivivienda">
+                
+                  <img  class="topes" src="../RECURSOS/icono8.png" />
+
+
+                </div>
+
+                <h6>Vivienda</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icalidad">
+                
+                  <img  class="topes" src="../RECURSOS/icono9.png" />
+
+
+                </div>
+
+                <h6>Calidad de Vida</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iecologia">
+                
+                  <img  class="topes" src="../RECURSOS/icono10.png" />
+
+
+                </div>
+
+                <h6>Ecología</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icultura">
+                
+                  <img  class="topes" src="../RECURSOS/icono11.png" />
+
+
+                </div>
+
+                <h6>Cultura</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iesparcimiento">
+                
+                  <img  class="topes" src="../RECURSOS/icono12.png" />
+
+
+                </div>
+
+                <h6>Esparcimiento</h6>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+    </div>
+  </div>  
+
+   <div class="portfolio-modal modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Estadisticas e indicadores de Tulum</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 text-center">
+               
+
+                <div class="contenedor_iconos" >
+                
+                  <img id="ieconomia" class="topes" src="../RECURSOS/icono1.png" />
+
+
+                </div>
+
+                 <h6>Economía</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+              <div class="contenedor_iconos" id="ieducacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono2.png" />
+
+
+                </div>
+
+                <h6>Educación</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="igobierno">
+                
+                  <img  class="topes" src="../RECURSOS/icono3.png" />
+
+
+                </div>
+
+                <h6>Gobierno</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="ipoblacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono4.png" />
+
+
+                </div>
+
+                <h6>Población</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="isalud">
+                
+                  <img  class="topes" src="../RECURSOS/icono5.png" />
+
+
+                </div>
+
+                <h6>Salud</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iseguridad">
+                
+                  <img  class="topes" src="../RECURSOS/icono6.png" />
+
+
+                </div>
+
+                <h6>Seguridad</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="itrabajo">
+                
+                  <img  class="topes" src="../RECURSOS/icono7.png" />
+
+
+                </div>
+
+                <h6>Trabajo</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="ivivienda">
+                
+                  <img  class="topes" src="../RECURSOS/icono8.png" />
+
+
+                </div>
+
+                <h6>Vivienda</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icalidad">
+                
+                  <img  class="topes" src="../RECURSOS/icono9.png" />
+
+
+                </div>
+
+                <h6>Calidad de Vida</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iecologia">
+                
+                  <img  class="topes" src="../RECURSOS/icono10.png" />
+
+
+                </div>
+
+                <h6>Ecología</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icultura">
+                
+                  <img  class="topes" src="../RECURSOS/icono11.png" />
+
+
+                </div>
+
+                <h6>Cultura</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iesparcimiento">
+                
+                  <img  class="topes" src="../RECURSOS/icono12.png" />
+
+
+                </div>
+
+                <h6>Esparcimiento</h6>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+    </div>
+  </div> 
+
+
+   <div class="portfolio-modal modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Estadisticas e indicadores de Solidaridad</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 text-center">
+               
+
+                <div class="contenedor_iconos" >
+                
+                  <img id="ieconomia" class="topes" src="../RECURSOS/icono1.png" />
+
+
+                </div>
+
+                 <h6>Economía</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+              <div class="contenedor_iconos" id="ieducacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono2.png" />
+
+
+                </div>
+
+                <h6>Educación</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="igobierno">
+                
+                  <img  class="topes" src="../RECURSOS/icono3.png" />
+
+
+                </div>
+
+                <h6>Gobierno</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="ipoblacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono4.png" />
+
+
+                </div>
+
+                <h6>Población</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="isalud">
+                
+                  <img  class="topes" src="../RECURSOS/icono5.png" />
+
+
+                </div>
+
+                <h6>Salud</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iseguridad">
+                
+                  <img  class="topes" src="../RECURSOS/icono6.png" />
+
+
+                </div>
+
+                <h6>Seguridad</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="itrabajo">
+                
+                  <img  class="topes" src="../RECURSOS/icono7.png" />
+
+
+                </div>
+
+                <h6>Trabajo</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="ivivienda">
+                
+                  <img  class="topes" src="../RECURSOS/icono8.png" />
+
+
+                </div>
+
+                <h6>Vivienda</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icalidad">
+                
+                  <img  class="topes" src="../RECURSOS/icono9.png" />
+
+
+                </div>
+
+                <h6>Calidad de Vida</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iecologia">
+                
+                  <img  class="topes" src="../RECURSOS/icono10.png" />
+
+
+                </div>
+
+                <h6>Ecología</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icultura">
+                
+                  <img  class="topes" src="../RECURSOS/icono11.png" />
+
+
+                </div>
+
+                <h6>Cultura</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iesparcimiento">
+                
+                  <img  class="topes" src="../RECURSOS/icono12.png" />
+
+
+                </div>
+
+                <h6>Esparcimiento</h6>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+    </div>
+  </div> 
+
+
+   <div class="portfolio-modal modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Estadisticas e indicadores de Lázaro Cardenas</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 text-center">
+               
+
+                <div class="contenedor_iconos" >
+                
+                  <img id="ieconomia" class="topes" src="../RECURSOS/icono1.png" />
+
+
+                </div>
+
+                 <h6>Economía</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+              <div class="contenedor_iconos" id="ieducacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono2.png" />
+
+
+                </div>
+
+                <h6>Educación</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="igobierno">
+                
+                  <img  class="topes" src="../RECURSOS/icono3.png" />
+
+
+                </div>
+
+                <h6>Gobierno</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="ipoblacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono4.png" />
+
+
+                </div>
+
+                <h6>Población</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="isalud">
+                
+                  <img  class="topes" src="../RECURSOS/icono5.png" />
+
+
+                </div>
+
+                <h6>Salud</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iseguridad">
+                
+                  <img  class="topes" src="../RECURSOS/icono6.png" />
+
+
+                </div>
+
+                <h6>Seguridad</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="itrabajo">
+                
+                  <img  class="topes" src="../RECURSOS/icono7.png" />
+
+
+                </div>
+
+                <h6>Trabajo</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="ivivienda">
+                
+                  <img  class="topes" src="../RECURSOS/icono8.png" />
+
+
+                </div>
+
+                <h6>Vivienda</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icalidad">
+                
+                  <img  class="topes" src="../RECURSOS/icono9.png" />
+
+
+                </div>
+
+                <h6>Calidad de Vida</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iecologia">
+                
+                  <img  class="topes" src="../RECURSOS/icono10.png" />
+
+
+                </div>
+
+                <h6>Ecología</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icultura">
+                
+                  <img  class="topes" src="../RECURSOS/icono11.png" />
+
+
+                </div>
+
+                <h6>Cultura</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iesparcimiento">
+                
+                  <img  class="topes" src="../RECURSOS/icono12.png" />
+
+
+                </div>
+
+                <h6>Esparcimiento</h6>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+    </div>
+  </div> 
+
+
+
+   <div class="portfolio-modal modal fade" id="modal8" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Estadisticas e indicadores de Puerto Morelos</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 text-center">
+               
+
+                <div class="contenedor_iconos" >
+                
+                  <img id="ieconomia" class="topes" src="../RECURSOS/icono1.png" />
+
+
+                </div>
+
+                 <h6>Economía</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+              <div class="contenedor_iconos" id="ieducacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono2.png" />
+
+
+                </div>
+
+                <h6>Educación</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="igobierno">
+                
+                  <img  class="topes" src="../RECURSOS/icono3.png" />
+
+
+                </div>
+
+                <h6>Gobierno</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="ipoblacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono4.png" />
+
+
+                </div>
+
+                <h6>Población</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="isalud">
+                
+                  <img  class="topes" src="../RECURSOS/icono5.png" />
+
+
+                </div>
+
+                <h6>Salud</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iseguridad">
+                
+                  <img  class="topes" src="../RECURSOS/icono6.png" />
+
+
+                </div>
+
+                <h6>Seguridad</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="itrabajo">
+                
+                  <img  class="topes" src="../RECURSOS/icono7.png" />
+
+
+                </div>
+
+                <h6>Trabajo</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="ivivienda">
+                
+                  <img  class="topes" src="../RECURSOS/icono8.png" />
+
+
+                </div>
+
+                <h6>Vivienda</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icalidad">
+                
+                  <img  class="topes" src="../RECURSOS/icono9.png" />
+
+
+                </div>
+
+                <h6>Calidad de Vida</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iecologia">
+                
+                  <img  class="topes" src="../RECURSOS/icono10.png" />
+
+
+                </div>
+
+                <h6>Ecología</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icultura">
+                
+                  <img  class="topes" src="../RECURSOS/icono11.png" />
+
+
+                </div>
+
+                <h6>Cultura</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iesparcimiento">
+                
+                  <img  class="topes" src="../RECURSOS/icono12.png" />
+
+
+                </div>
+
+                <h6>Esparcimiento</h6>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+    </div>
+  </div>  
+
+
+   <div class="portfolio-modal modal fade" id="modal9" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Estadisticas e indicadores de Benito Júarez</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 text-center">
+               
+
+                <div class="contenedor_iconos" >
+                
+                  <img id="ieconomia" class="topes" src="../RECURSOS/icono1.png" />
+
+
+                </div>
+
+                 <h6>Economía</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+              <div class="contenedor_iconos" id="ieducacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono2.png" />
+
+
+                </div>
+
+                <h6>Educación</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="igobierno">
+                
+                  <img  class="topes" src="../RECURSOS/icono3.png" />
+
+
+                </div>
+
+                <h6>Gobierno</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="ipoblacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono4.png" />
+
+
+                </div>
+
+                <h6>Población</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="isalud">
+                
+                  <img  class="topes" src="../RECURSOS/icono5.png" />
+
+
+                </div>
+
+                <h6>Salud</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iseguridad">
+                
+                  <img  class="topes" src="../RECURSOS/icono6.png" />
+
+
+                </div>
+
+                <h6>Seguridad</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="itrabajo">
+                
+                  <img  class="topes" src="../RECURSOS/icono7.png" />
+
+
+                </div>
+
+                <h6>Trabajo</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="ivivienda">
+                
+                  <img  class="topes" src="../RECURSOS/icono8.png" />
+
+
+                </div>
+
+                <h6>Vivienda</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icalidad">
+                
+                  <img  class="topes" src="../RECURSOS/icono9.png" />
+
+
+                </div>
+
+                <h6>Calidad de Vida</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iecologia">
+                
+                  <img  class="topes" src="../RECURSOS/icono10.png" />
+
+
+                </div>
+
+                <h6>Ecología</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icultura">
+                
+                  <img  class="topes" src="../RECURSOS/icono11.png" />
+
+
+                </div>
+
+                <h6>Cultura</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iesparcimiento">
+                
+                  <img  class="topes" src="../RECURSOS/icono12.png" />
+
+
+                </div>
+
+                <h6>Esparcimiento</h6>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+    </div>
+  </div> 
+
+
+   <div class="portfolio-modal modal fade" id="modal10" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Estadisticas e indicadores de Isla Mujeres</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 text-center">
+               
+
+                <div class="contenedor_iconos" >
+                
+                  <img id="ieconomia" class="topes" src="../RECURSOS/icono1.png" />
+
+
+                </div>
+
+                 <h6>Economía</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+              <div class="contenedor_iconos" id="ieducacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono2.png" />
+
+
+                </div>
+
+                <h6>Educación</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="igobierno">
+                
+                  <img  class="topes" src="../RECURSOS/icono3.png" />
+
+
+                </div>
+
+                <h6>Gobierno</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="ipoblacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono4.png" />
+
+
+                </div>
+
+                <h6>Población</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="isalud">
+                
+                  <img  class="topes" src="../RECURSOS/icono5.png" />
+
+
+                </div>
+
+                <h6>Salud</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iseguridad">
+                
+                  <img  class="topes" src="../RECURSOS/icono6.png" />
+
+
+                </div>
+
+                <h6>Seguridad</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="itrabajo">
+                
+                  <img  class="topes" src="../RECURSOS/icono7.png" />
+
+
+                </div>
+
+                <h6>Trabajo</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="ivivienda">
+                
+                  <img  class="topes" src="../RECURSOS/icono8.png" />
+
+
+                </div>
+
+                <h6>Vivienda</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icalidad">
+                
+                  <img  class="topes" src="../RECURSOS/icono9.png" />
+
+
+                </div>
+
+                <h6>Calidad de Vida</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iecologia">
+                
+                  <img  class="topes" src="../RECURSOS/icono10.png" />
+
+
+                </div>
+
+                <h6>Ecología</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icultura">
+                
+                  <img  class="topes" src="../RECURSOS/icono11.png" />
+
+
+                </div>
+
+                <h6>Cultura</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iesparcimiento">
+                
+                  <img  class="topes" src="../RECURSOS/icono12.png" />
+
+
+                </div>
+
+                <h6>Esparcimiento</h6>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+    </div>
+  </div> 
+
+
+   <div class="portfolio-modal modal fade" id="modal11" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Estadisticas e indicadores de Cozumel</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 text-center">
+               
+
+                <div class="contenedor_iconos" >
+                
+                  <img id="ieconomia" class="topes" src="../RECURSOS/icono1.png" />
+
+
+                </div>
+
+                 <h6>Economía</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+              <div class="contenedor_iconos" id="ieducacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono2.png" />
+
+
+                </div>
+
+                <h6>Educación</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="igobierno">
+                
+                  <img  class="topes" src="../RECURSOS/icono3.png" />
+
+
+                </div>
+
+                <h6>Gobierno</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                <div class="contenedor_iconos" id="ipoblacion">
+                
+                  <img  class="topes" src="../RECURSOS/icono4.png" />
+
+
+                </div>
+
+                <h6>Población</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="isalud">
+                
+                  <img  class="topes" src="../RECURSOS/icono5.png" />
+
+
+                </div>
+
+                <h6>Salud</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iseguridad">
+                
+                  <img  class="topes" src="../RECURSOS/icono6.png" />
+
+
+                </div>
+
+                <h6>Seguridad</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="itrabajo">
+                
+                  <img  class="topes" src="../RECURSOS/icono7.png" />
+
+
+                </div>
+
+                <h6>Trabajo</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="ivivienda">
+                
+                  <img  class="topes" src="../RECURSOS/icono8.png" />
+
+
+                </div>
+
+                <h6>Vivienda</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icalidad">
+                
+                  <img  class="topes" src="../RECURSOS/icono9.png" />
+
+
+                </div>
+
+                <h6>Calidad de Vida</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iecologia">
+                
+                  <img  class="topes" src="../RECURSOS/icono10.png" />
+
+
+                </div>
+
+                <h6>Ecología</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="icultura">
+                
+                  <img  class="topes" src="../RECURSOS/icono11.png" />
+
+
+                </div>
+
+                <h6>Cultura</h6>
+
+              </div>
+
+              <div class="col-md-2 text-center">
+                  <div class="contenedor_iconos" id="iesparcimiento">
+                
+                  <img  class="topes" src="../RECURSOS/icono12.png" />
+
+
+                </div>
+
+                <h6>Esparcimiento</h6>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+    </div>
+  </div> 
 
 
 
@@ -1518,35 +3206,56 @@ transform:scale(1.45);
     });
 
     $('#morelos').on("click", function(e){
-    
-    $('#morelos').removeClass('municipio');
-    $(this).addClass('onion');
-    //alert('evento');
-    });
+    if(!seleccionado){
+      $('#morelos').removeClass('municipio');
+     $(this).addClass('onion');
+     $("#modal4 ").modal("show");
+     seleccionado = true;
+    }else{
+     $('#morelos').removeClass('onion');
+     $(this).addClass('municipio');
+     seleccionado = false;
+    }
+     });
 
     $('#tulum').on("click", function(e){
-    
-    $('#tulum').removeClass('municipio');
-    $(this).addClass('onion');
-    //alert('evento');
-    });
+    if(!seleccionado){
+      $('#tulum').removeClass('municipio');
+     $(this).addClass('onion');
+     $("#modal5 ").modal("show");
+     seleccionado = true;
+    }else{
+     $('#tulum').removeClass('onion');
+     $(this).addClass('municipio');
+     seleccionado = false;
+    }
+     });
 
     $('#solidaridad').on("click", function(e){
-    
-    $('#solidaridad').removeClass('municipio');
-    $(this).addClass('onion');
-    //alert('evento');
-    });
+    if(!seleccionado){
+      $('#solidaridad').removeClass('municipio');
+     $(this).addClass('onion');
+     $("#modal6 ").modal("show");
+     seleccionado = true;
+    }else{
+     $('#solidaridad').removeClass('onion');
+     $(this).addClass('municipio');
+     seleccionado = false;
+    }
+     });
 
     $('#lazaro').on("click", function(e){
-    
-    $('#lazaro').removeClass('municipio');
-    $(this).addClass('onion');
-
-    $('#isla2').removeClass('municipio');
-    $('#isla2').addClass('onion');
-    //alert('evento');
-    });
+    if(!seleccionado){
+      $('#lazaro').removeClass('municipio');
+     $(this).addClass('onion');
+     $("#modal7 ").modal("show");
+     seleccionado = true;
+    }else{
+     $('#lazaro').removeClass('onion');
+     $(this).addClass('municipio');
+     seleccionado = false;
+    }
+     });
 
     $('#isla').on("click", function(e){
     
@@ -1560,17 +3269,42 @@ transform:scale(1.45);
     //alert('evento');
     });
 
-     $('#isla3').on("click", function(e){
-    
-    $('#isla3').removeClass('municipio');
-    $('#isla3').addClass('onion');
-
-    $('#isla').removeClass('municipio');
+    $('#isla').on("click", function(e){
+    if(!seleccionado){
+      $('#isla').removeClass('municipio');
     $('#isla').addClass('onion');
+     $('#isla3').removeClass('municipio');
+    $('#isla3').addClass('onion');
+     $("#modal10 ").modal("show");
+     seleccionado = true;
+    }else{
+     $('#isla').removeClass('onion');
+     $(this).addClass('municipio');
+       $('#isla3').removeClass('onion');
+     $(this).addClass('municipio');
+     seleccionado = false;
+    }
+     });
 
-   
-    //alert('evento');
-    });
+
+    $('#isla3').on("click", function(e){
+    if(!seleccionado){
+      $('#isla').removeClass('municipio');
+     $('#isla').addClass('onion');
+     $('#isla3').removeClass('municipio');
+     $('#isla3').addClass('onion');
+     $("#modal10 ").modal("show");
+     seleccionado = true;
+    }else{
+     $('#isla').removeClass('onion');
+     $(this).addClass('municipio');
+
+      $('#isla3').removeClass('onion');
+     $(this).addClass('municipio');
+     seleccionado = false;
+    }
+     });
+
 
      $('#isla2').on("click", function(e){
     
@@ -1583,29 +3317,44 @@ transform:scale(1.45);
     });
 
 
-     $('#cozumel').on("click", function(e){
-    
-    $('#cozumel').removeClass('municipio');
-    $(this).addClass('onion');
-    //alert('evento');
-    });
+    $('#cozumel').on("click", function(e){
+    if(!seleccionado){
+      $('#cozumel').removeClass('municipio');
+     $(this).addClass('onion');
+     $("#modal11 ").modal("show");
+     seleccionado = true;
+    }else{
+     $('#cozumel').removeClass('onion');
+     $(this).addClass('municipio');
+     seleccionado = false;
+    }
+     });
 
      $('#pmorelos').on("click", function(e){
-    
-    $('#pmorelos').removeClass('municipio');
-    $(this).addClass('onion');
-    //alert('evento');
-    });
+    if(!seleccionado){
+      $('#pmorelos').removeClass('municipio');
+     $(this).addClass('onion');
+     $("#modal8").modal("show");
+     seleccionado = true;
+    }else{
+     $('#pmorelos').removeClass('onion');
+     $(this).addClass('municipio');
+     seleccionado = false;
+    }
+     });
 
     $('#bjuarez').on("click", function(e){
-    
-    $('#bjuarez').removeClass('municipio');
-    $('#bjuarez').addClass('onion');
-
-    $('#bjuarez2').removeClass('municipio');
-    $('#bjuarez2').addClass('onion');
-    //alert('evento');
-    });
+    if(!seleccionado){
+      $('#bjuarez').removeClass('municipio');
+     $(this).addClass('onion');
+     $("#modal9 ").modal("show");
+     seleccionado = true;
+    }else{
+     $('#bjuarez').removeClass('onion');
+     $(this).addClass('municipio');
+     seleccionado = false;
+    }
+     });
 
 
     $('#bjuarez2').on("click", function(e){
