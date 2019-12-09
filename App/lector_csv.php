@@ -120,6 +120,17 @@ if (isset($_POST["submit"])) {
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="panel/demo/demo.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/estilos_lector.css">
+    <style type="text/css">
+        .ocultar_alv{
+            display: none;
+        }
+
+        .custom-file-label2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+    </style>
 </head>
 
 <body class="">
@@ -163,7 +174,7 @@ if (isset($_POST["submit"])) {
          <li class="active ">
             <a href="lector_csv.php">
               
-              <i class="nc-icon nc-glasses-2"></i>
+              <i class="nc-icon nc-share-66"></i>
               <p>Registrar Datos</p>
             </a>
           </li>
@@ -244,13 +255,15 @@ if (isset($_POST["submit"])) {
                                         ?>  
                                         </select>
                                       </div>
-
-                                       <div class="custom-file">
+<div class="form-group">
+    <div class="custom-file form-group" id="sadeje">
   <input type="file" name="file" class="custom-file-input" id="file" lang="es">
-  <label class="custom-file-label" for="file" id="label_de_ruta">Seleccionar Archivo</label>
+  <label class="custom-file-label2" for="file" id="label_de_ruta">Seleccionar Archivo</label>
 </div>
+</div>
+                                       
 
-                                            <button type="submit" class="btn btn-primary mb-2" name="submit">Agregar Datos</button>
+                                            <button id="asereje" type="submit" class="btn btn-primary mb-2" name="submit">Agregar Datos</button>
                                     </form>
                                
                             </div>
@@ -372,7 +385,7 @@ if (isset($_POST["submit"])) {
             <a href="http://localhost/Php/Hackaton/HackQROO_2019/App/lector_csv.php">CERRAR</a>
         </div>
     </div>
-
+ <script src="vendor/jquery/jquery.min.js"></script>
     <!--   Core JS Files   -->
     <script src="panel/js/core/jquery.min.js"></script>
     <script src="panel/js/core/popper.min.js"></script>
@@ -393,6 +406,9 @@ if (isset($_POST["submit"])) {
             // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
             demo.initChartsPages();
         });
+
+
+     
     </script>
 </body>
 
