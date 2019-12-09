@@ -900,13 +900,15 @@ transform:scale(1.45);
             <div class="container">
               <div class="row">
                 <div class="col-sm">
+                  <br><br><br><br><br>
+                  <h3>Control de adicciones en el estado</h3>
                   <p style="font-size:100%;">En el estado de Quintana Roo, se cuenta aproximádamente con una cantidad total de 22,759
-                  jóvenes menores a 20 años de edad con problemas de  consumo alcoholico o de drogas, dentro de los cuales 
+                  jóvenes menores a 20 años de edad con problemas de  consumo alcoholico o de drogas, dentro de los cuales, 
                   aproximádamente 10,959 son hombres y 11,800 son mujeres.</p>
                 </div>
                 <div class="col-sm">
                   <div class="card">
-                    <canvas id="myChart" height="100" width="100" ></canvas>
+                    <canvas id="myChart" height="50" width="50" ></canvas>
                     <script>
                         const getHttp = new XMLHttpRequest();
                             getHttp.open('GET', 'https://hackathon-juventud.herokuapp.com/obtenerDatosQuintanaRoo', true);
@@ -942,8 +944,65 @@ transform:scale(1.45);
                     </script>
                   </div>
                 </div>
-                <div class="col-sm">col-sm
+                <div class="row">
+                <div class="col-sm">
+                  <div class="card">
+                    <canvas id="padres" height="50" width="50" ></canvas>
+                    <script>
+                        const getHttp2 = new XMLHttpRequest();
+                            getHttp2.open('GET', 'https://hackathon-juventud.herokuapp.com/obtenerDatosQuintanaRoo', true);
+                            getHttp2.send();
+                            getHttp2.onreadystatechange = function () {
+                                if (this.readyState == 4 && this.status == 200) {
+                                    //console.log(this.responseText);
+                                    let datos = JSON.parse(this.responseText);
+                                    console.log(datos);
+                                    var results = datos[0].embarazos_15a19.split(",");
+                                    console.log(results[2]+","+results[8]+","+results[6]+","+results[1]+","+results[7]+","+results[4]);
+                                    var ctx2 = document.getElementById('padres').getContext('2d');
+                                    var myChart2 = new Chart(ctx2, {
+                                        type: 'bar',
+                                        data: {
+                                            labels: ['Sin estudios', 'Kinder', 'Primaria', 'Secundaria', 'Prepa', 'Licenciatura'],
+                                            datasets: [{
+                                                label: 'Preparacion academica del padre',
+                                                data: [results[2], results[8],results[6],results[1],results[7],results[4]
+                                                ],
+                                                backgroundColor: [
+                                                    'rgba(255, 99, 132, 0.2)',
+                                                    'rgba(54, 162, 235, 0.2)',
+                                                    'rgba(255, 206, 86, 0.2)',
+                                                    'rgba(75, 192, 192, 0.2)',
+                                                    'rgba(153, 102, 255, 0.2)',
+                                                    'rgba(255, 159, 64, 0.2)'
+                                                ],
+                                                borderColor: [
+                                                    'rgba(255, 99, 132, 1)',
+                                                    'rgba(54, 162, 235, 1)',
+                                                    'rgba(255, 206, 86, 1)',
+                                                    'rgba(75, 192, 192, 1)',
+                                                    'rgba(153, 102, 255, 1)',
+                                                    'rgba(255, 159, 64, 1)'
+                                                ],
+                                                borderWidth: 1
+                                            }]
+                                        },
+                                        options: {
 
+                                        }
+                                    });
+                                }
+                            }
+                    </script>
+                  </div>
+                </div>
+                <div class="col-sm">
+                <br><br><br><br><br>
+                  <h3>Control de natalidad entre jovencitas de 15 a 19 años</h3>
+                  <p style="font-size:100%;">En el estado de Quintana Roo, podemos encontrar una situación comprometedora, pues, podemos ver 
+                  que existen casos suficientes como para justificar la falta de preparación en la materia de educación sexual, pues muchos 
+                  de los casos de embarazo surgen en jovencitas que siguen en proceso de desarrollo corporal.</p>
+                </div>
                 </div>
               </div>
             </div>
@@ -1097,12 +1156,113 @@ transform:scale(1.45);
               </div>
             </div>
             <div class="container">
-              <div class="col-md-2 text-center">
+              <div class="row">
+                <div class="col-sm">
+                  <br><br><br><br><br>
+                  <h3>La tasa de natalidad entre jovencitas de 20 a 24</h3>
+                  <p style="font-size:100%;">En la juventud, la paternidad cada vez aumenta de forma exponencial, la situación
+                  en la que se encuentran al momento de convertirse e padres, es alarmante, pues, no se encuentran preparados
+                  académicamente hablando.</p>
+                </div>
+                <div class="col-sm">
+                  <div class="card">
+                    <canvas id="padres20" height="50" width="50" ></canvas>
+                    <script>
+                        const getHttp3 = new XMLHttpRequest();
+                            getHttp3.open('GET', 'https://hackathon-juventud.herokuapp.com/obtenerDatosQuintanaRoo', true);
+                            getHttp3.send();
+                            getHttp3.onreadystatechange = function () {
+                                if (this.readyState == 4 && this.status == 200) {
+                                    //console.log(this.responseText);
+                                    let datos = JSON.parse(this.responseText);
+                                    console.log(datos);
+                                    var results = datos[0].anexados_menores20.split(",");
+                                    var ctx3 = document.getElementById('padres20').getContext('2d');
+                                    var myChart3 = new Chart(ctx3, {
+                                        type: 'doughnut',
+                                        data: {
+                                            labels: ['Hombres', 'Mujeres'],
+                                            datasets: [{
+                                                label: 'Estudiantes',
+                                                data: [results[0], results[1]
+                                                ],
+                                                backgroundColor: [
+                                                    'rgba(54, 162, 235, 50)',
+                                                    'rgba(255, 99, 132, 50)'
 
-                 <h6>Esparcimiento</h6>
+                                                ],
+                                            }]
+                                        },
+                                        options: {
 
+                                        }
+                                    });
+                                }
+                            }
+                    </script>
+                  </div>
+                </div>
+                <div class="row">
+                <div class="col-sm">
+                  <div class="card">
+                    <canvas id="padres3" height="50" width="50" ></canvas>
+                    <script>
+                        const getHttp4 = new XMLHttpRequest();
+                            getHttp4.open('GET', 'https://hackathon-juventud.herokuapp.com/obtenerDatosQuintanaRoo', true);
+                            getHttp4.send();
+                            getHttp4.onreadystatechange = function () {
+                                if (this.readyState == 4 && this.status == 200) {
+                                    //console.log(this.responseText);
+                                    let datos = JSON.parse(this.responseText);
+                                    console.log(datos);
+                                    var results = datos[0].embarazos_15a19.split(",");
+                                    console.log(results[2]+","+results[8]+","+results[6]+","+results[1]+","+results[7]+","+results[4]);
+                                    var ctx4 = document.getElementById('padres3').getContext('2d');
+                                    var myChart4 = new Chart(ctx4, {
+                                        type: 'bar',
+                                        data: {
+                                            labels: ['Sin estudios', 'Kinder', 'Primaria', 'Secundaria', 'Prepa', 'Licenciatura'],
+                                            datasets: [{
+                                                label: 'Preparacion academica del padre',
+                                                data: [results[2], results[8],results[6],results[1],results[7],results[4]
+                                                ],
+                                                backgroundColor: [
+                                                    'rgba(255, 99, 132, 0.2)',
+                                                    'rgba(54, 162, 235, 0.2)',
+                                                    'rgba(255, 206, 86, 0.2)',
+                                                    'rgba(75, 192, 192, 0.2)',
+                                                    'rgba(153, 102, 255, 0.2)',
+                                                    'rgba(255, 159, 64, 0.2)'
+                                                ],
+                                                borderColor: [
+                                                    'rgba(255, 99, 132, 1)',
+                                                    'rgba(54, 162, 235, 1)',
+                                                    'rgba(255, 206, 86, 1)',
+                                                    'rgba(75, 192, 192, 1)',
+                                                    'rgba(153, 102, 255, 1)',
+                                                    'rgba(255, 159, 64, 1)'
+                                                ],
+                                                borderWidth: 1
+                                            }]
+                                        },
+                                        options: {
+
+                                        }
+                                    });
+                                }
+                            }
+                    </script>
+                  </div>
+                </div>
+                <div class="col-sm">
+                <br><br><br><br><br>
+                  <h3>Control de natalidad entre jovencitas de 15 a 19 años</h3>
+                  <p style="font-size:100%;">En el estado de Quintana Roo, podemos encontrar una situación comprometedora, pues, podemos ver 
+                  que existen casos suficientes como para justificar la falta de preparación en la materia de educación sexual, pues muchos 
+                  de los casos de embarazo surgen en jovencitas que siguen en proceso de desarrollo corporal.</p>
+                </div>
+                </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
