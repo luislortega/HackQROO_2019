@@ -198,7 +198,7 @@ require_once('config/DbConnect.php');
 
           <p class="lead mb-5">SEIJUVE es un sistema que coordina e integra eficientemente la estructura de los procesos y recursos de la funcion estadistica, cuya creacion persigue el objetivo de fortalecer la produccion de informacion.</p>
 
-          <a href="#estado" class="btn btn-outline-primary js-scroll-trigger" role="button" aria-disabled="true">Comenzar</a>
+          <a href="#estado" class="btn btn-outline-primary js-scroll-trigger" role="button" aria-disabled="true">Conocer Mis Municipios</a>
 
          
 
