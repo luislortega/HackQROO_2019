@@ -70,6 +70,14 @@ if (isset( $_SESSION['id_usuario'] )) {
               <p>Programas</p>
             </a>
           </li>
+
+          <li >
+            <a href="lector_csv.php">
+              
+              <i class="nc-icon nc-glasses-2"></i>
+              <p>Registrar Datos</p>
+            </a>
+          </li>
             
          
          
