@@ -143,33 +143,34 @@ if (isset($_POST["submit"])) {
                 </a>
             </div>
 
-            <div class="sidebar-wrapper">
-                <ul class="nav">
-                    <li>
-                        <a href="admin.php">
-                            <i class="nc-icon nc-diamond"></i>
-                            <p>Panel de Control</p>
-                        </a>
-                    </li>
-                    <li class="active ">
-                        <a href="instituciones.php">
+          <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li >
+            <a href="instituto.php">
+               <i class="nc-icon nc-diamond"></i>
+              <p>Panel de Control</p>
+            </a>
+          </li>
+          
+          <li >
+            <a href="programasins.php">
+              
+              <i class="nc-icon nc-tile-56"></i>
+              <p>Programas</p>
+            </a>
+          </li>
+            
+         <li class="active ">
+            <a href="lector_csv.php">
+              
+              <i class="nc-icon nc-glasses-2"></i>
+              <p>Registrar Datos</p>
+            </a>
+          </li>
+         
+        </ul>
+      </div>
 
-                            <i class="nc-icon nc-bank"></i>
-                            <p>Instituciones</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="programas.php">
-
-                            <i class="nc-icon nc-tile-56"></i>
-                            <p>Programas</p>
-                        </a>
-                    </li>
-
-
-
-                </ul>
-            </div>
 
         </div>
         <div class="main-panel">

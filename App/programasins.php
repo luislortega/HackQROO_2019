@@ -71,7 +71,13 @@ if (isset( $_SESSION['id_usuario'] )) {
             </a>
           </li>
             
-         
+         <li >
+            <a href="lector_csv.php">
+              
+              <i class="nc-icon nc-glasses-2"></i>
+              <p>Registrar Datos</p>
+            </a>
+          </li>
          
         </ul>
       </div>
