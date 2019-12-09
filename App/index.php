@@ -328,290 +328,341 @@ if (isset($_POST['usuario'])) {
 
           </div>
         </div>
-      </section>
+    </section>
 
 
 
-      <hr class="m-0">
+    <hr class="m-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="convocatorias">
-        <div class="w-20">
-          <h2 class="mb-5">Convocatorias</h2>
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="convocatorias">
+      <div class="w-20">
+        <h2 class="mb-5">Convocatorias</h2>
 
-          <div class="card-group">
-            <div class="card">
-              <img class="card-img-top" src="https://pbs.twimg.com/profile_images/3549029586/3607341f60496b2a274b91dcc3934963_400x400.jpeg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
+        <div class="card-group">
+          <div class="card">
+            <img class="card-img-top" src="https://pbs.twimg.com/profile_images/3549029586/3607341f60496b2a274b91dcc3934963_400x400.jpeg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
-            <div class="card">
-              <img class="card-img-top" src="http://pm1.narvii.com/6661/59f36d6f2efec887568611a888d8b857ee988029_00.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="http://pm1.narvii.com/6661/59f36d6f2efec887568611a888d8b857ee988029_00.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
-            <div class="card">
-              <img class="card-img-top" src="https://k06.kn3.net/6F5BBB1C5.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="https://k06.kn3.net/6F5BBB1C5.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <hr class="m-0">
+    <hr class="m-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="institutos">
-        <div class="w-20">
-          <h2 class="mb-5">Convocatorias</h2>
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="institutos">
+      <div class="w-20">
+        <h2 class="mb-5">Convocatorias</h2>
 
-          <div class="card-group">
-            <div class="card">
-              <img class="card-img-top" src="https://pbs.twimg.com/profile_images/3549029586/3607341f60496b2a274b91dcc3934963_400x400.jpeg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
+        <div class="card-group">
+          <div class="card">
+            <img class="card-img-top" src="https://pbs.twimg.com/profile_images/3549029586/3607341f60496b2a274b91dcc3934963_400x400.jpeg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
-            <div class="card">
-              <img class="card-img-top" src="http://pm1.narvii.com/6661/59f36d6f2efec887568611a888d8b857ee988029_00.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="http://pm1.narvii.com/6661/59f36d6f2efec887568611a888d8b857ee988029_00.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
-            <div class="card">
-              <img class="card-img-top" src="https://k06.kn3.net/6F5BBB1C5.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="https://k06.kn3.net/6F5BBB1C5.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <hr class="m-0">
+    <hr class="m-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="indicadores">
-        <div class="w-100">
-          <h2 class="mb-5">Indicadores de Riesgo</h2>
-          <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-          <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
-        </div>
-      </section>
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="indicadores">
+      <div class="w-100">
+        <h2 class="mb-5">Indicadores de Riesgo</h2>
+        <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
+        <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
+      </div>
+    </section>
 
-      <hr class="m-0">
+    <hr class="m-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="login">
-        <div class="w-100">
-          <h2 class="mb-5">Login de Servidores Publicos</h2>
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="login">
+      <div class="w-100">
+        <h2 class="mb-5">Login de Servidores Publicos</h2>
 
 
-          <form method="post" action="index.php">
-            <div class="form-group">
-              <label for="exampleInputEmail1">Usuario</label>
-              <input name="usuario" type="text" class="form-control" id="exampleInputEmail1" placeholder="Ej. Noobmaster69">
+        <form method="post" action="index.php">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Usuario</label>
+            <input name="usuario" type="text" class="form-control" id="exampleInputEmail1" placeholder="Ej. Noobmaster69">
 
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Contraseña</label>
-              <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Ej. La Lonja de Manu">
-            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Contraseña</label>
+            <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Ej. La Lonja de Manu">
+          </div>
 
-            <button type="submit" href="#estado" class="btn btn-outline-primary js-scroll-trigger" role="button" aria-disabled="true">Comenzar</button>
-          </form>
+          <button type="submit" href="#estado" class="btn btn-outline-primary js-scroll-trigger" role="button" aria-disabled="true">Comenzar</button>
+        </form>
 
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <div class="portfolio-modal modal fade" id="economiaEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-          <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">
-                <i class="fas fa-times"></i>
-              </span>
-            </button>
-            <div class="modal-body text-center">
-              <div class="container">
-                <div class="row justify-content-center">
-                  <div class="col-lg-12">
-                    <!-- Portfolio Modal - Title -->
-                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Economía estatal</h2>
-                    <!-- Icon Divider -->
-                    <div class="divider-custom">
-                      <div class="divider-custom-line"></div>
-                      <div class="divider-custom-icon">
-                        <i class="fas fa-star"></i>
-                      </div>
-                      <div class="divider-custom-line"></div>
+    <div class="portfolio-modal modal fade" id="economiaEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="fas fa-times"></i>
+            </span>
+          </button>
+          <div class="modal-body text-center">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-12">
+                  <!-- Portfolio Modal - Title -->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Economía estatal</h2>
+                  <!-- Icon Divider -->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
                     </div>
-
-
+                    <div class="divider-custom-line"></div>
                   </div>
+
+
                 </div>
-                <div class="container">
-                  <div class="col-md-2 text-center">
+              </div>
+              <div class="container">
+                <div class="col-md-2 text-center">
 
-                    <h6>Economía</h6>
+                  <h6>Economía</h6>
 
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="portfolio-modal modal fade" id="educacionEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-          <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">
-                <i class="fas fa-times"></i>
-              </span>
-            </button>
-            <div class="modal-body text-center">
-              <div class="container">
-                <div class="row justify-content-center">
-                  <div class="col-lg-12">
-                    <!-- Portfolio Modal - Title -->
-                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Educación estatal</h2>
-                    <!-- Icon Divider -->
-                    <div class="divider-custom">
-                      <div class="divider-custom-line"></div>
-                      <div class="divider-custom-icon">
-                        <i class="fas fa-star"></i>
-                      </div>
-                      <div class="divider-custom-line"></div>
+    <div class="portfolio-modal modal fade" id="educacionEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="fas fa-times"></i>
+            </span>
+          </button>
+          <div class="modal-body text-center">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-12">
+                  <!-- Portfolio Modal - Title -->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Educación estatal</h2>
+                  <!-- Icon Divider -->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
                     </div>
-
-
+                    <div class="divider-custom-line"></div>
                   </div>
+
+
                 </div>
-                <div class="container">
-                  <div class="col-md-2 text-center">
+              </div>
+              <div class="container">
+                <div class="col-md-2 text-center">
 
-                    <h6>Educación</h6>
+                  <h6>Educación</h6>
 
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="portfolio-modal modal fade" id="gobiernoEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-          <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">
-                <i class="fas fa-times"></i>
-              </span>
-            </button>
-            <div class="modal-body text-center">
-              <div class="container">
-                <div class="row justify-content-center">
-                  <div class="col-lg-12">
-                    <!-- Portfolio Modal - Title -->
-                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Gobierno estatal</h2>
-                    <!-- Icon Divider -->
-                    <div class="divider-custom">
-                      <div class="divider-custom-line"></div>
-                      <div class="divider-custom-icon">
-                        <i class="fas fa-star"></i>
-                      </div>
-                      <div class="divider-custom-line"></div>
+    <div class="portfolio-modal modal fade" id="gobiernoEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="fas fa-times"></i>
+            </span>
+          </button>
+          <div class="modal-body text-center">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-12">
+                  <!-- Portfolio Modal - Title -->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Gobierno estatal</h2>
+                  <!-- Icon Divider -->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
                     </div>
+                    <div class="divider-custom-line"></div>
                   </div>
                 </div>
-                <div class="container">
-                  <div class="col-md-2 text-center">
+              </div>
+              <div class="container">
+                <div class="col-md-2 text-center">
 
-                    <h6>Gobierno</h6>
+                  <h6>Gobierno</h6>
 
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="portfolio-modal modal fade" id="saludEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-          <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">
-                <i class="fas fa-times"></i>
-              </span>
-            </button>
-            <div class="modal-body text-center">
-              <div class="container">
-                <div class="row justify-content-center">
-                  <div class="col-lg-12">
-                    <!-- Portfolio Modal - Title -->
-                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Salud estatal</h2>
-                    <!-- Icon Divider -->
-                    <div class="divider-custom">
-                      <div class="divider-custom-line"></div>
-                      <div class="divider-custom-icon">
-                        <i class="fas fa-star"></i>
-                      </div>
-                      <div class="divider-custom-line"></div>
+    <div class="portfolio-modal modal fade" id="saludEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="fas fa-times"></i>
+            </span>
+          </button>
+          <div class="modal-body text-center">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-12">
+                  <!-- Portfolio Modal - Title -->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Salud estatal</h2>
+                  <!-- Icon Divider -->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
                     </div>
-
-
+                    <div class="divider-custom-line"></div>
                   </div>
+
+
                 </div>
-                <div class="container">
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm">
+                    <br><br><br><br><br>
+                    <h3>Control de adicciones en el estado</h3>
+                    <p style="font-size:100%;">En el estado de Quintana Roo, se cuenta aproximádamente con una cantidad total de 22,759
+                      jóvenes menores a 20 años de edad con problemas de consumo alcoholico o de drogas, dentro de los cuales,
+                      aproximádamente 10,959 son hombres y 11,800 son mujeres.</p>
+                  </div>
+                  <div class="col-sm">
+                    <div class="card">
+                      <canvas id="myChart" height="50" width="50"></canvas>
+                      <script>
+                        const getHttp = new XMLHttpRequest();
+                        getHttp.open('GET', 'https://hackathon-juventud.herokuapp.com/obtenerDatosQuintanaRoo', true);
+                        getHttp.send();
+                        getHttp.onreadystatechange = function() {
+                          if (this.readyState == 4 && this.status == 200) {
+                            //console.log(this.responseText);
+                            let datos = JSON.parse(this.responseText);
+                            console.log(datos);
+                            var results = datos[0].anexados_menores20.split(",");
+                            var ctx = document.getElementById('myChart').getContext('2d');
+                            var myChart = new Chart(ctx, {
+                              type: 'doughnut',
+                              data: {
+                                labels: ['Hombres', 'Mujeres'],
+                                datasets: [{
+                                  label: 'Estudiantes',
+                                  data: [results[0], results[1]],
+                                  backgroundColor: [
+                                    'rgba(54, 162, 235, 50)',
+                                    'rgba(255, 99, 132, 50)'
+
+                                  ],
+                                }]
+                              },
+                              options: {
+
+                              }
+                            });
+                          }
+                        }
+                      </script>
+                    </div>
+                  </div>
                   <div class="row">
                     <div class="col-sm">
-                      <br><br><br><br><br>
-                      <h3>Control de adicciones en el estado</h3>
-                      <p style="font-size:100%;">En el estado de Quintana Roo, se cuenta aproximádamente con una cantidad total de 22,759
-                        jóvenes menores a 20 años de edad con problemas de consumo alcoholico o de drogas, dentro de los cuales,
-                        aproximádamente 10,959 son hombres y 11,800 son mujeres.</p>
-                    </div>
-                    <div class="col-sm">
                       <div class="card">
-                        <canvas id="myChart" height="50" width="50"></canvas>
+                        <canvas id="padres" height="50" width="50"></canvas>
                         <script>
-                          const getHttp = new XMLHttpRequest();
-                          getHttp.open('GET', 'https://hackathon-juventud.herokuapp.com/obtenerDatosQuintanaRoo', true);
-                          getHttp.send();
-                          getHttp.onreadystatechange = function() {
+                          const getHttp2 = new XMLHttpRequest();
+                          getHttp2.open('GET', 'https://hackathon-juventud.herokuapp.com/obtenerDatosQuintanaRoo', true);
+                          getHttp2.send();
+                          getHttp2.onreadystatechange = function() {
                             if (this.readyState == 4 && this.status == 200) {
                               //console.log(this.responseText);
                               let datos = JSON.parse(this.responseText);
                               console.log(datos);
-                              var results = datos[0].anexados_menores20.split(",");
-                              var ctx = document.getElementById('myChart').getContext('2d');
-                              var myChart = new Chart(ctx, {
-                                type: 'doughnut',
+                              var results = datos[0].embarazos_15a19.split(",");
+                              console.log(results[2] + "," + results[8] + "," + results[6] + "," + results[1] + "," + results[7] + "," + results[4]);
+                              var ctx2 = document.getElementById('padres').getContext('2d');
+                              var myChart2 = new Chart(ctx2, {
+                                type: 'bar',
                                 data: {
-                                  labels: ['Hombres', 'Mujeres'],
+                                  labels: ['Sin estudios', 'Kinder', 'Primaria', 'Secundaria', 'Prepa', 'Licenciatura'],
                                   datasets: [{
-                                    label: 'Estudiantes',
-                                    data: [results[0], results[1]],
+                                    label: 'Preparacion academica del padre',
+                                    data: [results[2], results[8], results[6], results[1], results[7], results[4]],
                                     backgroundColor: [
-                                      'rgba(54, 162, 235, 50)',
-                                      'rgba(255, 99, 132, 50)'
-
+                                      'rgba(255, 99, 132, 0.2)',
+                                      'rgba(54, 162, 235, 0.2)',
+                                      'rgba(255, 206, 86, 0.2)',
+                                      'rgba(75, 192, 192, 0.2)',
+                                      'rgba(153, 102, 255, 0.2)',
+                                      'rgba(255, 159, 64, 0.2)'
                                     ],
+                                    borderColor: [
+                                      'rgba(255, 99, 132, 1)',
+                                      'rgba(54, 162, 235, 1)',
+                                      'rgba(255, 206, 86, 1)',
+                                      'rgba(75, 192, 192, 1)',
+                                      'rgba(153, 102, 255, 1)',
+                                      'rgba(255, 159, 64, 1)'
+                                    ],
+                                    borderWidth: 1
                                   }]
                                 },
                                 options: {
@@ -623,243 +674,243 @@ if (isset($_POST['usuario'])) {
                         </script>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-sm">
-                        <div class="card">
-                          <canvas id="padres" height="50" width="50"></canvas>
-                          <script>
-                            const getHttp2 = new XMLHttpRequest();
-                            getHttp2.open('GET', 'https://hackathon-juventud.herokuapp.com/obtenerDatosQuintanaRoo', true);
-                            getHttp2.send();
-                            getHttp2.onreadystatechange = function() {
-                              if (this.readyState == 4 && this.status == 200) {
-                                //console.log(this.responseText);
-                                let datos = JSON.parse(this.responseText);
-                                console.log(datos);
-                                var results = datos[0].embarazos_15a19.split(",");
-                                console.log(results[2] + "," + results[8] + "," + results[6] + "," + results[1] + "," + results[7] + "," + results[4]);
-                                var ctx2 = document.getElementById('padres').getContext('2d');
-                                var myChart2 = new Chart(ctx2, {
-                                  type: 'bar',
-                                  data: {
-                                    labels: ['Sin estudios', 'Kinder', 'Primaria', 'Secundaria', 'Prepa', 'Licenciatura'],
-                                    datasets: [{
-                                      label: 'Preparacion academica del padre',
-                                      data: [results[2], results[8], results[6], results[1], results[7], results[4]],
-                                      backgroundColor: [
-                                        'rgba(255, 99, 132, 0.2)',
-                                        'rgba(54, 162, 235, 0.2)',
-                                        'rgba(255, 206, 86, 0.2)',
-                                        'rgba(75, 192, 192, 0.2)',
-                                        'rgba(153, 102, 255, 0.2)',
-                                        'rgba(255, 159, 64, 0.2)'
-                                      ],
-                                      borderColor: [
-                                        'rgba(255, 99, 132, 1)',
-                                        'rgba(54, 162, 235, 1)',
-                                        'rgba(255, 206, 86, 1)',
-                                        'rgba(75, 192, 192, 1)',
-                                        'rgba(153, 102, 255, 1)',
-                                        'rgba(255, 159, 64, 1)'
-                                      ],
-                                      borderWidth: 1
-                                    }]
-                                  },
-                                  options: {
-
-                                  }
-                                });
-                              }
-                            }
-                          </script>
-                        </div>
-                      </div>
-                      <div class="col-sm">
-                        <br><br><br><br><br>
-                        <h3>Control de natalidad entre jovencitas de 15 a 19 años</h3>
-                        <p style="font-size:100%;">En el estado de Quintana Roo, podemos encontrar una situación comprometedora, pues, podemos ver
-                          que existen casos suficientes como para justificar la falta de preparación en la materia de educación sexual, pues muchos
-                          de los casos de embarazo surgen en jovencitas que siguen en proceso de desarrollo corporal.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-modal modal fade" id="seguridadEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-          <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">
-                <i class="fas fa-times"></i>
-              </span>
-            </button>
-            <div class="modal-body text-center">
-              <div class="container">
-                <div class="row justify-content-center">
-                  <div class="col-lg-12">
-                    <!-- Portfolio Modal - Title -->
-                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Seguridad estatal</h2>
-                    <!-- Icon Divider -->
-                    <div class="divider-custom">
-                      <div class="divider-custom-line"></div>
-                      <div class="divider-custom-icon">
-                        <i class="fas fa-star"></i>
-                      </div>
-                      <div class="divider-custom-line"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="container">
-                  <div class="col-md-2 text-center">
-
-                    <h6>Seguridad</h6>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-modal modal fade" id="viviendaEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-          <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">
-                <i class="fas fa-times"></i>
-              </span>
-            </button>
-            <div class="modal-body text-center">
-              <div class="container">
-                <div class="row justify-content-center">
-                  <div class="col-lg-12">
-                    <!-- Portfolio Modal - Title -->
-                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Vivienda estatal</h2>
-                    <!-- Icon Divider -->
-                    <div class="divider-custom">
-                      <div class="divider-custom-line"></div>
-                      <div class="divider-custom-icon">
-                        <i class="fas fa-star"></i>
-                      </div>
-                      <div class="divider-custom-line"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="container">
-                  <div class="col-md-2 text-center">
-
-                    <h6>Vivienda</h6>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-modal modal fade" id="calidadEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-          <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">
-                <i class="fas fa-times"></i>
-              </span>
-            </button>
-            <div class="modal-body text-center">
-              <div class="container">
-                <div class="row justify-content-center">
-                  <div class="col-lg-12">
-                    <!-- Portfolio Modal - Title -->
-                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Calidad de vida estatal</h2>
-                    <!-- Icon Divider -->
-                    <div class="divider-custom">
-                      <div class="divider-custom-line"></div>
-                      <div class="divider-custom-icon">
-                        <i class="fas fa-star"></i>
-                      </div>
-                      <div class="divider-custom-line"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="container">
-                  <div class="col-md-2 text-center">
-
-                    <h6>Calidad de vida</h6>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-modal modal fade" id="esparcimientoEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-          <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">
-                <i class="fas fa-times"></i>
-              </span>
-            </button>
-            <div class="modal-body text-center">
-              <div class="container">
-                <div class="row justify-content-center">
-                  <div class="col-lg-12">
-                    <!-- Portfolio Modal - Title -->
-                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Esparcimiento estatal</h2>
-                    <!-- Icon Divider -->
-                    <div class="divider-custom">
-                      <div class="divider-custom-line"></div>
-                      <div class="divider-custom-icon">
-                        <i class="fas fa-star"></i>
-                      </div>
-                      <div class="divider-custom-line"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="container">
-                  <div class="row">
                     <div class="col-sm">
                       <br><br><br><br><br>
-                      <h3>La tasa de natalidad entre jovencitas de 20 a 24</h3>
-                      <p style="font-size:100%;">En la juventud, la paternidad cada vez aumenta de forma exponencial, la situación
-                        en la que se encuentran al momento de convertirse e padres, es alarmante, pues, no se encuentran preparados
-                        académicamente hablando.</p>
+                      <h3>Control de natalidad entre jovencitas de 15 a 19 años</h3>
+                      <p style="font-size:100%;">En el estado de Quintana Roo, podemos encontrar una situación comprometedora, pues, podemos ver
+                        que existen casos suficientes como para justificar la falta de preparación en la materia de educación sexual, pues muchos
+                        de los casos de embarazo surgen en jovencitas que siguen en proceso de desarrollo corporal.</p>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="seguridadEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="fas fa-times"></i>
+            </span>
+          </button>
+          <div class="modal-body text-center">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-12">
+                  <!-- Portfolio Modal - Title -->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Seguridad estatal</h2>
+                  <!-- Icon Divider -->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="col-md-2 text-center">
+
+                  <h6>Seguridad</h6>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="viviendaEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="fas fa-times"></i>
+            </span>
+          </button>
+          <div class="modal-body text-center">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-12">
+                  <!-- Portfolio Modal - Title -->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Vivienda estatal</h2>
+                  <!-- Icon Divider -->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="col-md-2 text-center">
+
+                  <h6>Vivienda</h6>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="calidadEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="fas fa-times"></i>
+            </span>
+          </button>
+          <div class="modal-body text-center">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-12">
+                  <!-- Portfolio Modal - Title -->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Calidad de vida estatal</h2>
+                  <!-- Icon Divider -->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="col-md-2 text-center">
+
+                  <h6>Calidad de vida</h6>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="esparcimientoEstatal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="fas fa-times"></i>
+            </span>
+          </button>
+          <div class="modal-body text-center">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-12">
+                  <!-- Portfolio Modal - Title -->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Esparcimiento estatal</h2>
+                  <!-- Icon Divider -->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm">
+                    <br><br><br><br><br>
+                    <h3>La tasa de natalidad entre jovencitas de 20 a 24</h3>
+                    <p style="font-size:100%;">En la juventud, la paternidad cada vez aumenta de forma exponencial, la situación
+                      en la que se encuentran al momento de convertirse e padres, es alarmante, pues, no se encuentran preparados
+                      académicamente hablando.</p>
+                  </div>
+                  <div class="col-sm">
+                    <div class="card">
+                      <canvas id="padres20" height="50" width="50"></canvas>
+                      <script>
+                        const getHttp3 = new XMLHttpRequest();
+                        getHttp3.open('GET', 'https://hackathon-juventud.herokuapp.com/obtenerDatosQuintanaRoo', true);
+                        getHttp3.send();
+                        getHttp3.onreadystatechange = function() {
+                          if (this.readyState == 4 && this.status == 200) {
+                            //console.log(this.responseText);
+                            let datos = JSON.parse(this.responseText);
+                            console.log(datos);
+                            var results = datos[0].anexados_menores20.split(",");
+                            var ctx3 = document.getElementById('padres20').getContext('2d');
+                            var myChart3 = new Chart(ctx3, {
+                              type: 'doughnut',
+                              data: {
+                                labels: ['Hombres', 'Mujeres'],
+                                datasets: [{
+                                  label: 'Estudiantes',
+                                  data: [results[0], results[1]],
+                                  backgroundColor: [
+                                    'rgba(54, 162, 235, 50)',
+                                    'rgba(255, 99, 132, 50)'
+
+                                  ],
+                                }]
+                              },
+                              options: {
+
+                              }
+                            });
+                          }
+                        }
+                      </script>
+                    </div>
+                  </div>
+                  <div class="row">
                     <div class="col-sm">
                       <div class="card">
-                        <canvas id="padres20" height="50" width="50"></canvas>
+                        <canvas id="padres3" height="50" width="50"></canvas>
                         <script>
-                          const getHttp3 = new XMLHttpRequest();
-                          getHttp3.open('GET', 'https://hackathon-juventud.herokuapp.com/obtenerDatosQuintanaRoo', true);
-                          getHttp3.send();
-                          getHttp3.onreadystatechange = function() {
+                          const getHttp4 = new XMLHttpRequest();
+                          getHttp4.open('GET', 'https://hackathon-juventud.herokuapp.com/obtenerDatosQuintanaRoo', true);
+                          getHttp4.send();
+                          getHttp4.onreadystatechange = function() {
                             if (this.readyState == 4 && this.status == 200) {
                               //console.log(this.responseText);
                               let datos = JSON.parse(this.responseText);
                               console.log(datos);
-                              var results = datos[0].anexados_menores20.split(",");
-                              var ctx3 = document.getElementById('padres20').getContext('2d');
-                              var myChart3 = new Chart(ctx3, {
-                                type: 'doughnut',
+                              var results = datos[0].embarazos_15a19.split(",");
+                              console.log(results[2] + "," + results[8] + "," + results[6] + "," + results[1] + "," + results[7] + "," + results[4]);
+                              var ctx4 = document.getElementById('padres3').getContext('2d');
+                              var myChart4 = new Chart(ctx4, {
+                                type: 'bar',
                                 data: {
-                                  labels: ['Hombres', 'Mujeres'],
+                                  labels: ['Sin estudios', 'Kinder', 'Primaria', 'Secundaria', 'Prepa', 'Licenciatura'],
                                   datasets: [{
-                                    label: 'Estudiantes',
-                                    data: [results[0], results[1]],
+                                    label: 'Preparacion academica del padre',
+                                    data: [results[2], results[8], results[6], results[1], results[7], results[4]],
                                     backgroundColor: [
-                                      'rgba(54, 162, 235, 50)',
-                                      'rgba(255, 99, 132, 50)'
-
+                                      'rgba(255, 99, 132, 0.2)',
+                                      'rgba(54, 162, 235, 0.2)',
+                                      'rgba(255, 206, 86, 0.2)',
+                                      'rgba(75, 192, 192, 0.2)',
+                                      'rgba(153, 102, 255, 0.2)',
+                                      'rgba(255, 159, 64, 0.2)'
                                     ],
+                                    borderColor: [
+                                      'rgba(255, 99, 132, 1)',
+                                      'rgba(54, 162, 235, 1)',
+                                      'rgba(255, 206, 86, 1)',
+                                      'rgba(75, 192, 192, 1)',
+                                      'rgba(153, 102, 255, 1)',
+                                      'rgba(255, 159, 64, 1)'
+                                    ],
+                                    borderWidth: 1
                                   }]
                                 },
                                 options: {
@@ -871,64 +922,12 @@ if (isset($_POST['usuario'])) {
                         </script>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-sm">
-                        <div class="card">
-                          <canvas id="padres3" height="50" width="50"></canvas>
-                          <script>
-                            const getHttp4 = new XMLHttpRequest();
-                            getHttp4.open('GET', 'https://hackathon-juventud.herokuapp.com/obtenerDatosQuintanaRoo', true);
-                            getHttp4.send();
-                            getHttp4.onreadystatechange = function() {
-                              if (this.readyState == 4 && this.status == 200) {
-                                //console.log(this.responseText);
-                                let datos = JSON.parse(this.responseText);
-                                console.log(datos);
-                                var results = datos[0].embarazos_15a19.split(",");
-                                console.log(results[2] + "," + results[8] + "," + results[6] + "," + results[1] + "," + results[7] + "," + results[4]);
-                                var ctx4 = document.getElementById('padres3').getContext('2d');
-                                var myChart4 = new Chart(ctx4, {
-                                  type: 'bar',
-                                  data: {
-                                    labels: ['Sin estudios', 'Kinder', 'Primaria', 'Secundaria', 'Prepa', 'Licenciatura'],
-                                    datasets: [{
-                                      label: 'Preparacion academica del padre',
-                                      data: [results[2], results[8], results[6], results[1], results[7], results[4]],
-                                      backgroundColor: [
-                                        'rgba(255, 99, 132, 0.2)',
-                                        'rgba(54, 162, 235, 0.2)',
-                                        'rgba(255, 206, 86, 0.2)',
-                                        'rgba(75, 192, 192, 0.2)',
-                                        'rgba(153, 102, 255, 0.2)',
-                                        'rgba(255, 159, 64, 0.2)'
-                                      ],
-                                      borderColor: [
-                                        'rgba(255, 99, 132, 1)',
-                                        'rgba(54, 162, 235, 1)',
-                                        'rgba(255, 206, 86, 1)',
-                                        'rgba(75, 192, 192, 1)',
-                                        'rgba(153, 102, 255, 1)',
-                                        'rgba(255, 159, 64, 1)'
-                                      ],
-                                      borderWidth: 1
-                                    }]
-                                  },
-                                  options: {
-
-                                  }
-                                });
-                              }
-                            }
-                          </script>
-                        </div>
-                      </div>
-                      <div class="col-sm">
-                        <br><br><br><br><br>
-                        <h3>Control de natalidad entre jovencitas de 15 a 19 años</h3>
-                        <p style="font-size:100%;">En el estado de Quintana Roo, podemos encontrar una situación comprometedora, pues, podemos ver
-                          que existen casos suficientes como para justificar la falta de preparación en la materia de educación sexual, pues muchos
-                          de los casos de embarazo surgen en jovencitas que siguen en proceso de desarrollo corporal.</p>
-                      </div>
+                    <div class="col-sm">
+                      <br><br><br><br><br>
+                      <h3>Control de natalidad entre jovencitas de 15 a 19 años</h3>
+                      <p style="font-size:100%;">En el estado de Quintana Roo, podemos encontrar una situación comprometedora, pues, podemos ver
+                        que existen casos suficientes como para justificar la falta de preparación en la materia de educación sexual, pues muchos
+                        de los casos de embarazo surgen en jovencitas que siguen en proceso de desarrollo corporal.</p>
                     </div>
                   </div>
                 </div>
@@ -937,6 +936,7 @@ if (isset($_POST['usuario'])) {
           </div>
         </div>
       </div>
+    </div>
       <div class="portfolio-modal modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
         <div class="modal-dialog modal-xl" role="document">
           <div class="modal-content">
@@ -1072,7 +1072,7 @@ if (isset($_POST['usuario'])) {
               </div>
             </div>
           </div>
-
+        
         </div>
       </div>
 
