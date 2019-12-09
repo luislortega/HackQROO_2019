@@ -35,7 +35,7 @@ if (isset($_SESSION['id_usuario'])) {
     header("Location: index.php");
     exit();
 }
-    echo json_encode($array_lista);
+    //echo json_encode($array_lista);
 
 $row = 0;
 $programa = null;
@@ -352,10 +352,12 @@ if (isset($_POST["submit"])) {
                         xhr.onreadystatechange = () => {
                             if(xhr.readyState == 4 && xhr.status == 200) {
                                 console.log(xhr.responseText);
+                                window.location.replace("http://localhost/Php/Hackaton/HackQROO_2019/App/lector_csv.php?f=1#popup2");
                             }
                         };
                         xhr.open("GET", theUrl, true);
                         xhr.send();
+
                     }
                 </script>
             </div>
@@ -365,6 +367,7 @@ if (isset($_POST["submit"])) {
         <div class="popup">
             <h5>Archivo subido correctamente</h5>
             <img src="https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/512/Tick_Mark-512.png" alt="" srcset="">
+            <a href="http://localhost/Php/Hackaton/HackQROO_2019/App/lector_csv.php">CERRAR</a>
         </div>
     </div>
 
