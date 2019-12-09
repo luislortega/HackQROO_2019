@@ -52,24 +52,25 @@ if (isset($_POST["submit"])) {
         } else {
             if (file_exists("upload/" . $_FILES["file"]["name"])) {
                 // SI YA EXISTE ACTUALZIAR EL TAG
-                
-
-
                 $contador = rand(0, 100000);
                 $nombre_sin_extencion = explode(".", $_FILES["file"]["name"]);
                 move_uploaded_file($_FILES["file"]["tmp_name"], "upload/" . $nombre_sin_extencion[0] . "-" . $contador . "." . $nombre_sin_extencion[1]);
-                
                 $sql = "UPDATE programas SET carpeta_datos_programa='upload/". $nombre_sin_extencion[0] . "-" . $contador . "." . $nombre_sin_extencion[1]."' WHERE nombre_programa='".$_POST["programa"]."'";
-
+                if ($mysqli->query($sql) === true) {
+                    echo "Record updated successfully";
+                } else {
+                    echo "Error updating record: " . $mysqli->error;
+                }
+            } else {
+                //Ponerle un sin tag
+                move_uploaded_file($_FILES["file"]["tmp_name"], "upload/" . $_FILES["file"]["name"]);
+                $sql = "UPDATE programas SET carpeta_datos_programa='upload/" . $_FILES["file"]["name"] . "' WHERE nombre_programa='".$_POST["programa"]."'";
                 if ($mysqli->query($sql) === true) {
                     echo "Record updated successfully";
                 } else {
                     echo "Error updating record: " . $mysqli->error;
                 }
 
-            } else {
-                //Ponerle un sin tag
-                move_uploaded_file($_FILES["file"]["tmp_name"], "upload/" . $_FILES["file"]["name"]);
             }
         }
         if (($handle = fopen("upload/" . $_FILES["file"]["name"], "r")) !== false) {
@@ -92,11 +93,6 @@ if (isset($_POST["submit"])) {
             }
             fclose($handle);
         }
-        /*
-        To Do:
-        - obtener el nombre del programa y almacenarlo en una carpeta personalizada
-        - ingresar el valor del ultimo archivo subido a servidor
-        */
     } else {
         echo "No file selected <br />";
     }
@@ -347,9 +343,19 @@ if (isset($_POST["submit"])) {
 
                         let json_data = programa_seleccionado.innerHTML
                         let json_data2 = JSON.stringify(test)
-                        let json_combinado = json_data.concat(json_data2);
-                        console.log(json_combinado)
+                        httpGet("http://localhost/Php/Hackaton/HackQROO_2019/App/panel/ajax/upload_json.php?array_datos="+json_data2+"&programa="+json_data)
                         //Enviar al servidor 
+                    }
+
+                    function httpGet(theUrl){
+                        const xhr = new XMLHttpRequest();
+                        xhr.onreadystatechange = () => {
+                            if(xhr.readyState == 4 && xhr.status == 200) {
+                                console.log(xhr.responseText);
+                            }
+                        };
+                        xhr.open("GET", theUrl, true);
+                        xhr.send();
                     }
                 </script>
             </div>
