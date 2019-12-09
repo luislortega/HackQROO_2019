@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-12-2019 a las 10:04:07
+-- Tiempo de generación: 08-12-2019 a las 22:58:13
 -- Versión del servidor: 10.4.8-MariaDB
 -- Versión de PHP: 7.3.10
 
@@ -42,8 +42,7 @@ CREATE TABLE `instituciones` (
 --
 
 INSERT INTO `instituciones` (`id_instituciones`, `nombre_institucion`, `descripcion_institucion`, `imagen_institucion`, `usuario_institucion`, `password_institucion`) VALUES
-(1, 'Sociedad de ¿Me perdonas?', 'Es para perdonar a Magggy de Bootstrap', 'https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/012015/bootstrap.png', 'meperdonas', 'meperdonas'),
-(3, 'Sociedad de Pescadores', 'Sociedad de Pescadores', 'https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/012015/bootstrap.png', 'dianita6', 'dianita6');
+(8, 'Sociedad de ¿Me perdonas?', 'Apoyo para barriles de chela', 'https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/012015/bootstrap.png', 'meperdonas', 'meperdonas');
 
 -- --------------------------------------------------------
 
@@ -66,7 +65,7 @@ CREATE TABLE `programas` (
 --
 
 INSERT INTO `programas` (`id_programa`, `nombre_programa`, `descripcion_programa`, `carpeta_datos_programa`, `json_datos_programa`, `id_institucion`, `tag_archivo_programa`) VALUES
-(1, 'Apoyo para las chelas', 'Apoyo para las chelas', 'www.data.com/datos/ia/datos.api', 'www.data.com/datos/ia/datos.json', 1, '');
+(14, 'Apoyo para barriles de chela', 'Apoyo para barriles de chela', 'chelasbarriles.data', 'chelasbarriles.api', 8, 'chelasbarriles.json');
 
 -- --------------------------------------------------------
 
@@ -86,7 +85,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `user_usuario`, `password_usuario`, `rango_usuario`) VALUES
-(1, 'gobernador', '123456', 'admin');
+(1, 'gobernador', '123456', 'admin'),
+(8, 'meperdonas', 'meperdonas', 'instituto');
 
 --
 -- Índices para tablas volcadas
@@ -119,19 +119,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `instituciones`
 --
 ALTER TABLE `instituciones`
-  MODIFY `id_instituciones` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_instituciones` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `programas`
 --
 ALTER TABLE `programas`
-  MODIFY `id_programa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT de la tabla `usuarios`
---
-ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_programa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Restricciones para tablas volcadas
