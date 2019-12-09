@@ -458,15 +458,14 @@ if (isset($_POST['usuario'])) {
                     </div>
                     <div class="divider-custom-line"></div>
                   </div>
-
-
                 </div>
               </div>
               <div class="container">
-                <div class="col-md-2 text-center">
-
-                  <h6>Economía</h6>
-
+                <div class="text-center">
+                  <h3>Posicionamiento económico terciario</h3>
+                  <p style="font-size:100%;">Las actividades economico terciarias son las que están relacionadas
+                   con los servicios, transportes, turismo u otro tipo de servicio en un municipio o estado. 
+                  Según el ranking de la INEGI, Quintana Roo se posiciona en el <h3>Top 17</h3> a nivel nacional.</p>
                 </div>
               </div>
             </div>
@@ -502,10 +501,22 @@ if (isset($_POST['usuario'])) {
                 </div>
               </div>
               <div class="container">
-                <div class="col-md-2 text-center">
-
-                  <h6>Educación</h6>
-
+                <div class="row">
+                  <div class="col-sm">
+                    <h3>Porcentaje de absorción escolar en el estado</h3>
+                    <p style="font-size:100%;">El porcentaje de absorción en el estado de Quintana Roo
+                    se ve reflejado de manera negativa, pues únicamente el <h3>27.6</h3> de los estudiantes
+                    logran realizar la transición de secundaria a prepa, aunque, este último año, ha sido mejor que
+                    en otros años pues se ha considerado una absorción <h3>ascendente.</h3></p>
+                  </div>
+                  <div class="col-sm">
+                    <h3>Procentaje de aprobación escolar en el estado</h3>
+                    <p style="font-size:100%;">El porcentaje de aprobación en el estado de Quintana Roo
+                    se ve reflejado de manera positiva, pues refleja un promedio mayor a la media con un 
+                     <h3>66.9</h3> de promedio de aprobación en los estudiantes de preparatoria de todo 
+                     el estado, además, el promedio ha sido <h3>ascendente</h3> respecto al promedio 
+                     del año anterior.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -539,10 +550,11 @@ if (isset($_POST['usuario'])) {
                 </div>
               </div>
               <div class="container">
-                <div class="col-md-2 text-center">
-
-                  <h6>Gobierno</h6>
-
+                <div class="text-center">
+                  <h3>Confianza política</h3>
+                  <p style="font-size:100%;">En la juventud del estado de Quintana Roo se obtuvo un 
+                  intervalo de confianza de <h3>(3.5,3.8)</h3> hacia los políticos de las instituciones, municipios 
+                  y gobiernos del estado. Tomando en cuenta un universo de (0,10)</p>
                 </div>
               </div>
             </div>
@@ -715,10 +727,11 @@ if (isset($_POST['usuario'])) {
                 </div>
               </div>
               <div class="container">
-                <div class="col-md-2 text-center">
-
-                  <h6>Seguridad</h6>
-
+                <div class="text-center">
+                  <h3>Seguridad estatal</h3>
+                  <p style="font-size:100%;">En la juventud del estado de Quintana Roo se obtuvo un 
+                  intervalo de confianza de <h3>(3.3,3.6)</h3> hacia los policías de las instituciones, municipios 
+                  y gobierno del estado. Tomando en cuenta un universo de (0,10).</p>
                 </div>
               </div>
             </div>
@@ -752,10 +765,11 @@ if (isset($_POST['usuario'])) {
                 </div>
               </div>
               <div class="container">
-                <div class="col-md-2 text-center">
-
-                  <h6>Vivienda</h6>
-
+                <div class="text-center">
+                  <h3>Vivienda</h3>
+                  <p style="font-size:100%;">En la juventud del estado de Quintana Roo se obtuvo un 
+                  intervalo de confianza de <h3>(7.7,8.0)</h3> basado en la comodidad, bienes, integridad
+                  y seguridad familiar de cada joven quintanarroense.</p>
                 </div>
               </div>
             </div>
@@ -789,10 +803,10 @@ if (isset($_POST['usuario'])) {
                 </div>
               </div>
               <div class="container">
-                <div class="col-md-2 text-center">
-
-                  <h6>Calidad de vida</h6>
-
+                <div class="text-center">
+                  <h3>Seguros públicos</h3>
+                  <p style="font-size:100%;">En la juventud del estado de Quintana Roo se obtuvo un 
+                  intervalo de confianza de <h3>(5.4,5.7)</h3> según los datos públicos del Segob.</p>
                 </div>
               </div>
             </div>
@@ -831,12 +845,12 @@ if (isset($_POST['usuario'])) {
                     <br><br><br><br><br>
                     <h3>La tasa de natalidad entre jovencitas de 20 a 24</h3>
                     <p style="font-size:100%;">En la juventud, la paternidad cada vez aumenta de forma exponencial, la situación
-                      en la que se encuentran al momento de convertirse e padres, es alarmante, pues, no se encuentran preparados
+                      en la que se encuentran al momento de convertirse e padres, es complicado, pues, no se encuentran preparados
                       académicamente hablando.</p>
                   </div>
                   <div class="col-sm">
                     <div class="card">
-                      <canvas id="padres20" height="50" width="50"></canvas>
+                      <canvas id="padres2" height="50" width="50"></canvas>
                       <script>
                         const getHttp3 = new XMLHttpRequest();
                         getHttp3.open('GET', 'https://hackathon-juventud.herokuapp.com/obtenerDatosQuintanaRoo', true);
@@ -846,26 +860,39 @@ if (isset($_POST['usuario'])) {
                             //console.log(this.responseText);
                             let datos = JSON.parse(this.responseText);
                             console.log(datos);
-                            var results = datos[0].anexados_menores20.split(",");
-                            var ctx3 = document.getElementById('padres20').getContext('2d');
+                            var results = datos[0].embarazos_20a24.split(",");
+                            console.log(results[0] + "," + results[2] + "," + results[1] + "," + results[9] + "," + results[6] + "," + results[4]);
+                            var ctx3 = document.getElementById('padres2').getContext('2d');
                             var myChart3 = new Chart(ctx3, {
-                              type: 'doughnut',
-                              data: {
-                                labels: ['Hombres', 'Mujeres'],
-                                datasets: [{
-                                  label: 'Estudiantes',
-                                  data: [results[0], results[1]],
-                                  backgroundColor: [
-                                    'rgba(54, 162, 235, 50)',
-                                    'rgba(255, 99, 132, 50)'
+                                type: 'bar',
+                                data: {
+                                  labels: ['Sin estudios', 'Kinder', 'Primaria', 'Secundaria', 'Prepa', 'Licenciatura'],
+                                  datasets: [{
+                                    label: 'Preparacion academica del padre',
+                                    data: [results[0], results[2], results[1], results[9], results[6], results[4]],
+                                    backgroundColor: [
+                                      'rgba(255, 99, 132, 0.2)',
+                                      'rgba(54, 162, 235, 0.2)',
+                                      'rgba(255, 206, 86, 0.2)',
+                                      'rgba(75, 192, 192, 0.2)',
+                                      'rgba(153, 102, 255, 0.2)',
+                                      'rgba(255, 159, 64, 0.2)'
+                                    ],
+                                    borderColor: [
+                                      'rgba(255, 99, 132, 1)',
+                                      'rgba(54, 162, 235, 1)',
+                                      'rgba(255, 206, 86, 1)',
+                                      'rgba(75, 192, 192, 1)',
+                                      'rgba(153, 102, 255, 1)',
+                                      'rgba(255, 159, 64, 1)'
+                                    ],
+                                    borderWidth: 1
+                                  }]
+                                },
+                                options: {
 
-                                  ],
-                                }]
-                              },
-                              options: {
-
-                              }
-                            });
+                                }
+                              });
                           }
                         }
                       </script>
@@ -884,8 +911,8 @@ if (isset($_POST['usuario'])) {
                               //console.log(this.responseText);
                               let datos = JSON.parse(this.responseText);
                               console.log(datos);
-                              var results = datos[0].embarazos_15a19.split(",");
-                              console.log(results[2] + "," + results[8] + "," + results[6] + "," + results[1] + "," + results[7] + "," + results[4]);
+                              var results = datos[0].embarazos_25a29.split(",");
+                              console.log(results[0] + "," + results[3] + "," + results[2] + "," + results[6] + "," + results[4] + "," + results[8]);
                               var ctx4 = document.getElementById('padres3').getContext('2d');
                               var myChart4 = new Chart(ctx4, {
                                 type: 'bar',
@@ -893,7 +920,7 @@ if (isset($_POST['usuario'])) {
                                   labels: ['Sin estudios', 'Kinder', 'Primaria', 'Secundaria', 'Prepa', 'Licenciatura'],
                                   datasets: [{
                                     label: 'Preparacion academica del padre',
-                                    data: [results[2], results[8], results[6], results[1], results[7], results[4]],
+                                    data: [results[0], results[3], results[2], results[6], results[4], results[8]],
                                     backgroundColor: [
                                       'rgba(255, 99, 132, 0.2)',
                                       'rgba(54, 162, 235, 0.2)',
@@ -924,10 +951,10 @@ if (isset($_POST['usuario'])) {
                     </div>
                     <div class="col-sm">
                       <br><br><br><br><br>
-                      <h3>Control de natalidad entre jovencitas de 15 a 19 años</h3>
-                      <p style="font-size:100%;">En el estado de Quintana Roo, podemos encontrar una situación comprometedora, pues, podemos ver
-                        que existen casos suficientes como para justificar la falta de preparación en la materia de educación sexual, pues muchos
-                        de los casos de embarazo surgen en jovencitas que siguen en proceso de desarrollo corporal.</p>
+                      <h3>Control de natalidad entre jovencitas de 25 a 29 años</h3>
+                      <p style="font-size:100%;">La natalidad en el sector de juventud madura, muestra un comportamiento más estable
+                      lo que es positivo, pues se piensa de forma más segura, aunque, para llegar a este punto, hay un gran grado
+                      de complejidad, ya que, es probable que terminen siendo padres a una edad temprana.</p>
                     </div>
                   </div>
                 </div>
