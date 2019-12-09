@@ -224,33 +224,35 @@ if (isset($_POST["submit"])) {
                                 <h4 class="card-title"> Lector CSV dinamico</h4>
                             </div>
                             <div class="card-body">
-                                <table width="600">
+                               
+
+                                    
                                     <!-- 
                                     LECTOR DE LUIS LEON 
                                     -->
                                     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>?q=1#popup1" method="post" enctype="multipart/form-data">
-                                        <p>Programas de mi institucion</p>
-                                        <select name="programa">
-
-                                        <?php
+                                        
+                                         <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Programas de mi institucion</label>
+                                        <select class="form-control" id="exampleFormControlSelect1" name="programa">
+                                           <?php
                                         foreach ($array_lista as $key => $value) {
                                             echo '<option value="'.$value[1].'">';
                                             echo $value[1];
                                             echo '</option>';
                                         }
-                                        ?>    
+                                        ?>  
                                         </select>
-                                        <tr>
-                                            <td width="20%">Selecciona CSV </td>
-                                            <td width="80%"><input type="file" name="file" id="file" /></td>
-                                        </tr>
+                                      </div>
 
-                                        <tr>
-                                            <td><input type="submit" name="submit" /></td>
-                                        </tr>
+                                       <div class="custom-file">
+  <input type="file" name="file" class="custom-file-input" id="file" lang="es">
+  <label class="custom-file-label" for="file" id="label_de_ruta">Seleccionar Archivo</label>
+</div>
 
+                                            <button type="submit" class="btn btn-primary mb-2" name="submit">Agregar Datos</button>
                                     </form>
-                                </table>
+                               
                             </div>
                         </div>
                     </div>
