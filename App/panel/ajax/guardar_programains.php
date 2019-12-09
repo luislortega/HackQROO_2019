@@ -21,12 +21,11 @@ session_start();
 	$carpeta = mysqli_real_escape_string($con,(strip_tags($_POST["carpeta"],ENT_QUOTES))); //imagen
 	$json = mysqli_real_escape_string($con,(strip_tags($_POST["json"],ENT_QUOTES))); //user
 	$tag = mysqli_real_escape_string($con,(strip_tags($_POST["tag"],ENT_QUOTES))); //password 
-	$selectboxx = $_POST["selectboxx"];
+	$selectboxx = mysqli_real_escape_string($con,(strip_tags($_POST["selectboxx"],ENT_QUOTES)));
 
 	// REGISTER data into database
 
     $sql = "INSERT INTO `programas`(`id_programa`, `nombre_programa`, `descripcion_programa`, `carpeta_datos_programa`, `json_datos_programa`, `id_institucion`, `tag_archivo_programa`) VALUES (null,'$nombre','$description','$carpeta','$json',$selectboxx,'$tag')";
-    
     $query = mysqli_query($con,$sql);
     // if product has been added successfully
     if ($query) {
