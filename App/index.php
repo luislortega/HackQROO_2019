@@ -1,7 +1,11 @@
 <?php
 if (isset($_POST['usuario'])) {
-  session_start();
   require_once('config/DbConnect.php');
+  $sql_institutos = "SELECT * FROM instituciones";
+  $result_institutos = mysqli_query($db, $sql_institutos);
+
+  session_start();
+
 
   extract($_POST);
 
@@ -41,6 +45,10 @@ if (isset($_POST['usuario'])) {
 
   mysqli_close($db);
 }
+
+require_once('config/DbConnect.php');
+  $sql_institutos = "SELECT * FROM instituciones";
+  $result_institutos = mysqli_query($db, $sql_institutos);
 ?>
   <!DOCTYPE html>
   <html lang="en">
@@ -124,6 +132,13 @@ if (isset($_POST['usuario'])) {
         -o-transform: scale(1.45);
         transform: scale(1.45);
       }
+
+      .ajua .fa {
+  transition: .3s transform ease-in-out;
+}
+.ajua .collapsed .fa {
+  transform: rotate(90deg);
+}
     </style>
 
   </head>
@@ -133,7 +148,7 @@ if (isset($_POST['usuario'])) {
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">SEIJUVE QROO</span>
         <span class="d-none d-lg-block">
-          <img class="img-fluid mx-auto mb-2" src="http://pprioritariosqroo.com/assets/img/logo.png" alt="">
+         
         </span>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -141,6 +156,9 @@ if (isset($_POST['usuario'])) {
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
+           <li class="nav-item" style="margin-bottom: 190px;">
+            <a class="nav-link js-scroll-trigger" href="#inicio">Menú</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#inicio">Inicio</a>
           </li>
@@ -162,6 +180,11 @@ if (isset($_POST['usuario'])) {
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#login">Login</a>
           </li>
+
+          <li class="nav-item" style="margin-top: 100px;">
+            <a class="nav-link js-scroll-trigger" href="#login"> <img style="width: 100px; height: 100px;" class="img-fluid mx-auto mb-2" src="http://pprioritariosqroo.com/assets/img/logo.png" alt=""></a>
+          </li>
+
         </ul>
       </div>
     </nav>
@@ -170,14 +193,18 @@ if (isset($_POST['usuario'])) {
 
       <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="inicio">
         <div class="w-100" id="cosito">
-          <h1 class="mb-0">SEIJUVE
-            <span class="text-primary">QROO</span>
-          </h1>
+
+        <img style="width: 500px;" class="img-fluid mx-auto mb-2" src="panel/img/logosof/sejuve.png" alt="">
 
           <p class="lead mb-5">SEIJUVE es un sistema que coordina e integra eficientemente la estructura de los procesos y recursos de la funcion estadistica, cuya creacion persigue el objetivo de fortalecer la produccion de informacion.</p>
+
           <a href="#estado" class="btn btn-outline-primary js-scroll-trigger" role="button" aria-disabled="true">Comenzar</a>
 
+         
+
         </div>
+
+        
       </section>
 
 
@@ -371,35 +398,53 @@ if (isset($_POST['usuario'])) {
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="institutos">
       <div class="w-20">
-        <h2 class="mb-5">Convocatorias</h2>
+        <h2 class="mb-50">Institutos</h2>
+<div class="card-group">
+      
+        
+        <?php while($row = mysqli_fetch_array($result_institutos)){  
 
-        <div class="card-group">
-          <div class="card">
-            <img class="card-img-top" src="https://pbs.twimg.com/profile_images/3549029586/3607341f60496b2a274b91dcc3934963_400x400.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card-img-top" src="http://pm1.narvii.com/6661/59f36d6f2efec887568611a888d8b857ee988029_00.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card-img-top" src="https://k06.kn3.net/6F5BBB1C5.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-        </div>
+            $sql_programas = "SELECT * FROM programas WHERE id_institucion = ".$row['id_instituciones'];
+            $result_programas = mysqli_query($db, $sql_programas);
+
+          ?>
+
+
+
+                 <!-- Card -->
+                <div class="card">
+
+                  <!-- Card image -->
+                  <img width="70px" height="70px" class="card-img-top" src="<?php echo  $row['imagen_institucion']; ?>" alt="Card image cap">
+
+                  <!-- Card content -->
+                  <div class="card-body">
+
+                    <!-- Title -->
+                    <h4 class="card-title"><a> <?php echo " ". $row['nombre_institucion']; ?></a></h4>
+                    <!-- Text -->
+                    <p class="card-text"> <?php echo " ". $row['descripcion_institucion']; ?></p>
+                    <!-- Button -->
+
+
+<br>
+                   <?php while($row2 = mysqli_fetch_array($result_programas)){  
+
+
+          ?>
+                  <a href=" <?php echo $row2['carpeta_datos_programa']."?id_programa=".$row2['id_programa'] ?>" class="btn btn-outline-primary js-scroll-trigger" role="button" aria-disabled="true"><?php echo "Ver ". $row2['nombre_programa']; ?></a>
+ <?php }?>
+
+                  </div>
+
+                </div>
+                <!-- Card -->
+
+
+
+       <?php }?>
       </div>
+        </div>
     </section>
 
     <hr class="m-0">
