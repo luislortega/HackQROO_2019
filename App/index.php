@@ -1125,114 +1125,96 @@ if (isset($_POST['usuario'])) {
                       </div>
                       <div class="divider-custom-line"></div>
                     </div>
-
-
                   </div>
                 </div>
+
                 <div class="row">
-                  <div class="col-md-2 text-center">
-                    <div class="contenedor_iconos" id="ieconomia">
-                      <img class="topes" src="../RECURSOS/icono1.png" />
-                    </div>
-                    <h6>Economía</h6>
-                  </div>
-                  <div class="col-md-2 text-center">
-                    <div class="contenedor_iconos" id="ieducacion">
-
+                  <div class="col-sm">
+                    <div class="contenedor_iconos" id="ieducacionModal1">
                       <img class="topes" src="../RECURSOS/icono2.png" />
-
-
                     </div>
-
                     <h6>Educación</h6>
-
                   </div>
 
-                  <div class="col-md-2 text-center">
-                    <div class="contenedor_iconos" id="igobierno">
-                      <img class="topes" src="../RECURSOS/icono3.png" />
-                    </div>
-                    <h6>Gobierno</h6>
-                  </div>
-                  <div class="col-md-2 text-center">
-                    <div class="contenedor_iconos" id="ipoblacion">
-                      <img class="topes" src="../RECURSOS/icono4.png" />
-                    </div>
-
-                    <h6>Población</h6>
-
-                  </div>
-
-                  <div class="col-md-2 text-center">
+                  <div class="col-sm">
                     <div class="contenedor_iconos" id="isalud">
                       <img class="topes" src="../RECURSOS/icono5.png" />
                     </div>
-
                     <h6>Salud</h6>
-
                   </div>
 
-                  <div class="col-md-2 text-center">
-                    <div class="contenedor_iconos" id="iseguridad">
-                      <img class="topes" src="../RECURSOS/icono6.png" />
-                    </div>
-
-                    <h6>Seguridad</h6>
-
-                  </div>
-
-                  <div class="col-md-2 text-center">
-                    <div class="contenedor_iconos" id="itrabajo">
-                      <img class="topes" src="../RECURSOS/icono7.png" />
-                    </div>
-
-                    <h6>Trabajo</h6>
-
-                  </div>
-
-                  <div class="col-md-2 text-center">
+                  <div class="col-sm">
                     <div class="contenedor_iconos" id="ivivienda">
                       <img class="topes" src="../RECURSOS/icono8.png" />
                     </div>
-
                     <h6>Vivienda</h6>
-
                   </div>
 
-                  <div class="col-md-2 text-center">
-                    <div class="contenedor_iconos" id="icalidad">
-                      <img class="topes" src="../RECURSOS/icono9.png" />
-                    </div>
-
-                    <h6>Calidad de Vida</h6>
-
-                  </div>
-
-                  <div class="col-md-2 text-center">
-                    <div class="contenedor_iconos" id="iecologia">
-                      <img class="topes" src="../RECURSOS/icono10.png" />
-                    </div>
-
-                    <h6>Ecología</h6>
-
-                  </div>
-
-                  <div class="col-md-2 text-center">
-                    <div class="contenedor_iconos" id="icultura">
-                      <img class="topes" src="../RECURSOS/icono11.png" />
-                    </div>
-
-                    <h6>Cultura</h6>
-
-                  </div>
-
-                  <div class="col-md-2 text-center">
+                  <div class="col-sm">
                     <div class="contenedor_iconos" id="iesparcimiento">
                       <img class="topes" src="../RECURSOS/icono12.png" />
                     </div>
-
                     <h6>Esparcimiento</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="portfolio-modal modal fade" id="modal1_educacion" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">
+                <i class="fas fa-times"></i>
+              </span>
+            </button>
+            <div class="modal-body text-center">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-12">
+                    <!-- Portfolio Modal - Title -->
+                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Educacion de Chetumal</h2>
+                    <!-- Icon Divider -->
+                    <div class="divider-custom">
+                      <div class="divider-custom-line"></div>
+                      <div class="divider-custom-icon">
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <div class="divider-custom-line"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm">
+                    <div class="contenedor_iconos" id="ieducacion">
+                      <img class="topes" src="../RECURSOS/icono2.png" />
+                    </div>
+                    <h6>Educación</h6>
+                  </div>
+
+                  <div class="col-sm">
+                    <div class="contenedor_iconos" id="isalud">
+                      <img class="topes" src="../RECURSOS/icono5.png" />
+                    </div>
+                    <h6>Salud</h6>
+                  </div>
+
+                  <div class="col-sm">
+                    <div class="contenedor_iconos" id="ivivienda">
+                      <img class="topes" src="../RECURSOS/icono8.png" />
+                    </div>
+                    <h6>Vivienda</h6>
+                  </div>
+
+                  <div class="col-sm">
+                    <div class="contenedor_iconos" id="iesparcimiento">
+                      <img class="topes" src="../RECURSOS/icono12.png" />
+                    </div>
+                    <h6>Esparcimiento</h6>
                   </div>
                 </div>
               </div>
@@ -1285,6 +1267,11 @@ if (isset($_POST['usuario'])) {
             $('#chetumal3').addClass('onion');
 
             $("#modal1").modal("show");
+            $('#ieducacionModal1').on("click",function(e){
+              $("#modal1_educacion").modal("show");
+              $("#modal1").modal("toggle");
+
+            });
             seleccionado = true;
           } else {
             $('#chetumal').removeClass('onion');
