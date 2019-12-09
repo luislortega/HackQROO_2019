@@ -652,9 +652,7 @@ require_once('config/DbConnect.php');
                         getHttp.send();
                         getHttp.onreadystatechange = function() {
                           if (this.readyState == 4 && this.status == 200) {
-                            //console.log(this.responseText);
                             let datos = JSON.parse(this.responseText);
-                            console.log(datos);
                             var results = datos[0].anexados_menores20.split(",");
                             var ctx = document.getElementById('myChart').getContext('2d');
                             var myChart = new Chart(ctx, {
@@ -690,11 +688,8 @@ require_once('config/DbConnect.php');
                           getHttp2.send();
                           getHttp2.onreadystatechange = function() {
                             if (this.readyState == 4 && this.status == 200) {
-                              //console.log(this.responseText);
                               let datos = JSON.parse(this.responseText);
-                              console.log(datos);
                               var results = datos[0].embarazos_15a19.split(",");
-                              console.log(results[2] + "," + results[8] + "," + results[6] + "," + results[1] + "," + results[7] + "," + results[4]);
                               var ctx2 = document.getElementById('padres').getContext('2d');
                               var myChart2 = new Chart(ctx2, {
                                 type: 'bar',
@@ -902,11 +897,8 @@ require_once('config/DbConnect.php');
                         getHttp3.send();
                         getHttp3.onreadystatechange = function() {
                           if (this.readyState == 4 && this.status == 200) {
-                            //console.log(this.responseText);
                             let datos = JSON.parse(this.responseText);
-                            console.log(datos);
                             var results = datos[0].embarazos_20a24.split(",");
-                            console.log(results[0] + "," + results[2] + "," + results[1] + "," + results[9] + "," + results[6] + "," + results[4]);
                             var ctx3 = document.getElementById('padres2').getContext('2d');
                             var myChart3 = new Chart(ctx3, {
                                 type: 'bar',
@@ -953,11 +945,8 @@ require_once('config/DbConnect.php');
                           getHttp4.send();
                           getHttp4.onreadystatechange = function() {
                             if (this.readyState == 4 && this.status == 200) {
-                              //console.log(this.responseText);
                               let datos = JSON.parse(this.responseText);
-                              console.log(datos);
                               var results = datos[0].embarazos_25a29.split(",");
-                              console.log(results[0] + "," + results[3] + "," + results[2] + "," + results[6] + "," + results[4] + "," + results[8]);
                               var ctx4 = document.getElementById('padres3').getContext('2d');
                               var myChart4 = new Chart(ctx4, {
                                 type: 'bar',
@@ -1235,31 +1224,46 @@ require_once('config/DbConnect.php');
 
                 <div class="row">
                   <div class="col-sm">
-                    <div class="contenedor_iconos" id="ieducacion">
-                      <img class="topes" src="../RECURSOS/icono2.png" />
-                    </div>
-                    <h6>Educación</h6>
+                    <h3>Apoyo económico para estudiantes y trabajadores</h3>
+                    <p style="font-size:100%;">La concha de tu madre, jodido prro</p>
                   </div>
 
                   <div class="col-sm">
-                    <div class="contenedor_iconos" id="isalud">
-                      <img class="topes" src="../RECURSOS/icono5.png" />
-                    </div>
-                    <h6>Salud</h6>
-                  </div>
+                    <div class="card">
+                      <canvas id="myDonut" height="50" width="50"></canvas>
+                      <script>
+                        const getHttp5 = new XMLHttpRequest();
+                        getHttp5.open('GET', 'https://hackathon-juventud.herokuapp.com/obtenerDatosMunicipios', true);
+                        getHttp5.send();
+                        getHttp5.onreadystatechange = function() {
+                          if (this.readyState == 4 && this.status == 200) {
+                            console.log(this.responseText);
+                            let datos = JSON.parse(this.responseText);
+                            console.log(datos[3]);
+                            var results = datos[3].anexados_menores20.split(",");
+                            var ctx5 = document.getElementById('myChart').getContext('2d');
+                            var myChart = new Chart(ctx5, {
+                              type: 'doughnut',
+                              data: {
+                                labels: ['Hombres', 'Mujeres'],
+                                datasets: [{
+                                  label: 'Estudiantes',
+                                  data: [results[0], results[1]],
+                                  backgroundColor: [
+                                    'rgba(54, 162, 235, 50)',
+                                    'rgba(255, 99, 132, 50)'
 
-                  <div class="col-sm">
-                    <div class="contenedor_iconos" id="ivivienda">
-                      <img class="topes" src="../RECURSOS/icono8.png" />
-                    </div>
-                    <h6>Vivienda</h6>
-                  </div>
+                                  ],
+                                }]
+                              },
+                              options: {
 
-                  <div class="col-sm">
-                    <div class="contenedor_iconos" id="iesparcimiento">
-                      <img class="topes" src="../RECURSOS/icono12.png" />
+                              }
+                            });
+                          }
+                        }
+                      </script>
                     </div>
-                    <h6>Esparcimiento</h6>
                   </div>
                 </div>
               </div>
