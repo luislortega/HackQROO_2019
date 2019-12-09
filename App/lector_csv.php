@@ -138,13 +138,7 @@ if (isset($_POST["submit"])) {
                             <p>Panel de Control</p>
                         </a>
                     </li>
-                    <li class="active ">
-                        <a href="instituciones.php">
-
-                            <i class="nc-icon nc-bank"></i>
-                            <p>Instituciones</p>
-                        </a>
-                    </li>
+                  
                     <li>
                         <a href="programas.php">
 
@@ -153,7 +147,12 @@ if (isset($_POST["submit"])) {
                         </a>
                     </li>
 
-
+            <li class="active ">
+            <a href="lector_csv.php">
+               <i class="nc-icon nc-diamond"></i>
+              <p>Subir Datos</p>
+            </a>
+          </li>
 
                 </ul>
             </div>

@@ -62,6 +62,8 @@ if (isset( $_SESSION['id_usuario'] )) {
               <p>Panel de Control</p>
             </a>
           </li>
+
+
           
           <li class="active ">
             <a href="programasins.php">
@@ -71,7 +73,12 @@ if (isset( $_SESSION['id_usuario'] )) {
             </a>
           </li>
             
-         
+         <li >
+            <a href="lector_csv.php">
+               <i class="nc-icon nc-diamond"></i>
+              <p>Subir Datos</p>
+            </a>
+          </li>
          
         </ul>
       </div>
