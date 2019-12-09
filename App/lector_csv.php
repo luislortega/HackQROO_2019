@@ -10,6 +10,7 @@
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <?php
 //DEPUES DEL GUARDADO HACER EL ALGORITMO
+$array_lista = array();
 
 session_start();
 
@@ -26,30 +27,46 @@ if (isset($_SESSION['id_usuario'])) {
     $result = $mysqli->query($query);
 
     while ($row = $result->fetch_row()) {
-        $rows[]=$row;
+        array_push($array_lista, $row);
     }
+        
     //echo json_encode($rows);
-
 } else {
     header("Location: index.php");
     exit();
 }
+    echo json_encode($array_lista);
 
 $row = 0;
+$programa = null;
 $array_elementos = array(); //elementos de las variables
 $array_variables = array(); //variables de las tablas
 $array_data = array();
 if (isset($_POST["submit"])) {
     if (isset($_FILES["file"]) && isset($_GET["q"])) {
+        //programa obtenido
+        $programa = $_POST["programa"];
         //if there was an error uploading the file
         if ($_FILES["file"]["error"] > 0) {
             echo "Return Code: " . $_FILES["file"]["error"] . "<br />";
         } else {
             if (file_exists("upload/" . $_FILES["file"]["name"])) {
                 // SI YA EXISTE ACTUALZIAR EL TAG
+                
+
+
                 $contador = rand(0, 100000);
                 $nombre_sin_extencion = explode(".", $_FILES["file"]["name"]);
                 move_uploaded_file($_FILES["file"]["tmp_name"], "upload/" . $nombre_sin_extencion[0] . "-" . $contador . "." . $nombre_sin_extencion[1]);
+                
+                $sql = "UPDATE programas SET carpeta_datos_programa='upload/". $nombre_sin_extencion[0] . "-" . $contador . "." . $nombre_sin_extencion[1]."' WHERE nombre_programa='".$_POST["programa"]."'";
+
+                if ($mysqli->query($sql) === true) {
+                    echo "Record updated successfully";
+                } else {
+                    echo "Error updating record: " . $mysqli->error;
+                }
+
             } else {
                 //Ponerle un sin tag
                 move_uploaded_file($_FILES["file"]["tmp_name"], "upload/" . $_FILES["file"]["name"]);
@@ -215,6 +232,17 @@ if (isset($_POST["submit"])) {
                                     LECTOR DE LUIS LEON 
                                     -->
                                     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>?q=1#popup1" method="post" enctype="multipart/form-data">
+                                        <p>Programas de mi institucion</p>
+                                        <select name="programa">
+
+                                        <?php
+                                        foreach ($array_lista as $key => $value) {
+                                            echo '<option value="'.$value[1].'">';
+                                            echo $value[1];
+                                            echo '</option>';
+                                        }
+                                        ?>    
+                                        </select>
                                         <tr>
                                             <td width="20%">Selecciona CSV </td>
                                             <td width="80%"><input type="file" name="file" id="file" /></td>
@@ -282,14 +310,17 @@ if (isset($_POST["submit"])) {
                         }
                     }
                 }
-                echo '<p id="maximos">' . ($maxVar + 1) . "-" . ($maxElemen + 1) . '</p>';
+                echo '<p id="programa_obtenido">' . $programa . '</p>';
                 ?>
                 <button type="button" class="btn btn-primary" onclick="clickSubir()">Subir</button>
 
                 <script>
                     var variables = document.querySelectorAll("[id='variables']");
                     var elementos = document.querySelectorAll("[id='elementos']");
+                    var programa_seleccionado = document.getElementById("programa_obtenido");
+
                     function clickSubir() {
+                        //console.log(programa_seleccionado.innerHTML)
                         let test = new Array(new Array(), new Array());
                         variables.forEach(
                             function(currentValue, currentIndex, listObj) {
@@ -313,8 +344,11 @@ if (isset($_POST["submit"])) {
                             },
                             'miEsteArg'
                         );
-                        let json_data = JSON.stringify(test)
-                        console.log(json_data)
+
+                        let json_data = programa_seleccionado.innerHTML
+                        let json_data2 = JSON.stringify(test)
+                        let json_combinado = json_data.concat(json_data2);
+                        console.log(json_combinado)
                         //Enviar al servidor 
                     }
                 </script>
