@@ -291,13 +291,12 @@ if (isset($_POST["submit"])) {
                 if (isset($_GET["q"])) {
                     foreach ($array_variables as $key => $value) {
                         echo '<br>';
-                        echo $key;
                         if ($key > $maxVar) {
                             $maxVar = $key;
                         }
                         echo '<p style="font-size:20px !important; margin: 0 !important;"> <input type="checkbox" name="' . $array_variables[$key] . '" id="variables" ">', $array_variables[$key], ' </p>';
                         foreach ($array_elementos as $key2 => $value) {
-                            if ($array_data[$key + 1][$key2 + 1] !== '!n') {
+                            if ($array_data[$key + 1][$key2 + 1] !== '') {
                                 if ($key2 > $maxElemen) {
                                     $maxElemen = $key2;
                                 }

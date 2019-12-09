@@ -1,29 +1,29 @@
 <?php
 if (isset($_POST['usuario'])) {
-  require_once('config/DbConnect.php');
-  $sql_institutos = "SELECT * FROM instituciones";
-  $result_institutos = mysqli_query($db, $sql_institutos);
+    require_once('config/DbConnect.php');
+    $sql_institutos = "SELECT * FROM instituciones";
+    $result_institutos = mysqli_query($db, $sql_institutos);
 
-  session_start();
-
-
-  extract($_POST);
+    session_start();
 
 
-  $registro_query = "SELECT * FROM `usuarios` WHERE `user_usuario`='{$usuario}' AND `password_usuario` = '{$password}'";
-
-  $result = mysqli_query($db, $registro_query);
-
-  if ($result) {
-    $row = mysqli_fetch_assoc($result);
+    extract($_POST);
 
 
-    $_SESSION['id_usuario'] = $row['id_usuario'];
-    $_SESSION['user_usuario'] = $row['user_usuario'];
-    $_SESSION['password_usuario'] = $row['password_usuario'];
-    $_SESSION['rango_usuario'] = $row['rango_usuario'];
+    $registro_query = "SELECT * FROM `usuarios` WHERE `user_usuario`='{$usuario}' AND `password_usuario` = '{$password}'";
 
-    switch ($row['rango_usuario']) {
+    $result = mysqli_query($db, $registro_query);
+
+    if ($result) {
+        $row = mysqli_fetch_assoc($result);
+
+
+        $_SESSION['id_usuario'] = $row['id_usuario'];
+        $_SESSION['user_usuario'] = $row['user_usuario'];
+        $_SESSION['password_usuario'] = $row['password_usuario'];
+        $_SESSION['rango_usuario'] = $row['rango_usuario'];
+
+        switch ($row['rango_usuario']) {
       case 'admin':
         mysqli_close($db);
         header("Location: admin.php");
@@ -39,11 +39,11 @@ if (isset($_POST['usuario'])) {
         header("Location: index.php");
         exit();
     }
-  } else {
-    $mensaje_error = "El usuario o contraseña son incorrectos.";
-  }
+    } else {
+        $mensaje_error = "El usuario o contraseña son incorrectos.";
+    }
 
-  mysqli_close($db);
+    mysqli_close($db);
 }
 
 require_once('config/DbConnect.php');
@@ -402,12 +402,9 @@ require_once('config/DbConnect.php');
 <div class="card-group">
       
         
-        <?php while($row = mysqli_fetch_array($result_institutos)){  
-
-            $sql_programas = "SELECT * FROM programas WHERE id_institucion = ".$row['id_instituciones'];
-            $result_programas = mysqli_query($db, $sql_programas);
-
-          ?>
+        <?php while ($row = mysqli_fetch_array($result_institutos)) {
+    $sql_programas = "SELECT * FROM programas WHERE id_institucion = ".$row['id_instituciones'];
+    $result_programas = mysqli_query($db, $sql_programas); ?>
 
 
 
@@ -428,12 +425,12 @@ require_once('config/DbConnect.php');
 
 
 <br>
-                   <?php while($row2 = mysqli_fetch_array($result_programas)){  
-
-
-          ?>
-                  <a href=" <?php echo $row2['carpeta_datos_programa']."?id_programa=".$row2['id_programa'] ?>" class="btn btn-outline-primary js-scroll-trigger" role="button" aria-disabled="true"><?php echo "Ver ". $row2['nombre_programa']; ?></a>
- <?php }?>
+                   <?php
+                    while ($row2 = mysqli_fetch_array($result_programas)) {
+                      echo '<a href="vista_programa.php?id_programa='.$row2['id_programa'].'" class="btn btn-outline-primary js-scroll-trigger" role="button" aria-disabled="true">';
+                      echo $row2['nombre_programa'];
+                      echo '</a>';
+                    } ?>
 
                   </div>
 
@@ -442,7 +439,8 @@ require_once('config/DbConnect.php');
 
 
 
-       <?php }?>
+       <?php
+}?>
       </div>
         </div>
     </section>
