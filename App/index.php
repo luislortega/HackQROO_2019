@@ -996,6 +996,7 @@ require_once('config/DbConnect.php');
         </div>
       </div>
     </div>
+
       <div class="portfolio-modal modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
         <div class="modal-dialog modal-xl" role="document">
           <div class="modal-content">
@@ -1169,21 +1170,21 @@ require_once('config/DbConnect.php');
                   </div>
 
                   <div class="col-sm">
-                    <div class="contenedor_iconos" id="isalud">
+                    <div class="contenedor_iconos" id="isaludModal1">
                       <img class="topes" src="../RECURSOS/icono5.png" />
                     </div>
                     <h6>Salud</h6>
                   </div>
 
                   <div class="col-sm">
-                    <div class="contenedor_iconos" id="ivivienda">
+                    <div class="contenedor_iconos" id="iviviendaModal1">
                       <img class="topes" src="../RECURSOS/icono8.png" />
                     </div>
                     <h6>Vivienda</h6>
                   </div>
 
                   <div class="col-sm">
-                    <div class="contenedor_iconos" id="iesparcimiento">
+                    <div class="contenedor_iconos" id="iesparcimientoModal1">
                       <img class="topes" src="../RECURSOS/icono12.png" />
                     </div>
                     <h6>Esparcimiento</h6>
@@ -1222,8 +1223,12 @@ require_once('config/DbConnect.php');
 
                 <div class="row">
                   <div class="col-sm">
+                    <br><br><br><br><br>
                     <h3>Apoyo económico para estudiantes y trabajadores</h3>
-                    <p style="font-size:100%;">La concha de tu madre, jodido prro</p>
+                    <p style="font-size:100%;">En la gráfica podemos observar el apoyo que el gobierno
+                    brinda para el municipio de Othón Pompeyo Blanco, en el cual, aproximádamente 180
+                    jovenes cuentan con el apoyo del gobierno para desarrollar sus estudios, sin embargo,
+                    aún son muy pocos para el municipio.</p>
                   </div>
 
                   <div class="col-sm">
@@ -1237,16 +1242,14 @@ require_once('config/DbConnect.php');
                           if (this.readyState == 4 && this.status == 200) {
                             console.log(this.responseText);
                             let datos = JSON.parse(this.responseText);
-                            console.log(datos[3]);
-                            var results = datos[3].anexados_menores20.split(",");
-                            var ctx5 = document.getElementById('myChart').getContext('2d');
+                            var ctx5 = document.getElementById('myDonut').getContext('2d');
                             var myChart = new Chart(ctx5, {
                               type: 'doughnut',
                               data: {
-                                labels: ['Hombres', 'Mujeres'],
+                                labels: ['Alumnos becados', 'Alumnos no becados'],
                                 datasets: [{
-                                  label: 'Estudiantes',
-                                  data: [results[0], results[1]],
+                                  label: 'Alumnos',
+                                  data: [datos[3]["apoyo_trabajo_escuela"], datos[3]["cantidad_estudiantes"]],
                                   backgroundColor: [
                                     'rgba(54, 162, 235, 50)',
                                     'rgba(255, 99, 132, 50)'
@@ -1269,6 +1272,271 @@ require_once('config/DbConnect.php');
           </div>
         </div>
       </div>
+
+      <div class="portfolio-modal modal fade" id="modal1_salud" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">
+                <i class="fas fa-times"></i>
+              </span>
+            </button>
+            <div class="modal-body text-center">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-12">
+                    <!-- Portfolio Modal - Title -->
+                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Salud en Chetumal</h2>
+                    <!-- Icon Divider -->
+                    <div class="divider-custom">
+                      <div class="divider-custom-line"></div>
+                      <div class="divider-custom-icon">
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <div class="divider-custom-line"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm">
+                    <br><br><br><br><br>
+                    <h3>Protección y apoyo a mamás entre 15 y 19 años de edad</h3>
+                    <p style="font-size:100%;">En la gráfica podemos observar el comportamiento de los jóvenes
+                    en el sector de natalidad, si están preparados, si son menores de edad y ya son padres, 
+                    con esto podemos comprender cómo está la situación de natalidad y educación sexual en 
+                    el municipio de Othón Pompeyo Blanco.</p>
+                  </div>
+
+                  <div class="col-sm">
+                    <div class="card">
+                      <canvas id="myPie" height="50" width="50"></canvas>
+                      <script>
+                        const getHttp6 = new XMLHttpRequest();
+                        getHttp6.open('GET', 'https://hackathon-juventud.herokuapp.com/obtenerDatosMunicipios', true);
+                        getHttp6.send();
+                        getHttp6.onreadystatechange = function() {
+                          if (this.readyState == 4 && this.status == 200) {
+                            console.log(this.responseText);
+                            let datos = JSON.parse(this.responseText);
+                            var results = datos[3]["embarazos_menores_15"].split(",");
+                            var ctx6 = document.getElementById('myPie').getContext('2d');
+                            var myChart = new Chart(ctx6, {
+                              type: 'pie',
+                              data: {
+                                labels: ['Ninguno', 'Kinder','Primaria','Secundaria','Preparatoria','Licenciatura'],
+                                datasets: [{
+                                  label: 'Estudios del padre',
+                                  data: [results[1],results[2],results[3],results[4],results[5],results[6]],
+                                  backgroundColor: [
+                                      'rgba(255, 99, 132, 0.2)',
+                                      'rgba(54, 162, 235, 0.2)',
+                                      'rgba(255, 206, 86, 0.2)',
+                                      'rgba(75, 192, 192, 0.2)',
+                                      'rgba(153, 102, 255, 0.2)',
+                                      'rgba(255, 159, 64, 0.2)'
+
+                                  ],
+                                }]
+                              },
+                              options: {
+
+                              }
+                            });
+                          }
+                        }
+                      </script>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-modal modal fade" id="modal1_vivienda" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">
+                <i class="fas fa-times"></i>
+              </span>
+            </button>
+            <div class="modal-body text-center">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-12">
+                    <!-- Portfolio Modal - Title -->
+                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Salud en Chetumal</h2>
+                    <!-- Icon Divider -->
+                    <div class="divider-custom">
+                      <div class="divider-custom-line"></div>
+                      <div class="divider-custom-icon">
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <div class="divider-custom-line"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm">
+                    <br>
+                    <h3>Consumo electrico total anual en el municipio</h3>
+                    <p style="font-size:100%;">El consumo eléctrico anual del municipio Othón Pompeyo Blanco fue de 
+                    un total de <h3>$690,876,653</h3> pesos mexicanos en conjunto.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-modal modal fade" id="modal1_esparcimiento" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="fas fa-times"></i>
+            </span>
+          </button>
+          <div class="modal-body text-center">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-12">
+                  <!-- Portfolio Modal - Title -->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> Esparcimiento estatal</h2>
+                  <!-- Icon Divider -->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm">
+                    <br><br><br><br><br>
+                    <h3>La tasa de natalidad entre jovencitas de 20 a 24</h3>
+                    <p style="font-size:100%;">En la juventud, la paternidad cada vez aumenta de forma exponencial, la situación
+                      en la que se encuentran al momento de convertirse e padres, es complicado, pues, no se encuentran preparados
+                      académicamente hablando.</p>
+                  </div>
+                  <div class="col-sm">
+                    <div class="card">
+                      <canvas id="padresChe" height="50" width="50"></canvas>
+                      <script>
+                        const getHttp7 = new XMLHttpRequest();
+                        getHttp7.open('GET', 'https://hackathon-juventud.herokuapp.com/obtenerDatosMunicipios', true);
+                        getHttp7.send();
+                        getHttp7.onreadystatechange = function() {
+                          if (this.readyState == 4 && this.status == 200) {
+                            let datos = JSON.parse(this.responseText);
+                            var results = datos[3]["embarazos_20a24"].split(",");
+                            var ctx7 = document.getElementById('padresChe').getContext('2d');
+                            var myChart7 = new Chart(ctx7, {
+                                type: 'bar',
+                                data: {
+                                  labels: ['Sin estudios', 'Kinder', 'Primaria', 'Secundaria', 'Prepa', 'Licenciatura'],
+                                  datasets: [{
+                                    label: 'Preparacion academica del padre',
+                                    data: [results[1], results[2], results[3], results[4], results[5], results[6]],
+                                    backgroundColor: [
+                                      'rgba(255, 99, 132, 0.2)',
+                                      'rgba(54, 162, 235, 0.2)',
+                                      'rgba(255, 206, 86, 0.2)',
+                                      'rgba(75, 192, 192, 0.2)',
+                                      'rgba(153, 102, 255, 0.2)',
+                                      'rgba(255, 159, 64, 0.2)'
+                                    ],
+                                    borderColor: [
+                                      'rgba(255, 99, 132, 1)',
+                                      'rgba(54, 162, 235, 1)',
+                                      'rgba(255, 206, 86, 1)',
+                                      'rgba(75, 192, 192, 1)',
+                                      'rgba(153, 102, 255, 1)',
+                                      'rgba(255, 159, 64, 1)'
+                                    ],
+                                    borderWidth: 1
+                                  }]
+                                },
+                                options: {
+
+                                }
+                              });
+                          }
+                        }
+                      </script>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm">
+                      <div class="card">
+                        <canvas id="padresChe2" height="50" width="50"></canvas>
+                        <script>
+                          const getHttp8 = new XMLHttpRequest();
+                          getHttp8.open('GET', 'https://hackathon-juventud.herokuapp.com/obtenerDatosMunicipios', true);
+                          getHttp8.send();
+                          getHttp8.onreadystatechange = function() {
+                            if (this.readyState == 4 && this.status == 200) {
+                              let datos = JSON.parse(this.responseText);
+                              var results = datos[3]["embarazos_25a29"].split(",");
+                              var ctx8 = document.getElementById('padresChe2').getContext('2d');
+                              var myChart8 = new Chart(ctx8, {
+                                type: 'bar',
+                                data: {
+                                  labels: ['Sin estudios', 'Kinder', 'Primaria', 'Secundaria', 'Prepa', 'Licenciatura'],
+                                  datasets: [{
+                                    label: 'Preparacion academica del padre',
+                                    data: [results[1], results[2], results[3], results[4], results[5], results[6]],
+                                    backgroundColor: [
+                                      'rgba(255, 99, 132, 0.2)',
+                                      'rgba(54, 162, 235, 0.2)',
+                                      'rgba(255, 206, 86, 0.2)',
+                                      'rgba(75, 192, 192, 0.2)',
+                                      'rgba(153, 102, 255, 0.2)',
+                                      'rgba(255, 159, 64, 0.2)'
+                                    ],
+                                    borderColor: [
+                                      'rgba(255, 99, 132, 1)',
+                                      'rgba(54, 162, 235, 1)',
+                                      'rgba(255, 206, 86, 1)',
+                                      'rgba(75, 192, 192, 1)',
+                                      'rgba(153, 102, 255, 1)',
+                                      'rgba(255, 159, 64, 1)'
+                                    ],
+                                    borderWidth: 1
+                                  }]
+                                },
+                                options: {
+
+                                }
+                              });
+                            }
+                          }
+                        </script>
+                      </div>
+                    </div>
+                    <div class="col-sm">
+                      <br><br><br><br><br>
+                      <h3>Control de natalidad entre jovencitas de 25 a 29 años</h3>
+                      <p style="font-size:100%;">La natalidad en el sector de juventud madura, muestra un comportamiento más estable
+                      lo que es positivo, pues se piensa de forma más segura, aunque, para llegar a este punto, hay un gran grado
+                      de complejidad, ya que, es probable que terminen siendo padres a una edad temprana.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
@@ -1316,8 +1584,15 @@ require_once('config/DbConnect.php');
             $("#modal1").modal("show");
             $('#ieducacionModal1').on("click",function(e){
               $("#modal1_educacion").modal("show");
-              $("#modal1").modal("toggle");
-
+            });
+            $('#isaludModal1').on("click",function(e){
+              $("#modal1_salud").modal("show");
+            });
+            $('#iviviendaModal1').on("click",function(e){
+              $("#modal1_vivienda").modal("show");
+            });
+            $('#iesparcimientoModal1').on("click",function(e){
+              $("#modal1_esparcimiento").modal("show");
             });
             seleccionado = true;
           } else {
