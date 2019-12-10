@@ -38,10 +38,10 @@
 
 
 - [x]  Originalidad / Innovación de la propuesta. -
-- [ ]  Calidad en la conceptualización y definición. 
-- [ ]  Avance de las funcionalidades de la aplicación.
-- [ ]  Viabilidad de implementación del proyecto. 
-- [ ]  Utilidad de la propuesta. 
+- [x]  Calidad en la conceptualización y definición. 
+- [x]  Avance de las funcionalidades de la aplicación.
+- [x]  Viabilidad de implementación del proyecto. 
+- [x]  Utilidad de la propuesta. 
 - [x]  Experiencia de usuario. 
 - [x]  Ser propiedad exclusiva de los participantes. 
 - [x]  No vulnerar, en ningún caso, los derechos de propiedad intelectual e industrial de terceros. 
@@ -106,79 +106,3 @@ API DENUE: https://www.inegi.org.mx/servicios/api_denue.html
 
 
 https://www.inegi.org.mx/programas/encig/2017/default.html#Tabulados
-
-
-## NOTAS DE LUIS
-
-
-EDUCACION: 
-municipio:
-1) Apoyo economico trabajo - escuela [X]
-2) Cantidad de estudiantes [X]
-estatal:
-1) Porcentaje de aprobacion escolar [X]
-2) Porcentaje de secundaria entran a la prepa (absorcion) [X]
-
-
-SALUD:
-municipio:
-1) Seguridad en los seguros publicos [X]
-2) Embarazos en menor de 20 años. [X]
-estatal:
-1)  Apoyo a adolecentes en drogas y alcohol [X]
-
-
-ECONOMIA: 
-municipio:
-1) numero de estudiantes [X] CASO ESPECIAL: TULUM POR LA FALTA DE INFORMACION DE ESTUDIANTES.
-estatal: 
-1) datos inegi  (POSICION EN ECONOMIA POR ACTIVIDADES ECONOMICAS TERCIARIAS) [X]
-
-
-
-SEGURIDAD:
-municipio:
-1) Asaltos ocurridos en municipios
-estatal:
-1) promedio porcentaje de confianza en la policia [X]
-
-
-
-FAMILIA:
-estatal:
-1) promedio porcentaje de confianza en la familia [X]
-
-
-VIVIENDA:
-1) Consumo electrico por municipio [X]
-
-
-
-ESPARCIMIENTO:
-1) Consumo electrico por municipio [X]
-
-
-ARTE Y CULTURA
-municipio:
-1) Numero de bibliotecas y museos
-estatal:
-1) comparacion de todos.
-
-
-
-POLITICA:
-estatal: 
-1) promedio del porcentaje de confianza en los politicos [X]
-
-
-
-ASOCIACION:
-1) numero de negocios con mas de 3 socios
-
-
-
-MEDIO AMBIENTE: 
-1) Consumo electrico por municipio [X]
-
-
-**API KEY:** e6d570c40e5842299c77d9c3db48087f
